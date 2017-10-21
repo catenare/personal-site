@@ -5,10 +5,14 @@ const CleanWebPackPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
-  entry: './src/main.ts',
+  entry: {
+    home: './src/main.ts',
+    about: './src/about.ts',
+    vendor: './src/vendor.ts'
+  },
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'app.js'
+    filename: '[name].bundle.js'
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -16,7 +20,16 @@ module.exports = {
       template: 'src/site/layout.hbs',
       filename: 'index.html',
       cache: false,
-      hash: true
+      hash: true,
+      chunks: ['home', 'vendor']
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Foundation About',
+      template: 'src/site/about.hbs',
+      filename: 'about.html',
+      cache: false,
+      hash: true,
+      chunks: ['about', 'vendor']
     }),
     new CleanWebPackPlugin(['./assets']),
     new ExtractTextPlugin({
