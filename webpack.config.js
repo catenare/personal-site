@@ -20,7 +20,7 @@ module.exports = {
       filename: 'index.html',
       cache: false,
       hash: true,
-      chunks: ['home']
+      chunks: ['home', 'shared']
     }),
     new HtmlWebpackPlugin({
       title: 'Foundation About',
@@ -28,14 +28,18 @@ module.exports = {
       filename: 'about.html',
       cache: false,
       hash: true,
-      chunks: ['about']
+      chunks: ['about', 'shared']
     }),
     new CleanWebPackPlugin(['./assets']),
     new ExtractTextPlugin({
       filename: '[name].css',
       allChunks: true
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'shared',
+      minChunks: 2
+    })
   ],
   externals: {
     jquery: 'jQuery'
