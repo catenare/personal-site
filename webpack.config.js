@@ -6,9 +6,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   entry: {
-    home: './src/main.ts',
-    about: './src/about.ts',
-    vendor: './src/vendor.ts'
+    home: './src/home.ts',
+    about: './src/about.ts'
   },
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -21,7 +20,7 @@ module.exports = {
       filename: 'index.html',
       cache: false,
       hash: true,
-      chunks: ['home', 'vendor']
+      chunks: ['home']
     }),
     new HtmlWebpackPlugin({
       title: 'Foundation About',
@@ -29,11 +28,11 @@ module.exports = {
       filename: 'about.html',
       cache: false,
       hash: true,
-      chunks: ['about', 'vendor']
+      chunks: ['about']
     }),
     new CleanWebPackPlugin(['./assets']),
     new ExtractTextPlugin({
-      filename: 'styles.css',
+      filename: '[name].css',
       allChunks: true
     }),
     new webpack.HotModuleReplacementPlugin()

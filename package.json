@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/catenare/webpack-multipage-template.git#readme",
   "dependencies": {
+    "axios": "^0.17.0",
     "font-awesome": "^4.7.0"
   },
   "devDependencies": {
