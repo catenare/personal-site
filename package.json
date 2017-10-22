@@ -31,7 +31,8 @@
   "homepage": "https://github.com/catenare/webpack-multipage-template.git#readme",
   "dependencies": {
     "axios": "^0.17.0",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@types/handlebars": "^4.0.36",
@@ -71,7 +72,6 @@
     "tslint": "^5.7.0",
     "typescript": "^2.5.3",
     "url-loader": "^0.6.2",
-    "webfontloader": "^1.6.28",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.3"
   },

@@ -3,11 +3,13 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebPackPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const vendorPackages = require('./package.json')
 
 module.exports = {
   entry: {
     home: './src/home.ts',
-    about: './src/about.ts'
+    about: './src/about.ts',
+    vendor: Object.keys(vendorPackages.dependencies).filter(name => (name !== 'font-awesome'))
   },
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -20,7 +22,7 @@ module.exports = {
       filename: 'index.html',
       cache: false,
       hash: true,
-      chunks: ['home', 'shared']
+      chunks: ['home', 'shared', 'vendor']
     }),
     new HtmlWebpackPlugin({
       title: 'Foundation About',
@@ -28,7 +30,7 @@ module.exports = {
       filename: 'about.html',
       cache: false,
       hash: true,
-      chunks: ['about', 'shared']
+      chunks: ['about', 'shared', 'vendor']
     }),
     new CleanWebPackPlugin(['./assets']),
     new ExtractTextPlugin({
@@ -78,9 +80,10 @@ module.exports = {
       },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'url-loader',
+        loader: 'file-loader',
         options: {
-          limit: 10000
+          name: '[name].[ext]',
+          outputPath: 'fonts/'
         }
       }
     ]
