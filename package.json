@@ -1,7 +1,7 @@
 {
-  "name": "base-npm-theme",
+  "name": "learn-backbone",
   "version": "0.0.1",
-  "description": "Base npm theme",
+  "description": "Learn Backbone Js",
   "main": "index.js",
   "directories": {
     "test": "tests"
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:catenare/webpack-multipage-template.git"
+    "url": "git@github.com:catenare/learn-backbone.git"
   },
   "keywords": [
     "Wordpress",
@@ -26,9 +26,9 @@
   "author": "Johan Martin <martin.johan@johan-martin.com> (http://www.johan-martin.com/)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/catenare/webpack-multipage-template.git/issues"
+    "url": "https://github.com/catenare/learn-backbone/issues"
   },
-  "homepage": "https://github.com/catenare/webpack-multipage-template.git#readme",
+  "homepage": "https://github.com/catenare/learn-backbone",
   "dependencies": {
     "axios": "^0.17.0",
     "font-awesome": "^4.7.0",
@@ -74,25 +74,5 @@
     "url-loader": "^0.6.2",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.3"
-  },
-  "babel": {
-    "presets": [
-      [
-        "env",
-        {
-          "targets": {
-            "browsers": [
-              "last 2 versions",
-              "ie >= 7"
-            ]
-          }
-        }
-      ]
-    ]
-  },
-  "browserslist": [
-    "last 2 versions",
-    "ie >= 9",
-    "and_chr >= 2.3"
-  ]
+  }
 }

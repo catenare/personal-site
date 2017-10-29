@@ -41,15 +41,18 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'shared',
       minChunks: 2
+    }),
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery',
+      $: 'jquery',
+      Backbone: 'backbone'
     })
   ],
-  externals: {
-    jquery: 'jQuery'
-  },
   module: {
     rules: [
       {
         test: /\.scss$/,
+        exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
@@ -61,18 +64,22 @@ module.exports = {
       },
       {
         test: /\.js$/,
+        exclude: /node_modules/,
         loader: 'babel-loader'
       },
       {
         test: /\.ts$/,
+        exclude: /node_modules/,
         loader: 'awesome-typescript-loader'
       },
       {
         test: /\.hbs$/,
+        exclude: /node_modules/,
         use: 'handlebars-loader'
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        exclude: /node_modules/,
         loader: 'file-loader',
         options: {
           limit: 10000
@@ -80,6 +87,7 @@ module.exports = {
       },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        exclude: /node_modules/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
