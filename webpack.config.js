@@ -37,7 +37,6 @@ module.exports = {
       filename: '[name].css',
       allChunks: true
     }),
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'shared',
       minChunks: 2
@@ -97,7 +96,10 @@ module.exports = {
   devtool: '#source-map',
   devServer: {
     compress: true,
-    hot: true
+    hot: true,
+    historyApiFallback: true,
+    watchContentBase: true,
+    open: false
   }
 }
 
