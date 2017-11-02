@@ -73,7 +73,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        exclude: /node_modules/,
+        exclude: /node_modules(\/?!font-awesome)/,
         loader: 'file-loader',
         options: {
           limit: 10000
@@ -81,7 +81,7 @@ module.exports = {
       },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        exclude: /node_modules/,
+        exclude: /node_modules(\/?!font-awesome)/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
