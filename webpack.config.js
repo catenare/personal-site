@@ -40,11 +40,6 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'shared',
       minChunks: 2
-    }),
-    new webpack.ProvidePlugin({
-      jQuery: 'jquery',
-      $: 'jquery',
-      Backbone: 'backbone'
     })
   ],
   module: {
@@ -78,6 +73,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        exclude: /node_modules/,
         loader: 'file-loader',
         options: {
           limit: 10000
@@ -85,6 +81,7 @@ module.exports = {
       },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        exclude: /node_modules/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
@@ -93,7 +90,7 @@ module.exports = {
       }
     ]
   },
-  devtool: '#source-map',
+  devtool: 'eval-source-map',
   devServer: {
     compress: true,
     hot: true,
