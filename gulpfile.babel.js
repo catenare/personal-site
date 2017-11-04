@@ -63,6 +63,6 @@ function resetPages (done) {
 
 // Watch for changes to static assets, pages, Sass, and JavaScript
 function watch () {
-  gulp.watch('src/pages/**/*.html').on('all', gulp.series(pages))
-  gulp.watch('src/{layouts,partials}/**/*.html').on('all', gulp.series(resetPages, pages))
+  gulp.watch('src/panini/pages/**/*.html').on('all', gulp.series(pages))
+  gulp.watch('src/panini/{layouts,partials}/**/*.html').on('all', gulp.series(resetPages, pages))
 }

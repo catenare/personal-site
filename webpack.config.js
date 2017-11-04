@@ -7,12 +7,14 @@ const vendorPackages = require('./package.json')
 
 module.exports = {
   entry: {
-    home: './src/home.ts',
-    about: './src/about.ts',
+    app: './src/app/home.ts',
+    registration: './src/app/registration.ts',
+    about: './src/app/about.ts',
     vendor: Object.keys(vendorPackages.dependencies).filter(name => (name !== 'font-awesome' && name !== 'csspin'))
   },
   output: {
     path: path.resolve(__dirname, 'dist/assets'),
+    publicPath: '/assets/',
     filename: '[name].js'
   },
   plugins: [
@@ -34,12 +36,13 @@ module.exports = {
     // }),
 
     new ExtractTextPlugin({
-      filename: 'style.css',
+      filename: '[name].css',
       allChunks: true
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'shared',
-      minChunks: 2
+      name: 'vendor',
+      async: true,
+      minChunks: Infinity
     })
   ],
   module: {
@@ -119,10 +122,11 @@ module.exports = {
   devtool: 'eval-source-map',
   devServer: {
     compress: true,
-    hot: true,
+    hot: false,
     historyApiFallback: true,
     watchContentBase: true,
-    open: false
+    open: false,
+    contentBase: 'dist/'
   }
 }
 
