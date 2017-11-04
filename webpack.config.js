@@ -44,6 +44,32 @@ module.exports = {
   ],
   module: {
     rules: [
+      // {
+      //   test: /\.vue$/,
+      //   loader: 'vue-loader',
+      //   options: {
+      //     loaders: {
+      //       scss: ['vue-style-loader', {
+      //         loader: 'css-loader',
+      //         options: {
+      //           minimize: false,
+      //           sourceMap: false
+      //         }
+      //       },
+      //       {
+      //         loader: 'sass-loader',
+      //         exclude: /styles/,
+      //         options: {
+      //           includePaths: ['./src/assets/vue/styles'],
+      //           data: '@import "./src/assets/vue/styles/app";',
+      //           sourceMap: false
+      //         }
+      //       }
+      //       ],
+      //       ts: 'awesome-typescript-loader'
+      //     }
+      //   }
+      // },
       {
         test: /\.scss$/,
         exclude: /node_modules/,
@@ -58,7 +84,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: /node_modules(\/?!foundation-sites)/,
         loader: 'babel-loader'
       },
       {
