@@ -1,6 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+// const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebPackPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const vendorPackages = require('./package.json')
@@ -9,32 +9,32 @@ module.exports = {
   entry: {
     home: './src/home.ts',
     about: './src/about.ts',
-    vendor: Object.keys(vendorPackages.dependencies).filter(name => (name !== 'font-awesome'))
+    vendor: Object.keys(vendorPackages.dependencies).filter(name => (name !== 'font-awesome' && name !== 'csspin'))
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: '[name].bundle.js'
+    path: path.resolve(__dirname, 'dist/assets'),
+    filename: '[name].js'
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Foundation proto',
-      template: 'src/site/layout.hbs',
-      filename: 'index.html',
-      cache: false,
-      hash: true,
-      chunks: ['home', 'shared', 'vendor']
-    }),
-    new HtmlWebpackPlugin({
-      title: 'Foundation About',
-      template: 'src/site/about.hbs',
-      filename: 'about.html',
-      cache: false,
-      hash: true,
-      chunks: ['about', 'shared', 'vendor']
-    }),
-    new CleanWebPackPlugin(['./assets']),
+    // new HtmlWebpackPlugin({
+    //   title: 'Foundation proto',
+    //   template: 'src/site/layout.hbs',
+    //   filename: 'index.html',
+    //   cache: false,
+    //   hash: true,
+    //   chunks: ['home', 'shared', 'vendor']
+    // }),
+    // new HtmlWebpackPlugin({
+    //   title: 'Foundation About',
+    //   template: 'src/site/about.hbs',
+    //   filename: 'about.html',
+    //   cache: false,
+    //   hash: true,
+    //   chunks: ['about', 'shared', 'vendor']
+    // }),
+
     new ExtractTextPlugin({
-      filename: '[name].css',
+      filename: 'style.css',
       allChunks: true
     }),
     new webpack.optimize.CommonsChunkPlugin({
@@ -130,6 +130,7 @@ if (process.env.NODE_ENV === 'production') {
   module.exports.devtool = '#source-map'
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
+    new CleanWebPackPlugin(['./dist/assets']),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: '"production"'
