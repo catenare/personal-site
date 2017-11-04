@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "npm-run-all -n -s gulp:clean -p gulp:watch dev:server lint:watch",
+    "start": "npm-run-all -n -p gulp:watch dev:server lint:watch --aggregate-output",
     "dev:watch": "webpack -w -d",
     "dev:server": "cross-env NODE_ENV=development webpack-dev-server --color --progress",
     "gulp:clean": "gulp build",
@@ -15,7 +15,7 @@
     "build:webpack": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "lint": "esw webpack.config.* src --color",
     "lint:watch": "npm run lint -- --watch",
-    "gulp:watch": "gulp watch",
+    "gulp:watch": "gulp -LLL --color",
     "build:gulp": "gulp build",
     "gh-deploy": "gh-pages -d dist"
   },
