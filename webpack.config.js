@@ -38,9 +38,12 @@ module.exports = {
       allChunks: true
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'shared',
-      minChunks: 2
-    })
+      name: 'vendor',
+      async: true,
+      minChunks: Infinity
+    }),
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ],
   module: {
     rules: [
