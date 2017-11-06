@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebPackPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const vendorPackages = require('./package.json')
+const combineLoaders = require('webpack-combine-loaders')
 
 module.exports = {
   entry: {
@@ -22,7 +23,7 @@ module.exports = {
       filename: 'index.html',
       cache: false,
       hash: true,
-      chunks: ['home', 'shared', 'vendor']
+      chunks: ['home', 'vendor']
     }),
     new HtmlWebpackPlugin({
       title: 'Foundation About',
@@ -30,7 +31,7 @@ module.exports = {
       filename: 'about.html',
       cache: false,
       hash: true,
-      chunks: ['about', 'shared', 'vendor']
+      chunks: ['about', 'vendor']
     }),
     new CleanWebPackPlugin(['./assets']),
     new ExtractTextPlugin({
@@ -52,20 +53,45 @@ module.exports = {
         exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: [
-            'css-loader',
-            'postcss-loader',
-            'sass-loader'
-          ]
+          use: combineLoaders([
+            {
+              loader: 'css-loader'
+            },
+            {
+              loader: 'postcss-loader'
+            },
+            {
+              loader: 'sass-loader'
+            }
+          ])
         })
       },
       {
-        test: /\.js$/,
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: combineLoaders([
+            {
+              loader: 'css-loader',
+              query: {
+                modules: true,
+                localIdentName: '[name]__[local]__[hash:base64:5]'
+              }
+            },
+            {
+              loader: 'postcss-loader'
+            }
+          ])
+        })
+      },
+      {
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
       },
       {
-        test: /\.ts$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
         loader: 'awesome-typescript-loader'
       },
