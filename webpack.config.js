@@ -9,7 +9,7 @@ const StylelintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = {
   entry: {
-    app: './src/app/home.ts',
+    app: './src/app/index.tsx',
     about: './src/app/about.ts',
     vendor: Object.keys(vendorPackages.dependencies).filter(name => (name !== 'font-awesome' && name !== 'csspin'))
   },
@@ -17,6 +17,9 @@ module.exports = {
     path: path.resolve(__dirname, 'dist/assets'),
     publicPath: '/assets/',
     filename: '[name].js'
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.json']
   },
   plugins: [
     new ExtractTextPlugin({
