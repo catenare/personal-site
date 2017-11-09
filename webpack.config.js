@@ -5,6 +5,7 @@ const CleanWebPackPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const vendorPackages = require('./package.json')
 const combineLoaders = require('webpack-combine-loaders')
+const StylelintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -19,23 +20,6 @@ module.exports = {
     filename: '[name].js'
   },
   plugins: [
-    // new HtmlWebpackPlugin({
-    //   title: 'Foundation proto',
-    //   template: 'src/site/layout.hbs',
-    //   filename: 'index.html',
-    //   cache: false,
-    //   hash: true,
-    //   chunks: ['home', 'shared', 'vendor']
-    // }),
-    // new HtmlWebpackPlugin({
-    //   title: 'Foundation About',
-    //   template: 'src/site/about.hbs',
-    //   filename: 'about.html',
-    //   cache: false,
-    //   hash: true,
-    //   chunks: ['about', 'shared', 'vendor']
-    // }),
-
     new ExtractTextPlugin({
       filename: '[name].css',
       allChunks: true
@@ -44,36 +28,11 @@ module.exports = {
       name: 'vendor',
       async: true,
       minChunks: Infinity
-    })
+    }),
+    new StylelintPlugin({'syntax': 'scss'})
   ],
   module: {
     rules: [
-      // {
-      //   test: /\.vue$/,
-      //   loader: 'vue-loader',
-      //   options: {
-      //     loaders: {
-      //       scss: ['vue-style-loader', {
-      //         loader: 'css-loader',
-      //         options: {
-      //           minimize: false,
-      //           sourceMap: false
-      //         }
-      //       },
-      //       {
-      //         loader: 'sass-loader',
-      //         exclude: /styles/,
-      //         options: {
-      //           includePaths: ['./src/assets/vue/styles'],
-      //           data: '@import "./src/assets/vue/styles/app";',
-      //           sourceMap: false
-      //         }
-      //       }
-      //       ],
-      //       ts: 'awesome-typescript-loader'
-      //     }
-      //   }
-      // },
       {
         test: /\.scss$/,
         exclude: /node_modules/,
