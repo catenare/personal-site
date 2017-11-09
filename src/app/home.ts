@@ -1,2 +1,2 @@
-import "./scss/app.scss";
+import "../scss/app.scss";
 console.log("hello main");
