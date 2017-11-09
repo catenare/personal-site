@@ -10,7 +10,6 @@ const StylelintPlugin = require('stylelint-webpack-plugin')
 module.exports = {
   entry: {
     app: './src/app/home.ts',
-    registration: './src/app/registration.ts',
     about: './src/app/about.ts',
     vendor: Object.keys(vendorPackages.dependencies).filter(name => (name !== 'font-awesome' && name !== 'csspin'))
   },
