@@ -29,7 +29,7 @@ module.exports = {
       async: true,
       minChunks: Infinity
     }),
-    new StylelintPlugin({'syntax': 'scss'})
+    new StylelintPlugin({syntax: 'scss', emitErrors: false, lintDirtyModulesOnly: true})
   ],
   module: {
     rules: [

@@ -2,7 +2,7 @@
 
 @import 'settings';
 @import 'custom';
-@import '~font-awesome/scss/font-awesome.scss';
+@import '~font-awesome/scss/font-awesome';
 @import '~foundation-sites/scss/foundation';
 
 @include foundation-global-styles;
@@ -22,7 +22,7 @@
 // @include foundation-callout;
 @include foundation-card;
 // @include foundation-close-button;
- @include foundation-menu;
+@include foundation-menu;
 // @include foundation-menu-icon;
 // @include foundation-drilldown-menu;
 // @include foundation-dropdown;

@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "npm-run-all -n -p gulp:watch dev:server lint:watch --aggregate-output",
+    "start": "npm-run-all -n -p gulp:watch dev:server lint:watch",
     "dev:watch": "webpack -w -d",
     "dev:server": "cross-env NODE_ENV=development webpack-dev-server --color --progress",
     "gulp:clean": "gulp build",
@@ -36,9 +36,9 @@
   "homepage": "https://github.com/catenare/webpack-multipage-template",
   "dependencies": {
     "axios": "^0.17.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
     "csspin": "^1.1.4",
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
@@ -73,7 +73,7 @@
     "handlebars-loader": "^1.6.0",
     "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.6.0",
-    "npm-run-all": "^4.1.1",
+    "npm-run-all": "^4.1.2",
     "panini": "^1.5.1",
     "postcss-cssnext": "^3.0.2",
     "postcss-loader": "^2.0.8",
@@ -82,6 +82,8 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
     "stylelint": "^8.2.0",
+    "stylelint-config-sass-guidelines": "^3.1.0",
+    "stylelint-config-standard": "^17.0.0",
     "stylelint-scss": "^2.1.0",
     "stylelint-webpack-plugin": "^0.9.0",
     "tslint": "^5.7.0",
@@ -92,6 +94,9 @@
     "webpack-dev-server": "^2.9.4"
   },
   "stylelint": {
-    "extends": "stylelint-config-standard"
+    "plugins": [
+      "stylelint-scss"
+    ],
+    "extends": "stylelint-config-sass-guidelines"
   }
 }
