@@ -10,9 +10,28 @@
     <link rel="stylesheet" href="{{root}}assets/{{#if css}}{{css}}{{else}}app.css{{/if}}">
   </head>
   <body>
-
+  <header class="top-bar">
+    <nav class="top-bar-left">
+      <ul class="menu">
+        <li><a href="{{root}}index.html"><i class="fi-list"></i> <span>Home</span></a></li>
+        <li><a href="{{root}}about.html"><i class="fi-list"></i> <span>About</span></a></li>
+        <li><a href="{{root}}article.html"><i class="fi-list"></i> <span>About</span></a></li>
+      </ul>
+    </nav>
+    <nav class="top-bar-right">
+      <ul class="menu">
+        <li><a href="#"><i class="fi-list"></i> <span>Privacy</span></a></li>
+        <li><a href="#"><i class="fi-list"></i> <span>Other...</span></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="grid-container">
     {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
     {{> body}}
+  </main>
+  <footer class="grid-container">
+    {{>blog-footer}}
+  </footer>
     <script src="{{root}}assets/vendor.js"></script>
     <script src="{{root}}assets/{{#if js}}{{js}}{{else}}app.js{{/if}}"></script>
   </body>

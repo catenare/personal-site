@@ -1,5 +1,6 @@
 module.exports = {
-  plugins: {
-    'postcss-cssnext': {}
-  }
+  parser: 'scss',
+  plugins: [
+    require('postcss-cssnext')({browsers: ['last 2 versions', 'ie >= 9', 'and_chr >= 2.3']})
+  ]
 }
