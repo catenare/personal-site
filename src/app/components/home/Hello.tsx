@@ -6,7 +6,7 @@ class Hello extends React.Component<any, any> {
     super(props);
   }
 
-  protected render() {
+  public render() {
     return <div id="hello"><h1>Hello World Basic! Test with scss</h1></div>;
   }
 }
