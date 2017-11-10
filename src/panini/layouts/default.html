@@ -9,9 +9,9 @@
     <title>{{#if title}} {{title}} | {{/if}} Paseo Daycare Center</title>
     <link rel="stylesheet" href="{{root}}assets/{{#if css}}{{css}}{{else}}app.css{{/if}}">
   </head>
-  <body>
-    <header class="grid-container fluid">
-    {{>topbar-center-logo}}
+  <body class="sticky-shrinknav-wrapper">
+    <header class="grid-container full">
+    {{>sticky-shrinknav}}
   </header>
   <main class="grid-container fluid">
     {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
