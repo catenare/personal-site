@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import {Hello} from "./components/home/Hello";
+import {Hello} from "./components/Home/Hello";
 
 import "../scss/app.scss";
 
