@@ -42,12 +42,12 @@ module.exports = {
           fallback: 'style-loader',
           use: combineLoaders([
             {
-              loader: 'css-loader',
-              options: {
-                modules: true,
-                localIdentName: '[sha512:hash:base32]-[name]-[local]',
-                importLoaders: 2
-              }
+              loader: 'css-loader'
+              // options: {
+              //   modules: true,
+              //   localIdentName: '[sha512:hash:base32]-[name]-[local]',
+              //   importLoaders: 2
+              // }
             },
             {
               loader: 'postcss-loader'
@@ -60,17 +60,17 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        exclude: /node_modules(\/?!font-awesome)/,
+        exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: combineLoaders([
             {
-              loader: 'css-loader',
-              options: {
-                modules: true,
-                localIdentName: '[sha512:hash:base32]-[name]-[local]',
-                importLoaders: 1
-              }
+              loader: 'css-loader'
+              // options: {
+              //   modules: true,
+              //   localIdentName: '[sha512:hash:base32]-[name]-[local]',
+              //   importLoaders: 1
+              // }
             },
             {
               loader: 'postcss-loader'
