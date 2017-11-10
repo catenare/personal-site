@@ -2,21 +2,25 @@
 title: Home Page
 ---
 <section>
-  <!-- slider -->
-  {{>marketing-site-hero}}
+    {{>marketing-site-hero}}
 </section>
-
+<div id="root"></div>
 <section>
-  <div id="root"></div>
-  <!-- Articles -->
+    <div class="row small-up-1 medium-up-3">
+        <div class="column">
+          {{> news-card}}
+        </div>
+        <div class="column">
+          {{> news-card}}
+        </div>
+        <div class="column">
+          {{> news-card}}
+        </div>
+      </div>
 </section>
-
 <section>
-  <!-- Projects -->
-  {{>marketing-site-three-up}}
+    {{>marketing-site-three-up}}
 </section>
-
 <section>
-  <!-- Images -->
-  {{>grid-staggered}}
+    {{>grid-staggered}}
 </section>
