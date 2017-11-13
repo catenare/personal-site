@@ -7,8 +7,10 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "npm-run-all -n -p gulp:watch dev:server lint:watch",
+    "start": "npm-run-all -n -p build:gulp prod:server",
+    "dev": "npm-run-all -n -p gulp:watch dev:server lint:watch",
     "dev:watch": "webpack -w -d",
+    "prod:server": "cross-env NODE_ENV=production webpack-dev-server --color --progress",
     "dev:server": "cross-env NODE_ENV=development webpack-dev-server --color --progress",
     "gulp:clean": "gulp build",
     "build": "npm-run-all -s build:gulp build:webpack",
@@ -17,6 +19,7 @@
     "lint:watch": "npm run lint -- --watch",
     "gulp:watch": "gulp -LLL --color",
     "build:gulp": "gulp build",
+    "build:style": "gulp style",
     "gh-deploy": "gh-pages -d dist",
     "test": "mocha"
   },
@@ -96,6 +99,7 @@
     "raw-loader": "^0.5.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
+    "style-sherpa": "^1.0.2",
     "stylelint": "^8.2.0",
     "stylelint-config-sass-guidelines": "^3.1.0",
     "stylelint-config-standard": "^17.0.0",

@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="{{root}}assets/{{#if css}}{{css}}{{else}}app.css{{/if}}">
   </head>
   <body class="sticky-shrinknav-wrapper">
-    <header class="grid-container full">
     {{>sticky-shrinknav}}
-  </header>
   <main class="grid-container full">
     {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
     {{>body}}

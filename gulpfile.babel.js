@@ -5,6 +5,7 @@
 import gulp from 'gulp'
 import panini from 'panini'
 import rimraf from 'rimraf'
+import sherpa from 'style-sherpa'
 import yaml from 'js-yaml'
 import fs from 'fs'
 
@@ -24,7 +25,7 @@ function loadConfig () {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
-  gulp.series(clean, pages))
+  gulp.series(clean, pages, styleGuide))
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -35,6 +36,17 @@ gulp.task('clean',
 
 gulp.task('watch',
   gulp.series(watch))
+
+gulp.task('style',
+  gulp.series(styleGuide))
+
+// Generate a style guide from the Markdown content and HTML template in styleguide/
+function styleGuide (done) {
+  sherpa('src/styleguide/index.md', {
+    output: PATHS.dist + '/styleguide.html',
+    template: 'src/styleguide/template.html'
+  }, done)
+}
 
 // Delete the "dist" folder
 // This happens every time a build starts
