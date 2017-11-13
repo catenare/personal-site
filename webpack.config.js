@@ -19,7 +19,10 @@ module.exports = {
     filename: '[name].js'
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json']
+    extensions: ['.ts', '.tsx', '.js', '.json'],
+    alias: {
+      holder: 'holderjs/holder.min.js'
+    }
   },
   plugins: [
     new ExtractTextPlugin({
@@ -121,6 +124,16 @@ module.exports = {
     open: false,
     contentBase: 'dist/'
   }
+}
+
+if (process.env.NODE_ENV !== 'production') {
+  module.exports.plugins = (module.exports.plugins || []).concat([
+    new webpack.ProvidePlugin({
+      'Holder': 'holderjs',
+      'holder': 'holderjs',
+      'window.Holder': 'holderjs'
+    })
+  ])
 }
 
 if (process.env.NODE_ENV === 'production') {

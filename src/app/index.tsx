@@ -7,8 +7,6 @@ import {SetScroll} from "../lib/utils";
 
 import "../scss/app.scss";
 
-
-
 ReactDOM.render(
   <AppRoute />,
   document.getElementById("root"),
