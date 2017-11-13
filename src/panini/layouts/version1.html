@@ -6,16 +6,12 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{#if title}} {{title}} | {{/if}} Johan N. Martin</title>
+    <title>{{page}} | Johan N. Martin</title>
     <link rel="stylesheet" href="{{root}}assets/{{#if css}}{{css}}{{else}}app.css{{/if}}">
   </head>
-  <body class="sticky-shrinknav-wrapper">
-    {{>sticky-shrinknav}}
-  <main class="grid-container full">
+  <body>
     {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
     {{>body}}
-  </main>
-    {{>marketing-site-footer}}
     <script src="{{root}}assets/vendor.js"></script>
     <script src="{{root}}assets/{{#if js}}{{js}}{{else}}app.js{{/if}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>

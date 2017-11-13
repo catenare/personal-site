@@ -11,6 +11,7 @@ module.exports = {
   entry: {
     app: './src/app/index.tsx',
     about: './src/app/about.ts',
+    home: './src/app/home.ts',
     vendor: Object.keys(vendorPackages.dependencies).filter(name => (name !== 'font-awesome' && name !== 'csspin'))
   },
   output: {
@@ -21,7 +22,7 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
     alias: {
-      holder: 'holderjs/holder.min.js'
+      holder: '~holderjs/holder.js'
     }
   },
   plugins: [
@@ -131,7 +132,8 @@ if (process.env.NODE_ENV !== 'production') {
     new webpack.ProvidePlugin({
       'Holder': 'holderjs',
       'holder': 'holderjs',
-      'window.Holder': 'holderjs'
+      'window.Holder': 'holderjs',
+      'window.holder': 'holderjs'
     })
   ])
 }

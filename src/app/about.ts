@@ -1,3 +1,7 @@
 import "../scss/app.scss";
 
-const holderjs = require("holderjs");
+// document.addEventListener("DOMContentLoaded", () => {
+//   if (typeof window !== "undefined") {
+//     const Holder = require("holderjs");
+//   }
+// });
