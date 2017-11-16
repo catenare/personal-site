@@ -1,5 +1,5 @@
 import * as React from "react";
-import {BrowserRouter, Route, Switch, Redirect } from "react-router-dom"; // eslint-disable-line
+import {BrowserRouter, Redirect, Route, Switch } from "react-router-dom"; // eslint-disable-line
 import {Hello} from "./components/Home/Hello";
 
 const AppRoute = () => ( // eslint-disable-line
@@ -11,6 +11,6 @@ const AppRoute = () => ( // eslint-disable-line
       </Switch>
     </main>
   </BrowserRouter>
-)
+);
 
 export {AppRoute};
