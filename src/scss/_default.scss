@@ -1,0 +1,5 @@
+//footer create columns
+footer {
+  @include xy-grid;
+  @include xy-grid-layout(4, 'div');
+}
