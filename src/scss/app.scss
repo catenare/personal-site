@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 @import 'settings';
-@import 'custom';
 @import '~font-awesome/scss/font-awesome';
 @import '~foundation-sites/scss/foundation';
 
@@ -53,4 +52,4 @@
 // @include motion-ui-animations;
 
 //Include everything else here
-@import 'default';
+@import 'custom';

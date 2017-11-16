@@ -21,5 +21,24 @@
   </div>
   <div>
     <h2>contact me</h2>
+    <form>
+      <label for="name"><input type="text" name="name" aria-describedby="nameHelpText" required></label>
+      <p class="help-text" id="nameHelpText">Your first and last name</p>
+      <label for="phone"><input type="text" name="phone" id="phone" aria-describedby="phoneHelpText"></label>
+      <p class="help-text" id="phoneHelpText">Your phone number</p>
+      <label for="email"><input type="text" name="email" id="email" aria-describedby="emailHelpText" required></label>
+      <p class="help-text" id="emailHelpText">Your email address so we can reply.</p>
+      <label for="message">
+        Please type your message here
+        <textarea name="message" id="message" cols="30" rows="10" aria-describedby="messageHelpText"></textarea>
+      </label>
+      <p class="help-text" id="messageHelpText">Your message to us.</p>
+      <button>Submit</button>
+    </form>
+    <h2>Join email list</h2>
+    <form>
+    <input type="emaillist" id="emaillist">
+    <button></button>
+    </form>
   </div>
 </footer>
