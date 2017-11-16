@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="{{root}}assets/{{#if css}}{{css}}{{else}}app.css{{/if}}">
   </head>
   <body>
-    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
-    {{>body}}
+    <div class="wrapper">
+        {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+        {{>body}}
+    </div>
     <script src="{{root}}assets/vendor.js"></script>
     <script src="{{root}}assets/{{#if js}}{{js}}{{else}}app.js{{/if}}"></script>
   </body>
