@@ -1,28 +1,32 @@
-{{!-->   section#carousel>ul>li*3>(h2>{item title}^p>{summary text}^figure>img[src="http://via.placeholder.com/1200x300" alt="slide image"]>figcaption>{slide caption}) --}}
-<section id="carousel" class="carousel">
-  <ul>
-    <li>
-      <h2>item title</h2>
-      <p>summary text</p>
+{{!--> section#carousel>ul.carousel>li.slide.slide$*3>(div>h2>{item title $}^p>{summary text}^^figure>figcaption>{slide caption $}) --}}
+
+<section id="carousel">
+  <ul class="carousel">
+    <li class="slide slide1">
+      <div>
+        <h2>item title 1</h2>
+        <p>summary text</p>
+      </div>
       <figure>
-        <img src="http://via.placeholder.com/1200x300" alt="slide image">
-          <figcaption>slide caption</figcaption>
+        <figcaption>slide caption 1</figcaption>
       </figure>
     </li>
-    <li>
-      <h2>item title</h2>
-      <p>summary text</p>
+    <li class="slide slide2">
+      <div>
+        <h2>item title 2</h2>
+        <p>summary text</p>
+      </div>
       <figure>
-        <img src="http://via.placeholder.com/1200x300" alt="slide image">
-          <figcaption>slide caption</figcaption>
+        <figcaption>slide caption 2</figcaption>
       </figure>
     </li>
-    <li>
-      <h2>item title</h2>
-      <p>summary text</p>
+    <li class="slide slide3">
+      <div>
+        <h2>item title 3</h2>
+        <p>summary text</p>
+      </div>
       <figure>
-        <img src="http://via.placeholder.com/1200x300" alt="slide image">
-          <figcaption>slide caption</figcaption>
+        <figcaption>slide caption 3</figcaption>
       </figure>
     </li>
   </ul>

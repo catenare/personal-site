@@ -1,53 +1,80 @@
-.carousel ul {
-  height: 370px;
-  margin: 5em auto 0.5em;
-  max-width: 495px;
+// https://themarklee.com/2013/10/16/simple-crossfading-slideshow-css/
+
+#carousel {
+  height: 800px;
+  margin: auto;
+  max-width: 2400px;
   position: relative;
 
-  li {
-    background: #000;
-    height: 370px;
-    margin: 0;
-    max-width: 495px;
-    position: absolute;
-  }
+  .carousel {
+    position: relative;
+    // margin: 5em auto 0.5em auto;
+    position: relative;
 
-  img {
-    box-shadow: 0 0 2px #666;
-  }
+    .slide {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: 0 0 2px #666;
+      display: block;
+      height: 800px;
+      margin: 1em auto;
+      opacity: 0;
+      position: absolute;
+      width: 100%;
 
-  figcaption {
-    background: rgba(0, 0, 0, 0.3);
-    color: #fff;
-    font-size: 0.8em;
-    opacity: 0;
-    padding: 8px 12p;
-    position: absolute;
-    top: 0;
-    transition: opacity 0.5s;
-  }
 
-  li:nth-child(1) {
-    animation: xfade 48s 42s infinite;
-  }
+      &:nth-child(1) {
+        animation: xfade 18s 12s infinite;
+      }
 
-  li:nth-child(2) {
-    animation: xfade 48s 36s infinite;
-  }
+      &:nth-child(2) {
+        animation: xfade 18s 6s infinite;
+      }
 
-  li:nth-child(3) {
-    animation: xfade 48s 30s infinite;
-  }
+      &:nth-child(3) {
+        animation: xfade 18s 0s infinite;
+      }
 
-  li {
-    opacity: 0;
+    }
+
+    .slide1 {
+      background-image: url('https://www.dummyimage.co.uk/2400x800/000000/ffffff/Slide 1');
+    }
+
+    .slide2 {
+      background-image: url('https://www.dummyimage.co.uk/2400x800/000000/ffffff/Slide 2');
+    }
+
+    .slide3 {
+      background-image: url('https://www.dummyimage.co.uk/2400x800/000000/ffffff/Slide 3');
+    }
+
+    div {
+      color: #fff;
+      font-size: 0.8em;
+      left: 10%;
+      padding: 8px 12px;
+      position: absolute;
+      text-align: left;
+      top: 20%;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.5s;
+    }
+
+    figure {
+      background: rgba(255, 255, 100, 0.3);
+      bottom: 0;
+      color: #fff;
+      padding-bottom: 0.5em;
+      padding-top: 0.5em;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+    }
   }
 }
 
-.carousel ul:hover li figcaption {
-  opacity: 1;
-  transition: opacity 0.5s;
-}
 
 @keyframes xfade {
   0% {
@@ -58,11 +85,11 @@
     opacity: 1;
   }
 
-  12.5% {
+  33.0% {
     opacity: 0;
   }
 
-  98% {
+  66% {
     opacity: 0;
   }
 
@@ -70,3 +97,57 @@
     opacity: 1;
   }
 }
+
+
+
+// .carousel {
+//   height: 370px;
+//   margin: 5em auto 0.5em;
+//   max-width: 1200px;
+//   position: relative;
+
+//   li {
+//     background: #000;
+//     height: 370px;
+//     margin: 0;
+//     max-width: 495px;
+//     position: absolute;
+//   }
+
+//   img {
+//     box-shadow: 0 0 2px #666;
+//   }
+
+//   figcaption {
+//     background: rgba(0, 0, 0, 0.3);
+//     color: #fff;
+//     font-size: 0.8em;
+//     opacity: 0;
+//     padding: 8px 12p;
+//     position: absolute;
+//     top: 0;
+//     transition: opacity 0.5s;
+//   }
+
+//   &:hover figure figcaption {
+//     opacity: 1;
+//     transition: opacity 0.5s;
+//   }
+
+//   li:nth-child(1) {
+//     animation: xfade 48s 42s infinite;
+//   }
+
+//   li:nth-child(2) {
+//     animation: xfade 48s 36s infinite;
+//   }
+
+//   li:nth-child(3) {
+//     animation: xfade 48s 30s infinite;
+//   }
+
+//   figure {
+//     opacity: 0;
+//   }
+// }
+
