@@ -9,7 +9,7 @@ const StylelintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = {
   entry: {
-    app: './src/app/home.ts',
+    app: './src/app/index.tsx',
     vendor: Object.keys(vendorPackages.dependencies).filter(name => (name !== 'font-awesome' && name !== 'csspin'))
   },
   output: {
@@ -18,10 +18,7 @@ module.exports = {
     filename: '[name].js'
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json'],
-    alias: {
-      holder: '~holderjs/holder.js'
-    }
+    extensions: ['.ts', '.tsx', '.js', '.json']
   },
   plugins: [
     new ExtractTextPlugin({
@@ -45,11 +42,6 @@ module.exports = {
           use: combineLoaders([
             {
               loader: 'css-loader'
-              // options: {
-              //   modules: true,
-              //   localIdentName: '[sha512:hash:base32]-[name]-[local]',
-              //   importLoaders: 2
-              // }
             },
             {
               loader: 'postcss-loader'
@@ -68,11 +60,6 @@ module.exports = {
           use: combineLoaders([
             {
               loader: 'css-loader'
-              // options: {
-              //   modules: true,
-              //   localIdentName: '[sha512:hash:base32]-[name]-[local]',
-              //   importLoaders: 1
-              // }
             },
             {
               loader: 'postcss-loader'
@@ -125,16 +112,16 @@ module.exports = {
   }
 }
 
-if (process.env.NODE_ENV !== 'production') {
-  module.exports.plugins = (module.exports.plugins || []).concat([
-    new webpack.ProvidePlugin({
-      'Holder': 'holderjs',
-      'holder': 'holderjs',
-      'window.Holder': 'holderjs',
-      'window.holder': 'holderjs'
-    })
-  ])
-}
+// if (process.env.NODE_ENV !== 'production') {
+//   module.exports.plugins = (module.exports.plugins || []).concat([
+//     new webpack.ProvidePlugin({
+//       'Holder': 'holderjs',
+//       'holder': 'holderjs',
+//       'window.Holder': 'holderjs',
+//       'window.holder': 'holderjs'
+//     })
+//   ])
+// }
 
 if (process.env.NODE_ENV === 'production') {
   module.exports.devtool = '#source-map'
