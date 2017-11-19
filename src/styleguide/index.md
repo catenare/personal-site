@@ -1,62 +1,39 @@
-# The Grid
-
-<p class="lead">Problem: You've got tons of content, each needing different sized cells, and don't know how to quick and easily get it all done. Solution: The awesome XY grid!</p>
-
----
-
-## Overview
-
-The grid is built around two key elements: grid-x and cells. grid-container create a max-width and contain the grid, and cells create the final structure. Everything on your page that you don't give a specific structural style to should be within a grid-x or cell.
-
----
-
-## Nesting
-
-In the Grid you can nest cells down as far as you'd like. Just embed grid-x inside cells and go from there. Each embedded grid-x can contain up to 12 cells.
-
----
-
-## How to Use
-
-Using this framework is easy. Here's how your code will look when you use a series of `<div>` tags to create cells.
-
+# Cards
 ```html
-<div class="grid-x">
-  <div class="small-6 medium-4 large-3 cell">...</div>
-  <div class="small-6 medium-8 large-9 cell">...</div>
+<div class="card">
+  <a href="#" class="card-image">
+    <div class="background-card-image"></div>
+    <div class="image-hover"></div>
+  </a>
+  <div class="card-details">
+    <div class="category">category</div>
+    <h2 class="title"><a href="#">title</a></h2>
+    <p class="meta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, repellendus?<span class="date">24 nov 2017</span> </p>
+    <div class="excerpt"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum labore vel corrupti earum cum natus voluptatibus corporis harum libero perspiciatis possimus reiciendis, praesentium maxime asperiores consectetur? Quas error magnam quisquam.</p></div>
+    <div class="tail"><a href="#">Read more</a></div>
+  </div>
 </div>
 ```
-
-<div class="grid-x display">
-  <div class="small-12 large-4 cell">4</div>
-  <div class="small-12 large-4 cell">4</div>
-  <div class="small-12 large-4 cell">4</div>
+<div class="grid-x">
+<div class="small-6 medium-4 cell">
+<div class="card">
+  <a href="#" class="card-image">
+    <div class="background-card-image">
+    <img src="http://placehold.it/640x427" alt="">
+    </div>
+    <div class="image-hover"></div>
+  </a>
+  <div class="card-section">
+    <div class="category">category</div>
+    <h4 class="title"><a href="#">title</a></h4>
+    <p class="meta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, repellendus?<span class="date">24 nov 2017</span> </p>
+    <div class="excerpt"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum labore vel corrupti earum cum natus voluptatibus corporis harum libero perspiciatis possimus reiciendis, praesentium maxime asperiores consectetur? Quas error magnam quisquam.</p></div>
+    <div class="tail"><a href="#">Read more</a></div>
+  </div>
 </div>
-<div class="grid-x display">
-  <div class="small-12 large-3 cell">3</div>
-  <div class="small-12 large-6 cell">6</div>
-  <div class="small-12 large-3 cell">3</div>
 </div>
-<div class="grid-x display">
-  <div class="small-12 large-2 cell">2</div>
-  <div class="small-12 large-8 cell">8</div>
-  <div class="small-12 large-2 cell">2</div>
+<div class="cell auto">
 </div>
-<div class="grid-x display">
-  <div class="small-12 large-3 cell">3</div>
-  <div class="small-12 large-9 cell">9</div>
-</div>
-<div class="grid-x display">
-  <div class="small-12 large-4 cell">4</div>
-  <div class="small-12 large-8 cell">8</div>
-</div>
-<div class="grid-x display">
-  <div class="small-12 large-5 cell">5</div>
-  <div class="small-12 large-7 cell">7</div>
-</div>
-<div class="grid-x display">
-  <div class="small-12 large-6 cell">6</div>
-  <div class="small-12 large-6 cell">6</div>
 </div>
 
 ---

@@ -77,4 +77,5 @@ function resetPages (done) {
 function watch () {
   gulp.watch('src/panini/pages/**/*.html').on('all', gulp.series(pages))
   gulp.watch('src/panini/{layouts,partials}/**/*.html').on('all', gulp.series(resetPages, pages))
+  gulp.watch('src/styleguide/*.*').on('all', gulp.series(styleGuide, resetPages, pages))
 }

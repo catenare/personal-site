@@ -1,6 +1,9 @@
 @import 'components/footer';
-@import 'components/carousel';
+@import 'components/feature';
+@import 'components/card';
+// @import 'components/carousel';
 // @import 'components/demo';
 // @import 'components/placeholder';
 
 
+// @include card-container(rgba(0, 0, 0, 0.2), $color, $margin, $border, $radius, $shadow);
