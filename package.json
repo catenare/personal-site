@@ -9,6 +9,7 @@
   "scripts": {
     "start": "npm-run-all -n -p build:gulp prod:server",
     "dev": "npm-run-all -n -p gulp:watch dev:server lint:watch",
+    "dev:dashboard": "webpack-dashboard -- npm-run-all -n -p gulp:watch dev:server lint:watch",
     "dev:watch": "webpack -w -d",
     "prod:server": "cross-env NODE_ENV=production webpack-dev-server --color --progress",
     "dev:server": "cross-env NODE_ENV=development webpack-dev-server --color --progress",
@@ -110,9 +111,11 @@
     "stylelint-webpack-plugin": "^0.9.0",
     "tslint": "^5.7.0",
     "typescript": "^2.6.1",
+    "uglifyjs-webpack-plugin": "^1.1.0",
     "url-loader": "^0.6.2",
     "webpack": "^3.8.1",
     "webpack-combine-loaders": "^2.0.3",
+    "webpack-dashboard": "^1.0.2",
     "webpack-dev-server": "^2.9.4"
   },
   "stylelint": {

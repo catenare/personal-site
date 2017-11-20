@@ -1,9 +1,13 @@
 @import 'components/footer';
-@import 'components/feature';
+@import 'components/article';
 @import 'components/card';
-// @import 'components/carousel';
+@import 'components/carousel';
+@import 'components/hero';
 // @import 'components/demo';
 // @import 'components/placeholder';
 
 
 // @include card-container(rgba(0, 0, 0, 0.2), $color, $margin, $border, $radius, $shadow);
+section {
+  margin-bottom: 2rem;
+}

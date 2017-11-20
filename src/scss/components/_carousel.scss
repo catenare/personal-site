@@ -1,12 +1,13 @@
 // https://themarklee.com/2013/10/16/simple-crossfading-slideshow-css/
 
-#carousel {
+.carousel {
   height: 800px;
   margin: auto;
+  margin-bottom: 2rem;
   max-width: 100%;
   position: relative;
 
-  .carousel {
+  ul {
     margin: 0;
     position: relative;
 
