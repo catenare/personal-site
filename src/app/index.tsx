@@ -2,10 +2,12 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 // import {list} from "./components/Ingredients/ingredients";
-import {AddColorForm, colorForm} from "./components/Ingredients/addcolorform";
+// import {AddColorForm, colorForm, StatelessForm} from "./components/Ingredients/addcolorform";
 // import {AppRoute} from "./Router";
 
 // import {SetScroll} from "../lib/utils";
+
+import {StarRating} from "./components/Ingredients/stars"
 
 import "../lib/utils.css";
 import "../scss/app.scss";
@@ -15,4 +17,8 @@ import "../scss/app.scss";
 //   document.getElementById("root"),
 // );
 
-ReactDOM.render(colorForm, document.getElementById("react-container"));
+// ReactDOM.render(colorForm, document.getElementById("react-container"));
+ReactDOM.render(
+  <StarRating totalStars={7} starsSelected={3} />,
+  document.getElementById("root"),
+);
