@@ -105,7 +105,7 @@ module.exports = {
       }
     ]
   },
-  devtool: 'eval-source-map',
+  devtool: 'cheap-module-source-map',
   devServer: {
     compress: true,
     hot: false,
@@ -115,17 +115,6 @@ module.exports = {
     contentBase: 'dist/'
   }
 }
-
-// if (process.env.NODE_ENV !== 'production') {
-//   module.exports.plugins = (module.exports.plugins || []).concat([
-//     new webpack.ProvidePlugin({
-//       'Holder': 'holderjs',
-//       'holder': 'holderjs',
-//       'window.Holder': 'holderjs',
-//       'window.holder': 'holderjs'
-//     })
-//   ])
-// }
 
 if (process.env.NODE_ENV === 'production') {
   module.exports.devtool = '#source-map'
