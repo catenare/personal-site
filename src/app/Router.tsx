@@ -8,6 +8,7 @@ const AppRoute = () => ( // eslint-disable-line
     <main>
       <Switch>
         <Route path="/" exact component={list} />
+        {/* <Route path="/color" component={color} /> */}
         <Redirect to="/" />
       </Switch>
     </main>

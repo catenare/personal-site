@@ -6,7 +6,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const vendorPackages = require('./package.json')
 const combineLoaders = require('webpack-combine-loaders')
 const StylelintPlugin = require('stylelint-webpack-plugin')
-const DashboardPlugin = require('webpack-dashboard/plugin')
+// const DashboardPlugin = require('webpack-dashboard/plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
@@ -32,7 +32,7 @@ module.exports = {
       async: true,
       minChunks: Infinity
     }),
-    new DashboardPlugin(),
+    // new DashboardPlugin(),
     new StylelintPlugin({syntax: 'scss', emitErrors: false, lintDirtyModulesOnly: true})
 
   ],
