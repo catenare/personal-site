@@ -1,7 +1,11 @@
 main {
-  @include xy-grid-container;
+  // @include xy-grid-container;
   margin-bottom: 50px;
   margin-top: 50px;
+}
+
+section {
+  @include xy-grid-container(90%);
 }
 
 header,
