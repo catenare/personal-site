@@ -5,7 +5,7 @@ main {
 }
 
 section {
-  @include xy-grid-container(90%);
+  @include xy-grid-container(80%);
 }
 
 header,
@@ -24,14 +24,18 @@ footer {
 }
 
 .class-listing {
-  div>div {
-    text-align: center;
+  ul {
+    list-style-type: none;
   }
-}
-
-.class-listing {
+  ul.skills {
+    border-bottom: 1px solid;
+  }
   img {
     border-radius: 100px;
+  }
+
+  .listing-image {
+    text-align: center;
   }
 }
 
