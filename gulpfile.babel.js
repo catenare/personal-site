@@ -5,6 +5,7 @@
 import gulp from 'gulp'
 import panini from 'panini'
 import rimraf from 'rimraf'
+import sherpa from 'style-sherpa'
 import yaml from 'js-yaml'
 import fs from 'fs'
 
@@ -36,6 +37,14 @@ gulp.task('clean',
 gulp.task('watch',
   gulp.series(watch))
 
+// Generate a style guide from the Markdown content and HTML template in styleguide/
+function styleGuide (done) {
+  sherpa('src/styleguide/index.md', {
+    output: PATHS.dist + '/styleguide.html',
+    template: 'src/styleguide/template.html'
+  }, done)
+}
+
 // Delete the "dist" folder
 // This happens every time a build starts
 function clean (done) {
@@ -65,4 +74,5 @@ function resetPages (done) {
 function watch () {
   gulp.watch('src/panini/pages/**/*.html').on('all', gulp.series(pages))
   gulp.watch('src/panini/{layouts,partials}/**/*.html').on('all', gulp.series(resetPages, pages))
+  gulp.watch('src/styleguide/*.*').on('all', gulp.series(styleGuide, resetPages, pages))
 }

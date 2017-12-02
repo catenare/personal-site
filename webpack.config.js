@@ -6,6 +6,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const vendorPackages = require('./package.json')
 const combineLoaders = require('webpack-combine-loaders')
 const StylelintPlugin = require('stylelint-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -18,6 +19,9 @@ module.exports = {
     path: path.resolve(__dirname, 'dist/assets'),
     publicPath: '/assets/',
     filename: '[name].js'
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.json']
   },
   plugins: [
     new ExtractTextPlugin({
@@ -80,11 +84,11 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'awesome-typescript-loader'
       },
-      {
-        test: /\.hbs$/,
-        exclude: /node_modules/,
-        use: 'handlebars-loader'
-      },
+      // {
+      //   test: /\.hbs$/,
+      //   exclude: /node_modules/,
+      //   use: 'handlebars-loader'
+      // },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         exclude: /node_modules(\/?!font-awesome)/,
@@ -104,7 +108,7 @@ module.exports = {
       }
     ]
   },
-  devtool: 'eval-source-map',
+  devtool: 'cheap-module-source-map',
   devServer: {
     compress: true,
     hot: false,
@@ -125,10 +129,12 @@ if (process.env.NODE_ENV === 'production') {
         NODE_ENV: '"production"'
       }
     }),
-    new webpack.optimize.UglifyJsPlugin({
+    new UglifyJsPlugin({
       sourceMap: true,
-      compress: {
-        warnings: false
+      uglifyOptions: {
+        compress: {
+          warnings: false
+        }
       }
     }),
     new webpack.LoaderOptionsPlugin({
