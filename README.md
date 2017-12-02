@@ -1,6 +1,5 @@
 # Basic webpack setup
-* Starter template for multi-page website using Webpack.
+* LookFindMe prototype
 
 ## Notes
-* 3 Nov. 2017
-  * Added `gh-pages` to deploy site to github pages.
+* Use Foundation to create a basic prototype for LookFindMe
