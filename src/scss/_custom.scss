@@ -1,3 +1,7 @@
+body {
+  overflow: hidden;
+}
+
 main {
   // @include xy-grid-container;
   margin-bottom: 50px;
@@ -21,4 +25,10 @@ header {
 
 footer {
   bottom: 0;
+}
+
+.class-listing {
+  a {
+    display: block;
+  }
 }
