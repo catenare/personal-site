@@ -1,0 +1,32 @@
+$marketing-site-three-up-width: 900px;
+
+/* home hero */
+
+.marketing-site-three-up {
+  padding: 2rem 0;
+  text-align: center;
+
+  .row {
+    max-width: $marketing-site-three-up-width;
+  }
+
+  .columns {
+    margin-bottom: 1rem;
+
+    @media screen and (min-width: 40em) {
+      margin-bottom: 0;
+    }
+  }
+
+  .fa {
+    color: $primary-color;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.marketing-site-three-up-headline {
+  font-size: 24px;
+  margin-bottom: 2rem;
+}
+
