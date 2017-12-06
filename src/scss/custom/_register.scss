@@ -1,0 +1,21 @@
+.register {
+  a {
+    display: block;
+    background-color: $light-gray;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 10px;
+  }
+
+  .form {
+    @include xy-grid-container;
+  }
+
+  fieldset {
+    @include xy-grid;
+  }
+
+  .input-group {
+    @include xy-cell(2);
+  }
+}
