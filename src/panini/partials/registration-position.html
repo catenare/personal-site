@@ -1,0 +1,58 @@
+<fieldset class="fieldset">
+<div class="grid-x grid-padding-x">
+  <fieldset class="medium-8 cell">
+    <legend>Position(s)</legend>
+    <div class="grid-x grid-padding-x">
+      {{#each registration.profession}}
+      <div class="medium-6 cell">
+        <input type="checkbox" name="position">
+        <label for="{{this}}">{{this}}</label>
+      </div>
+      {{/each}}
+    </div>
+  </fieldset>
+  <div class="medium-4 cell">
+  <fieldset>
+    <legend>Position Type</legend>
+    <input type="radio" name="pokemon" value="Red" id="pokemonRed">
+    <label for="pokemonRed">Part-Time</label>
+    <input type="radio" name="pokemon" value="Blue" id="pokemonBlue" checked>
+    <label for="pokemonBlue">Full-Time</label>
+    <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow">
+    <label for="pokemonYellow">Casual</label>
+  </fieldset>
+  <fieldset>
+    <legend>Do you have a client base?</legend>
+    <input type="radio" id="client-base" name="client-base" value="yes"><label for="client-base">Yes</label>
+    <input type="radio" id="client-base" name="client-base" value="no" checked><label for="client-base">No</label>
+  </fieldset>
+  <fieldset>
+      <legend>Interested in renting a chair?</legend>
+      <input type="radio" id="client-base" name="chair" value="yes"><label for="clinet-base">Yes</label>
+      <input type="radio" id="client-base" name="chair" value="no" checked><label for="clinet-base">No</label>
+    </fieldset>
+    <fieldset>
+      <label for="">Languages<input type="text" name="languages" id="languages" autocomplete="on"></label>
+    </fieldset>
+</div>
+</div>
+<div class="grid-x grid-padding-x">
+  <div class="medium-12 cell">
+    <label for="summary">
+      Summary/Description
+      <textarea name="summary" id="summary" cols="100" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur et facere ab. Quod officia dolores facere,
+        iste qui sunt distinctio nobis blanditiis nesciunt animi ducimus sapiente architecto, earum incidunt Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Voluptates quas fugiat aliquid sunt nemo accusantium quam
+        sint, totam, ad ducimus asperiores sed. Pariatur, sunt! Laudantium sit natus perferendis reprehenderit a.</textarea>
+    </label>
+    <p class="help-text" id="summary">Summary or description</p>
+  </div>
+</div>
+<div class="grid-x grid-padding-x">
+    <div class="medium-12 cell">
+      <div class="button-group">
+        <a class="button rounded bordered shadow secondary" href="#panel2" role="tab">Next</a>
+      </div>
+    </div>
+  </div>
+</fieldset>
