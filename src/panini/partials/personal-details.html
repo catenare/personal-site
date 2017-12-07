@@ -34,13 +34,13 @@
     <div class="medium-6 cell">
       <label for="location">
         Location/Zip Code
-        <input type="text" id="location" name="location" value="66104" placeholder="zip code" required="required"
+        <input type="text" id="location" name="location" value="10001" placeholder="zip code" required="required"
           aria-describedby="zip code">
       </label>
       <p class="help-text" id="location">Enter your zip code</p>
       <div class="grid-x grid-padding-x">
         <div class="medium-12 cell">
-        <input type="text" readonly="readonly" value="City, State, zip">
+        <input type="text" readonly="readonly" placeholder="City, State Zip" value="New York, NY 10001">
       </div>
       </div>
       <div class="grid-x grid-padding-x">
@@ -56,14 +56,15 @@
         </fieldset>
       </div>
     </div>
-    <div class="medium-6 cell text-center">
-      <img src="../../../src/app/img/map_img.png" alt="map" width="300px">
-    </div>
+    <fieldset class="medium-6 cell text-center">
+      <legend>Travel Distance</legend>
+      <img src="../assets/img/map_img.png" alt="map" width="300px">
+    </fieldset>
   </div>
   <div class="grid-x grid-padding-x">
     <div class="medium-12 cell">
       <div class="button-group">
-        <a class="button rounded bordered shadow secondary" href="#panel2" role="tab">Next</a>
+        <a class="button rounded bordered shadow secondary next" href="#position" role="tab">Next</a>
       </div>
     </div>
   </div>

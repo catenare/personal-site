@@ -1,6 +1,10 @@
 <div class="register">
   <div class="social-media">
+    {{#ifpage 'register'}}
     <h1>Sign up</h1>
+    {{else}}
+    <h1>Sign In</h1>
+    {{/ifpage}}
     <a href="{{root}}registration.html" class="social-button-facebook">Facebook</a>
     <a href="{{root}}registration.html" class="social-button-google">Google</a>
     <a href="{{root}}registration.html" class="social-button-linkedin">LinkedIn</a>
