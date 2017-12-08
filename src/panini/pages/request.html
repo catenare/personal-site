@@ -1,0 +1,174 @@
+<section class="grid-container">
+  <h1>Find a Candidate</h1>
+  <div class="grid-x grid-padding-x">
+    <div class="medium-6 cell">
+      <label for="position">Position</label>
+      <select name="position" id="position">
+        {{#each registration.profession}}
+        <option value="{{this}}">{{this}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="medium-6 cell">
+      <label for="location">
+        Location
+        <input type="text" required="required">
+      </label>
+    </div>
+
+    <fieldset class="medium-12 cell">
+        <legend>Position Type(s)</legend>
+        <input type="checkbox" name="pokemon" value="Red" id="pokemonRed">
+        <label for="pokemonRed">Part-Time</label>
+        <input type="checkbox" name="pokemon" value="Blue" id="pokemonBlue" checked>
+        <label for="pokemonBlue">Full-Time</label>
+        <input type="checkbox" name="pokemon" value="Yellow" id="pokemonYellow">
+        <label for="pokemonYellow">Casual</label>
+        <p class="help-text">Position types interest</p>
+      </fieldset>
+
+    <div class="medium-12 cell">
+    <fieldset class="fieldset">
+      <legend>Days</legend>
+      <div class="grid-x grid-padding-x">
+        <div class="medium-3 cell">
+          <input type="checkbox" id="sun">
+          <label for="sun">Sunday</label>
+        </div>
+        <div class="medium-9 cell">
+          <input type="radio" name="sun-time" id="sun-morning">
+          <label for="">Morning</label>
+          <input type="radio" name="sun-time" id="sun-afternoon">
+          <label for="">Afternoon</label>
+          <input type="radio" name="sun-time" id="sun-evening">
+          <label for="">Evening</label>
+          <input type="radio" name="sun-time" id="sun-full">
+          <label for="">All Day</label>
+        </div>
+      </div>
+
+      <div class="grid-x grid-padding-x">
+        <div class="medium-3 cell">
+          <input type="checkbox" id="sun">
+          <label for="sun">Monday</label>
+        </div>
+        <div class="medium-9 cell">
+          <input type="radio" name="mon-time" id="sun-morning">
+          <label for="">Morning</label>
+          <input type="radio" name="mon-time" id="sun-afternoon">
+          <label for="">Afternoon</label>
+          <input type="radio" name="mon-time" id="sun-evening">
+          <label for="">Evening</label>
+          <input type="radio" name="mon-time" id="sun-full">
+          <label for="">All Day</label>
+        </div>
+      </div>
+
+      <div class="grid-x grid-padding-x">
+        <div class="medium-3 cell">
+          <input type="checkbox" id="sun">
+          <label for="sun">Tueday</label>
+        </div>
+        <div class="medium-9 cell">
+          <input type="radio" name="tue-time" id="sun-morning">
+          <label for="">Morning</label>
+          <input type="radio" name="tue-time" id="sun-afternoon">
+          <label for="">Afternoon</label>
+          <input type="radio" name="tue-time" id="sun-evening">
+          <label for="">Evening</label>
+          <input type="radio" name="tue-time" id="sun-full">
+          <label for="">All Day</label>
+        </div>
+      </div>
+
+      <div class="grid-x grid-padding-x">
+        <div class="medium-3 cell">
+          <input type="checkbox" id="sun">
+          <label for="sun">Wednesday</label>
+        </div>
+        <div class="medium-9 cell">
+          <input type="radio" name="wed-time" id="sun-morning">
+          <label for="">Morning</label>
+          <input type="radio" name="wed-time" id="sun-afternoon">
+          <label for="">Afternoon</label>
+          <input type="radio" name="wed-time" id="sun-evening">
+          <label for="">Evening</label>
+          <input type="radio" name="wed-time" id="sun-full">
+          <label for="">All Day</label>
+        </div>
+      </div>
+
+      <div class="grid-x grid-padding-x">
+        <div class="medium-3 cell">
+          <input type="checkbox" id="sun">
+          <label for="sun">Thursday</label>
+        </div>
+        <div class="medium-9 cell">
+          <input type="radio" name="thu-time" id="sun-morning">
+          <label for="">Morning</label>
+          <input type="radio" name="thu-time" id="sun-afternoon">
+          <label for="">Afternoon</label>
+          <input type="radio" name="thu-time" id="sun-evening">
+          <label for="">Evening</label>
+          <input type="radio" name="thu-time" id="sun-full">
+          <label for="">All Day</label>
+        </div>
+      </div>
+
+      <div class="grid-x grid-padding-x">
+        <div class="medium-3 cell">
+          <input type="checkbox" id="sun">
+          <label for="sun">Friday</label>
+        </div>
+        <div class="medium-9 cell">
+          <input type="radio" name="fri-time" id="sun-morning">
+          <label for="">Morning</label>
+          <input type="radio" name="fri-time" id="sun-afternoon">
+          <label for="">Afternoon</label>
+          <input type="radio" name="fri-time" id="sun-evening">
+          <label for="">Evening</label>
+          <input type="radio" name="fri-time" id="sun-full">
+          <label for="">All Day</label>
+        </div>
+      </div>
+
+      <div class="grid-x grid-padding-x">
+        <div class="medium-3 cell">
+          <input type="checkbox" id="sun">
+          <label for="sun">Saturday</label>
+        </div>
+        <div class="medium-9 cell">
+          <input type="radio" name="sat-time" id="sun-morning">
+          <label for="">Morning</label>
+          <input type="radio" name="sat-time" id="sun-afternoon">
+          <label for="">Afternoon</label>
+          <input type="radio" name="sat-time" id="sun-evening">
+          <label for="">Evening</label>
+          <input type="radio" name="sat-time" id="sun-full">
+          <label for="">All Day</label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+    <div class="medium-12 cell">
+      <label for="description">
+        Description
+        <textarea name="description" id="description" cols="30" rows="5"></textarea>
+      </label>
+    </div>
+    <div class="medium-12 cell">
+      <label for="request-title">
+        Request Title
+        <input type="text">
+      </label>
+    </div>
+  </div>
+  <div class="grid-x grid-padding-x">
+      <div class="medium-12 cell">
+        <div class="button-group">
+          <a class="button rounded bordered shadow secondary next" href="#education" role="tab">Next</a>
+        </div>
+      </div>
+    </div>
+</section>
