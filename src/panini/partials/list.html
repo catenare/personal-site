@@ -1,16 +1,16 @@
-<div class="grid-x grid-padding-x">
+<div class="grid-x grid-padding-x users">
   <div class="medium-3 cell text-center">
     <img src="{{picture.large}}" alt="{{name.first}} {{name.last}}">
     <a href="#" class="button success rounded shadow margin-top-1">Select</a>
   </div>
   <div class="medium-9 cell">
     <ul class="no-bullet">
-      <li>{{name.first}} {{name.last}}</li>
-      <li>{{location.street}}</li>
-      <li>{{location.city}} {{location.state}}, {{location.postcode}}</li>
-      <li>{{email}}</li>
-      <li>Phone: {{phone}}</li>
-      <li>{{cell}}</li>
+      <li class="text-capitalize">{{name.first}} {{name.last}}</li>
+      <li class="text-capitalize">{{location.street}}</li>
+      <li class="text-capitalize">{{location.city}} {{location.state}}, {{location.postcode}}</li>
+      <li><span><i class="fa fa-envelope"></i></span>{{email}}</li>
+      <li><span><i class="fa fa-phone"></i></span>{{phone}}</li>
+      <li><span><i class="fa fa-mobile"></i></span>{{cell}}</li>
       <li><img src="../img/map_img.png" alt="Map Image" width="50%"></li>
     </ul>
   </div>
