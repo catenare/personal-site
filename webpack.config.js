@@ -11,9 +11,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 module.exports = {
   entry: {
     app: './src/app/js/app.js',
-    home: './src/app/ts/home.ts',
-    registration: './src/app/ts/registration.ts',
-    about: './src/app/ts/about.ts',
+    index: './src/app/ts/index.ts',
     vendor: Object.keys(vendorPackages.dependencies).filter(name => (name !== 'font-awesome' && name !== 'csspin'))
   },
   output: {

@@ -1,5 +1,16 @@
 $marketing-site-footer-bg: #2c3840;
 
+footer {
+  bottom: 0;
+  left: 0;
+  position: relative;
+  & div.auto.cell {
+    label {
+      color: $white;
+    }
+  }
+}
+
 .marketing-site-footer {
   background: $marketing-site-footer-bg;
   color: lighten($marketing-site-footer-bg, 40%);

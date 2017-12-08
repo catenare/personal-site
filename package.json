@@ -1,7 +1,7 @@
 {
-  "name": "multi_page_template",
+  "name": "site_proto_template",
   "version": "0.0.1",
-  "description": "Basic Multipage Template",
+  "description": "Basic Template",
   "main": "index.js",
   "directories": {
     "test": "tests"
@@ -9,7 +9,6 @@
   "scripts": {
     "start": "npm-run-all -n -p build:gulp prod:server",
     "dev": "npm-run-all -n -p gulp:watch dev:server lint:watch",
-    "dev:dashboard": "webpack-dashboard -- npm-run-all -n -p gulp:watch dev:server lint:watch",
     "dev:watch": "webpack -w -d",
     "prod:server": "cross-env NODE_ENV=production webpack-dev-server --color --progress",
     "dev:server": "cross-env NODE_ENV=development webpack-dev-server --color --progress",
@@ -28,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:catenare/webpack-multipage-template.git"
+    "url": "git@github.com:catenare/site-prototype-template.git"
   },
   "keywords": [
     "Static",
@@ -38,9 +37,9 @@
   "author": "Johan Martin <martin.johan@johan-martin.com> (http://www.johan-martin.com/)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/catenare/webpack-multipage-template/issues"
+    "url": "https://github.com/catenare/site-prototype-template/issues"
   },
-  "homepage": "https://github.com/catenare/webpack-multipage-template",
+  "homepage": "https://github.com/catenare/site-prototype-template",
   "dependencies": {
     "axios": "^0.17.0",
     "csspin": "^1.1.4",

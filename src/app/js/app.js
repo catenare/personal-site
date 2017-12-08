@@ -10,8 +10,3 @@ import Foundation from 'foundation-sites' // eslint-disable-line
 // import './lib/foundation-explicit-pieces';
 
 $(document).foundation()
-$('a.next').on('click', function (e) {
-  e.preventDefault()
-  let next = e.target.hash
-  $('#registration-tabs').foundation('selectTab', next, true)
-})
