@@ -1,4 +1,13 @@
 <section>
 <h1>Home Page</h1>
-<img src="../img/map_img.png" alt="Map Image">
+<div class="grid-x grid-padding-x">
+  <div class="medium-3 cell">
+    <h2>Users</h2>
+  </div>
+  <div class="medium-9 cell">
+    {{#each users.results}}
+    {{>list user=this}}
+    {{/each}}
+  </div>
+</div>
 </section>
