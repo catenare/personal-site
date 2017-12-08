@@ -1,64 +1,49 @@
 <div class="grid-container fluid">
     <div class="grid-x grid-padding-x">
-      <h1>Registration Form 2018</h1>
+      <h1>Registration Form</h1>
       <div class="registration-form"></div>
       <div class="medium-9 cell">
         <form>
           <div class="grid-container">
             <fieldset class="fieldset">
-              <legend>Child Details</legend>
+              <legend>Personal Details</legend>
               <div class="grid-x grid-padding-x">
                 <div class="auto cell">
                   <div class="input-group">
-                    <span class="input-group-label">Surname</span>
-                    <input class="input-group-field" type="text" aria-describedby="child-surname">
+                    <span class="input-group-label">Last Name</span>
+                    <input class="input-group-field" type="text" aria-describedby="child-surname" placeholder="Last Name" disabled required>
                   </div>
-                  <p class="help-text" id="child-surname">Your child's surname</p>
+                  <p class="help-text" id="child-surname">Last Name</p>
                 </div>
                 <div class="auto cell">
                   <div class="input-group">
-                    <span class="input-group-label">First Names</span>
-                    <input class="input-group-field" type="text" aria-describedby="child-firstname">
+                    <span class="input-group-label">First Name</span>
+                    <input class="input-group-field" type="text" aria-describedby="child-firstname" placeholder="First Name" disabled required>
                   </div>
-                  <p class="help-text" id="child-surname">Your child's first name</p>
+                  <p class="help-text" id="child-surname">Your first name</p>
                 </div>
               </div>
               <div class="grid-x grid-padding-x">
                 <div class="auto cell">
                   <div class="input-group">
-                    <span class="input-group-label">Preferred Name</span>
-                    <input class="input-group-field" type="text" aria-describedby="prefer-name">
+                    <span class="input-group-label">Email</span>
+                    <input class="input-group-field" type="email" aria-describedby="email" placehoder="name@email.com" required disabled>
                   </div>
-                  <p class="help-text" id="prefer-name">Preferred name or nickname</p>
+                  <p class="help-text" id="email">Your email address</p>
                 </div>
                 <div class="auto cell">
-
-                  <span class="input-group-label">Gender</span>
-                  <input id="gender-female" name="gender" type="radio">
-                  <label for="gender-female">Female</label>
-                  <input id="gender-male" name="gender" type="radio">
-                  <label for="gender-male">Male</label>
-                </div>
-
-              </div>
-              <div class="grid-x grid-padding-x">
-                <div class="auto cell">
-                  <div class="input-group">
-                    <span class="input-group-label">Date Of Birth</span>
-                    <input class="input-group-field" type="date">
-                  </div>
-                </div>
-
-                <div class="auto cell">
-                  <div class="input-group">
-                    <span class="input-group-label">ID Number</span>
-                    <input class="input-group-field" type="text">
-                  </div>
+                  <span class="input-group-label">Type</span>
+                  <input id="type-candidate" name="type" type="radio">
+                  <label for="candidate">Candidate</label>
+                  <input id="type-candidate" name="type" type="radio">
+                  <label for="employer">Employer</label>
+                  <p class="help-text" id="email">Your employment type</p>
                 </div>
               </div>
             </fieldset>
+            {{!--
             <fieldset class="fieldset">
-              <legend>Parent/Guardian Information</legend>
+              <legend>Experience</legend>
               <div class="grid-x grid-padding-x">
                 <div class="medium-6 cell">
                   <div class="input-group">
@@ -214,6 +199,7 @@
                 </div>
               </div>
             </fieldset>
+            --}}
           </div>
 
         </form>

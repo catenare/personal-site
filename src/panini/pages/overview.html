@@ -1,0 +1,28 @@
+<section class="grid-container">
+
+  <ul class="tabs" data-tabs="tab-group" id="overview-tabs" role="tablist">
+
+    <li class="tabs-title is-active" role="presentation">
+      <a href="#candidate" aria-selected="true" role="tab" aria-controls="candidate" id="candidate-label" tabindex="0">Candidate</a>
+    </li>
+
+    <li class="tabs-title" role="presentation">
+      <a href="#employer" role="tab" aria-controls="employer" aria-selected="false" id="employer-label" tabindex="-1">Employer</a>
+    </li>
+  </ul>
+
+  <div class="tabs-content" data-tabs-content="overview-tabs">
+
+    <div class="tabs-panel is-active" id="candidate" role="tabpanel" aria-labelledby="candidate-label">
+      <h2>Candidate</h2>
+      {{>overview-candidate }}
+    </div>
+
+    <div class="tabs-panel" id="employer" role="tabpanel" aria-labelledby="employer-label" aria-hidden="true">
+      <h2>Employer</h2>
+      {{>overview-employer }}
+    </div>
+
+  </div>
+
+</section>

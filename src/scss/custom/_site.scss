@@ -1,0 +1,48 @@
+main {
+  margin-bottom: 25px;
+  margin-top: 50px;
+  min-height: 60vh;
+  position: relative;
+  // height: 100vh;
+}
+
+section,
+footer>div,
+header>nav {
+  @include xy-grid-container(80%);
+}
+
+header {
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  li.social-button.menu-text {
+    color: $white;
+    margin: 0 0.5em;
+    &.facebook {
+      background-color: #3b5998;
+    }
+    &.linkedin {
+      background-color: #0077b5;
+    }
+  }
+
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  position: relative;
+  & div.auto.cell {
+    label {
+      color: $white;
+    }
+  }
+}
+
+header {
+  top: 0;
+}
+
+

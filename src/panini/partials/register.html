@@ -1,0 +1,43 @@
+<div class="register">
+    <div class="social-media">
+      <h1>Sign up</h1>
+      <a href="{{root}}registration.html" class="social-button-facebook">Facebook</a>
+      <a href="{{root}}registration.html" class="social-button-google">Google</a>
+      <a href="{{root}}registration.html" class="social-button-linkedin">LinkedIn</a>
+    </div>
+    <h2 class="or">Or</h2>
+    <form action="#">
+      <fieldset class="fieldset">
+        <div class="grid-x grid-padding-x">
+          <div class="medium-6 cell">
+            <label for="first">First Name<input type="text" name="first" id="first" placeholder="First" aria-describedby="first-help-text" required="required"></label>
+            <p class="help-text" id="first-help-text">Enter First Name</p>
+          </div>
+          <div class="medium-6 cell">
+            <label for="last">Last Name<input type="text" name="last" id="last" placeholder="Last" aria-describedby="last-help-text" required="required"></label>
+            <p class="help-text" id="last-help-text">Enter Last Name</p>
+          </div>
+          <div class="medium-6 cell">
+            <label for="Email">Email<input type="email" name="email" id="email" aria-describedby="email-help-text" placeholder="Email" required="required"></label>
+            <p class="help-text" id="email-help-text">Enter your email address</p>
+          </div>
+          <div class="auto cell">
+              <span class="input-group-label">Type</span>
+              <input id="type-candidate" name="client" type="radio" checked>
+              <label for="type-candidate">Candidate</label>
+              <input id="type-employer" name="client" type="radio">
+              <label for="type-employer">Employer</label>
+            </div>
+          <div class="medium-6 cell">
+            <label for="password">Password<input type="password" name="password" id="password" aria-describedby="password-help-text" required="required"></label>
+            <p class="help-text" id="password-help-text">Enter a password</p>
+          </div>
+          <div class="medium-6 cell">
+            <label for="password2">Password Again<input type="password" name="password2" id="password2" aria-describedby="password2-help-text" required="required"></label>
+            <p class="help-text" id="password2-help-text">Password again</p>
+          </div>
+        </div>
+        <div class="medium-12 cell"><a href="{{root}}registration.html" class="button">Sign Up</a></div>
+      </fieldset>
+    </form>
+  </div>

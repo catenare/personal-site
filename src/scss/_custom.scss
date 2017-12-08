@@ -1,24 +1,13 @@
-main {
-  // @include xy-grid-container;
-  margin-bottom: 50px;
-  margin-top: 50px;
-}
+@import './custom/site';
+@import './custom/home';
+@import './custom/hero';
+@import './custom/footer';
+@import './custom/listing';
+@import './components/login';
+@import './components/filter';
+@import './components/card';
+@import './components/feature';
+@import './custom/register';
 
-section {
-  @include xy-grid-container(90%);
-}
 
-header,
-footer {
-  left: 0;
-  position: fixed;
-  width: 100%;
-}
 
-header {
-  top: 0;
-}
-
-footer {
-  bottom: 0;
-}

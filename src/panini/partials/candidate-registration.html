@@ -1,0 +1,42 @@
+<form>
+  <ul class="tabs" data-tabs="tab-group" id="registration-tabs" role="tablist">
+    <li class="tabs-title is-active" role="presentation">
+      <a href="#panel1" aria-selected="true" role="tab" aria-controls="panel1" id="panel1-label" tabindex="0">Personal</a>
+    </li>
+    <li class="tabs-title" role="presentation">
+        <a href="#position" role="tab" aria-controls="position" aria-selected="false" id="position-label" tabindex="-1">Position</a>
+      </li>
+    <li class="tabs-title" role="presentation">
+      <a href="#panel2" role="tab" aria-controls="panel2" aria-selected="false" id="panel2-label" tabindex="-1">Availability</a>
+    </li>
+    <li class="tabs-title" role="presentation">
+        <a href="#education" role="tab" aria-controls="aria-education" aria-selected="false" id="education-label" tabindex="-1">Education and Certification</a>
+      </li>
+    <li class="tabs-title" role="presentation">
+      <a href="#panel3" role="tab" aria-controls="panel3" aria-selected="false" id="panel3-label">Other</a>
+    </li>
+  </ul>
+  <div class="tabs-content" data-tabs-content="registration-tabs">
+
+    <div class="tabs-panel is-active" id="panel1" role="tabpanel" aria-labelledby="panel1-label">
+      {{>personal-details}}
+    </div>
+
+    <div class="tabs-panel" id="position" role="tabpanel" aria-labelledby="position-label" aria-hidden="true">
+        {{>registration-position}}
+      </div>
+
+    <div class="tabs-panel" id="panel2" role="tabpanel" aria-labelledby="panel2-label" aria-hidden="true">
+      {{>registration-availability}}
+    </div>
+
+    <div class="tabs-panel" id="education" role="tabpanel" aria-labelledby="aria-education" aria-hidden="true">
+        {{>registration-certification}}
+      </div>
+
+    <div class="tabs-panel" id="panel3" role="tabpanel" aria-labelledby="panel3-label" aria-hidden="true">
+      {{>other-registration}}
+    </div>
+  </div>
+</form>
+

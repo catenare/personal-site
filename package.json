@@ -109,6 +109,10 @@
     "plugins": [
       "stylelint-scss"
     ],
-    "extends": "stylelint-config-sass-guidelines"
+    "extends": "stylelint-config-sass-guidelines",
+    "rules": {
+      "max-nesting-depth": 3,
+      "order/properties-alphabetical-order": false
+    }
   }
 }
