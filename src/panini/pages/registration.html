@@ -1,18 +1,29 @@
 <section class="grid-container">
-  <ul class="tabs" data-tabs="tab-group" id="registration-type-tabs" role="tablist">
-    <li class="tabs-title is-active" role="presentation"><a href="#registration1" aria-selected="true" role="tab" aria-controls="registration1" id="registration1-label" tabindex="0">Candidate</a></li>
-    <li class="tabs-title" role="presentation"><a href="#registration2" role="tab" aria-controls="registration2" aria-selected="false" id="registration2-label" tabindex="-1">Employer</a></li>
-  </ul>
-  <div class="tabs-content" data-tabs-content="registration-type-tabs">
-    <div class="tabs-panel is-active" id="registration1" role="tabpanel" aria-labelledby="registration1-label">
-        <h2>Candidate Registration</h2>
-        {{>candidate-registration}}
-    </div>
-    <div class="tabs-panel" id="registration2" role="tabpanel" aria-labelledby="registration2-label" aria-hidden="true">
-        <h2>Employer Registration</h2>
-        {{>employer-registration}}
 
-    </div>
+<ul class="tabs" data-tabs="tab-group" id="registration-type-tabs" role="tablist">
+
+  <li class="tabs-title is-active" role="presentation">
+    <a href="#registration1" aria-selected="true" role="tab" aria-controls="registration1" id="registration1-label" tabindex="0">Candidate</a>
+  </li>
+
+  <li class="tabs-title" role="presentation">
+    <a href="#registration2" role="tab" aria-controls="registration2" aria-selected="false" id="registration2-label" tabindex="-1">Employer</a>
+  </li>
+
+</ul>
+
+<div class="tabs-content" data-tabs-content="registration-type-tabs">
+
+  <div class="tabs-panel is-active" id="registration1" role="tabpanel" aria-labelledby="registration1-label">
+    <h2>Candidate Registration</h2>
+    {{>candidate-registration}}
   </div>
+
+  <div class="tabs-panel" id="registration2" role="tabpanel" aria-labelledby="registration2-label" aria-hidden="true">
+    <h2>Employer Registration</h2>
+    {{>employer-registration}}
+
+  </div>
+</div>
 
 </section>
