@@ -10,6 +10,9 @@
       <a href="#panel2" role="tab" aria-controls="panel2" aria-selected="false" id="panel2-label" tabindex="-1">Availability</a>
     </li>
     <li class="tabs-title" role="presentation">
+        <a href="#education" role="tab" aria-controls="aria-education" aria-selected="false" id="education-label" tabindex="-1">Education and Certification</a>
+      </li>
+    <li class="tabs-title" role="presentation">
       <a href="#panel3" role="tab" aria-controls="panel3" aria-selected="false" id="panel3-label">Other</a>
     </li>
   </ul>
@@ -26,6 +29,10 @@
     <div class="tabs-panel" id="panel2" role="tabpanel" aria-labelledby="panel2-label" aria-hidden="true">
       {{>registration-availability}}
     </div>
+
+    <div class="tabs-panel" id="education" role="tabpanel" aria-labelledby="aria-education" aria-hidden="true">
+        {{>registration-certification}}
+      </div>
 
     <div class="tabs-panel" id="panel3" role="tabpanel" aria-labelledby="panel3-label" aria-hidden="true">
       {{>other-registration}}

@@ -44,7 +44,7 @@ gulp.task('images',
 // In production, the images are compressed
 function images () {
   return gulp.src('src/app/img/**/*')
-    .pipe(gulp.dest(PATHS.dist + '/assets/img'))
+    .pipe(gulp.dest(PATHS.dist + '/img'))
 }
 
 // Generate a style guide from the Markdown content and HTML template in styleguide/
