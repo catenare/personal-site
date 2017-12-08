@@ -1,60 +1,49 @@
-<h1>Candidate Listing</h1>
-<section class="grid-x">
-  <div class="medium-3 cell">
-    <h2>Filter By</h2>
-    {{!-- form[action="post"]>(label[for="text_$"]{name_$}>input[type="text" id="text_$"])*3+button{Search} --}}
-    <form action="post">
-      <label for="text_1">name_1
-        <input type="text" id="text_1">
-      </label>
-      <label for="text_2">name_2
-        <input type="text" id="text_2">
-      </label>
-      <label for="text_3">name_3
-        <input type="text" id="text_3">
-      </label>
-      <button>Search</button>
-    </form>
-  </div>
+<section class="grid-container">
+  <h2>Candidate Listing</h2>
+  <div class="grid-x grid-padding-x">
+    <div class="medium-4 cell">
+      <h3>Filter By</h3>
+      {{!-- form[action="post"]>(label[for="text_$"]{name_$}>input[type="text" id="text_$"])*3+button{Search} --}}
+      <form action="post">
+        <label for="text_1">Position
+          <select name="position" id="position">
+            {{#each registration.profession}}
+            <option value="{{this}}">{{this}}</option>
+            {{/each}}
+          </select>
+        </label>
+        <label for="text_2">Location
+          <input type="text" id="text_2">
+        </label>
+        <fieldset class="medium-12 cell">
+            <legend>Position Type(s)</legend>
+            <input type="checkbox" name="pokemon" value="Red" id="pokemonRed">
+            <label for="pokemonRed">Part-Time</label>
+            <input type="checkbox" name="pokemon" value="Blue" id="pokemonBlue" checked>
+            <label for="pokemonBlue">Full-Time</label>
+            <input type="checkbox" name="pokemon" value="Yellow" id="pokemonYellow">
+            <label for="pokemonYellow">Casual</label>
+          </fieldset>
+        <a href="#" class="button primary rounded">Search</a>
+      </form>
+    </div>
 
-  <div class="medium-7 cell class-listing">
-    {{>listing}}
-  </div>
+    <div class="medium-7 cell class-listing">
+      {{#each users.results}}
+      {{>listing user=this}}
+      {{/each}}
+    </div>
 
-  <div class="medium-2 cell">
-    <h2>Selected</h2>
-    <ul class="grid-x">
-      <li>
-        <a href="#">candidate_selected_1</a>
-      </li>
-      <li>
-        <a href="#">candidate_selected_2</a>
-      </li>
-      <li>
-        <a href="#">candidate_selected_3</a>
-      </li>
-      <li>
-        <a href="#">candidate_selected_4</a>
-      </li>
-      <li>
-        <a href="#">candidate_selected_5</a>
-      </li>
-      <li>
-        <a href="#">candidate_selected_6</a>
-      </li>
-      <li>
-        <a href="#">candidate_selected_7</a>
-      </li>
-      <li>
-        <a href="#">candidate_selected_8</a>
-      </li>
-      <li>
-        <a href="#">candidate_selected_9</a>
-      </li>
-      <li>
-        <a href="#">candidate_selected_10</a>
-      </li>
-    </ul>
-  </div>
+    <div class="medium-1 cell">
+      <h2>Selected</h2>
+      <ul class="grid-x grid-padding-x no-bullet">
+        {{#repeat 5}}
+        <li>
+          <a href="#">first last_{{@index}}</a>
+        </li>
+        {{/repeat}}
+      </ul>
+    </div>
 
+  </div>
 </section>
