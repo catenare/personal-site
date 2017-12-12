@@ -1,7 +1,12 @@
 import * as React from "react";
+
 import "./styles.scss";
 
 class AddColorForm extends React.Component<any, any> {
+
+  public static defaultProps: any = {
+    onNewColor: (f) => f,
+  };
 
   private _title: HTMLInputElement; // tslint:disable-line
   private _color: HTMLInputElement; // tslint:disable-line
@@ -30,5 +35,9 @@ class AddColorForm extends React.Component<any, any> {
     );
   }
 }
+
+// AddColorForm.propTypes = {
+//   onNewColor: PropTypes.func,
+// };
 
 export {AddColorForm};
