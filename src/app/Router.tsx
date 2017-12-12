@@ -1,13 +1,13 @@
 import * as React from "react";
-import {BrowserRouter, HashRouter, Redirect, Route, Switch } from "react-router-dom"; // eslint-disable-line
+import {HashRouter, Redirect, Route, Switch } from "react-router-dom"; // eslint-disable-line
 import {Hello} from "./components/Home/Hello";
-import {list} from "./components/Ingredients/ingredients";
+// import {list} from "./components/Ingredients/ingredients";
 
 const AppRoute = () => ( // eslint-disable-line
   <HashRouter>
     <main>
       <Switch>
-        <Route path="/" exact component={list} />
+        <Route path="/" exact component={Hello} />
         {/* <Route path="/color" component={color} /> */}
         <Redirect to="/" />
       </Switch>
