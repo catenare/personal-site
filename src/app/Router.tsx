@@ -1,16 +1,21 @@
 import * as React from "react";
 import {HashRouter, Redirect, Route, Switch } from "react-router-dom"; // eslint-disable-line
+import {App} from "./components/Colors/app";
 import {AddColorForm} from "./components/Colors/colorform";
 import {Hello} from "./components/Home/Hello";
 
-// import {list} from "./components/Ingredients/ingredients";
 
-const AppRoute = () => ( // eslint-disable-line
+const logColor = (title, color) => console.log(`New Color: ${title} | ${color}`) // tslint:disable-line
+
+const AppRoute = (props) => ( // eslint-disable-line
   <HashRouter>
     <main>
       <Switch>
         <Route path="/" exact component={Hello} />
-        <Route path="/color" component={AddColorForm} />
+        <Route path="/color"  render = {() => (
+          <AddColorForm onNewColor={logColor} />
+        ) } />
+        <Route path="/colors" component={App} />
         <Redirect to="/" />
       </Switch>
     </main>

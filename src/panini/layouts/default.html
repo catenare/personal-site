@@ -19,5 +19,8 @@
     {{#ifpage 'index'}}
     <script src="{{root}}assets/{{#if js}}{{js}}{{else}}app.js{{/if}}"></script>
     {{/ifpage}}
+    {{#ifpage 'demo'}}
+    <script src="{{root}}assets/{{#if js}}{{js}}{{else}}demo.js{{/if}}"></script>
+    {{/ifpage}}
   </body>
 </html>

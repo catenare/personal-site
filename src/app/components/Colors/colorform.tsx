@@ -1,7 +1,5 @@
 import * as React from "react";
 
-import "./styles.scss";
-
 class AddColorForm extends React.Component<any, any> {
 
   public static defaultProps: any = {
@@ -13,6 +11,7 @@ class AddColorForm extends React.Component<any, any> {
 
   public constructor(props) {
     super(props);
+    console.log(props); // tslint:disable-line
     this.submit = this.submit.bind(this);
   }
 
