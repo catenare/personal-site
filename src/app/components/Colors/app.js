@@ -1,71 +1,69 @@
-import {Component} from "react";
-import uuid from "uuid/v4";
-import { AddColorForm } from "./colorform";
-import { ColorList } from "./colorlist";
+import React, {Component} from 'react'
+import uuid from 'uuid/v4'
+import { AddColorForm } from './colorform'
+import { ColorList } from './colorlist'
 
-import "./styles/APP.scss";
+import './styles/APP.scss'
 
 class App extends Component {
- constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
-      colors: [],
-    };
-    this.addColor = this.addColor.bind(this);
-    this.rateColor = this.rateColor.bind(this);
-    this.removeColor = this.removeColor.bind(this);
-
+      colors: []
+    }
+    this.addColor = this.addColor.bind(this)
+    this.rateColor = this.rateColor.bind(this)
+    this.removeColor = this.removeColor.bind(this)
   }
 
-  componentWillMount() {
-    if(this.props.colors) {
+  componentWillMount () {
+    if (this.props.colors) {
       let colors = this.props.colors.colors
       this.setState({colors})
     }
   }
 
-  addColor(title, color) {
+  addColor (title, color) {
     const colors = [
       ...this.state.colors,
       {
         color,
         id: uuid(),
         rating: 0,
-        title,
+        title
 
-      },
-    ];
-    this.setState({colors});
+      }
+    ]
+    this.setState({colors})
   }
 
-  rateColor(id, rating) {
+  rateColor (id, rating) {
     const colors = this.state.colors.map(
-      (color) => (color.id !== id) ? color: { ...color, rating}
-    );
-    console.log(colors);
-    this.setState({colors});
+      (color) => (color.id !== id) ? color : {...color, rating}
+    )
+    this.setState({colors})
   }
 
-  removeColor(id) {
+  removeColor (id) {
     const colors = this.state.colors.filter(
-      (color) => color.id !== id,
-    );
-    this.setState({colors});
+      (color) => color.id !== id
+    )
+    this.setState({colors})
   }
 
-  render() {
-    const { addColor, rateColor, removeColor } = this;
-    const { colors } = this.state;
+  render () {
+    const { addColor, rateColor, removeColor } = this
+    const { colors } = this.state
     return (
-      <div className="app">
+      <div className='app'>
         <AddColorForm onNewColor={addColor} />
         <ColorList colors={colors}
           onRate={rateColor}
           onRemove={removeColor}
         />
       </div>
-    );
+    )
   }
 }
 
-export {App};
+export {App}
