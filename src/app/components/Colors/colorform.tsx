@@ -1,4 +1,5 @@
 import * as React from "react";
+import "./styles/AddColorForm.scss";
 
 class AddColorForm extends React.Component<any, any> {
 
@@ -18,7 +19,6 @@ class AddColorForm extends React.Component<any, any> {
   public submit(e) {
     const { _title, _color} = this.refs;
     e.preventDefault();
-    // alert(`New Color: ${this._title.value} ${this._color.value}`);
     this.props.onNewColor(this._title.value, this._color.value);
     this._title.value = "enter a value";
     this._color.value = "#0f0f0f";
@@ -34,9 +34,5 @@ class AddColorForm extends React.Component<any, any> {
     );
   }
 }
-
-// AddColorForm.propTypes = {
-//   onNewColor: PropTypes.func,
-// };
 
 export {AddColorForm};
