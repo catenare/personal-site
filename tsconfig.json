@@ -1,14 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["es6", "dom"],
     "jsx": "react",
+    "allowJs": true,
     "pretty": true,
     "diagnostics": true,
-     "moduleResolution": "node",
-     "allowSyntheticDefaultImports": true,
-     "experimentalDecorators": true,
-     "emitDecoratorMetadata": true
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
   "exclude": [
     "node_modules"
