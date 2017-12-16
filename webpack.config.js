@@ -73,12 +73,12 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules(\/?!foundation-sites)/,
-        loader: 'babel-loader'
+        use: 'babel-loader'
       },
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
-        loaders: ['babel-loader', 'awesome-typescript-loader']
+        use: ['babel-loader', 'awesome-typescript-loader']
       },
       {
         test: /\.hbs$/,
