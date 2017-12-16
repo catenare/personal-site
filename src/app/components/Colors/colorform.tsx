@@ -1,38 +1,51 @@
 import * as React from "react";
+import {addColor} from "./actions";
 import "./styles/AddColorForm.scss";
 
-class AddColorForm extends React.Component<any, any> {
+const AddColorForm = ({onNewColor = (f, a) => f}) => {
+  let _title; // tslint:disable-line
+  let _color; // tslint:disable-line
 
-  public static defaultProps: any = {
-    onNewColor: (f) => f,
+  const submit = (e) => {
+    e.preventDefault();
+    onNewColor(_title.value, _color.value);
+    _title.value = "";
+    _color.value = "#000000";
+    _title.focus();
   };
 
-  private _title: HTMLInputElement; // tslint:disable-line
-  private _color: HTMLInputElement; // tslint:disable-line
-
-  public constructor(props) {
-    super(props);
-    console.log(props); // tslint:disable-line
-    this.submit = this.submit.bind(this);
-  }
-
-  public submit(e) {
-    const { _title, _color} = this.refs;
-    e.preventDefault();
-    this.props.onNewColor(this._title.value, this._color.value);
-    this._title.value = "enter a value";
-    this._color.value = "#0f0f0f";
-    this._title.focus();
-  }
-  public render() {
-    return (
-      <form onSubmit={this.submit}>
-        <input ref={(input) => {this._title = input; }} type="text" placeholder="color title..." required />
-        <input ref={(input) => {this._color = input; }} type="color" required/>
-        <button className="button">ADD</button>
-      </form>
-    );
-  }
-}
+  return (
+    <form className="add-color" onSubmit = {submit}>
+      <input ref={(input) => _title = input} type="text" placeholder="color title..." required />
+      <input ref={(input) => _color = input} type="color" required />
+      <button className="button">Add</button>
+    </form>
+  );
+};
 
 export {AddColorForm};
+
+// const AddColorForm = ({onNewColor=f=>f}) => {
+
+//       let _title, _color
+
+//       const submit = e => {
+//           e.preventDefault()
+//           onNewColor(_title.value, _color.value)
+//           _title.value = ''
+//           _color.value = '#000000'
+//           _title.focus()
+//       }
+
+//       return (
+//           <form className="add-color" onSubmit={submit}>
+//               <input ref={input => _title = input}
+//                      type="text"
+//                      placeholder="color title..." required/>
+//               <input ref={input => _color = input}
+//                      type="color" required/>
+//               <button>ADD</button>
+//           </form>
+//       )
+
+//   }

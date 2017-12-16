@@ -52,19 +52,19 @@ class App extends React.Component<any, any> {
     this.setState({colors});
   }
 
-  public render() {
-    const { addColor, rateColor, removeColor } = this;
-    const { colors } = this.state;
-    return (
-      <div className="app">
-        <AddColorForm onNewColor={addColor} />
-        <ColorList colors={colors}
-          onRate={rateColor}
-          onRemove={removeColor}
-        />
-      </div>
-    );
-  }
+//   public render() {
+//     const { addColor, rateColor, removeColor } = this;
+//     const { colors } = this.state;
+//     return (
+//       <div className="app">
+//         <AddColorForm onNewColor={addColor} />
+//         <ColorList colors={colors}
+//           onRate={rateColor}
+//           onRemove={removeColor}
+//         />
+//       </div>
+//     );
+//   }
 }
 
 export {App};

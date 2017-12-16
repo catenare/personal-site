@@ -1,45 +1,22 @@
 import * as React from "react";
+import {Provider} from "react-redux";
 import {HashRouter, Redirect, Route, Switch } from "react-router-dom"; // eslint-disable-line
+// import initialState from "./components/Colors/colors";
 
-import {combineReducers, createStore} from "redux";
-import {colors, sort} from "./components/Colors/reducers";
+import {ReduxApp} from "./components/Colors/ReduxApp";
+import storeFactory from "./components/Colors/store";
 
-import initialState from "./components/Colors/colors";
-
-import {App} from "./components/Colors/app";
-import {AddColorForm} from "./components/Colors/colorform";
-import {Hello} from "./components/Home/Hello";
-
-const logColor = (title, color) => console.log(`New Color: ${title} | ${color}`) // tslint:disable-line
-
-const store: any = createStore(
-  combineReducers({colors, sort}),
-  initialState,
-);
-
-console.log(store.getState().colors.length);
-console.log(store.getState().sort);
-
-store.dispatch({
-  color: "#F142FF",
-  id: "2222e1p5-3abl-0p523-30e4-8001l8yf2222",
-  timestamp: "Thu Mar 10 2016 01:11:12 GMT-0800 (PST)",
-  title: "Party Pink",
-  type: "ADD_COLOR",
-});
-
-console.log(store.getState().colors.length);
+const store = storeFactory();
+// console.log(store.getState());
 
 const AppRoute = (props) => ( // eslint-disable-line
   <HashRouter>
     <main>
       <Switch>
-        <Route path="/" exact component={Hello} />
-        <Route path="/color"  render = {() => (
-          <AddColorForm onNewColor={logColor} />
-        ) } />
-        <Route path="/colors" render = {() => (
-          <App colors={initialState} />
+        <Route path="/" render = {() => (
+          <Provider store={store}>
+            <ReduxApp />
+          </Provider>
         )} />
         <Redirect to="/" />
       </Switch>
