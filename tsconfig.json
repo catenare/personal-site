@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es6",
     "module": "es6",
-    "jsx": "react",
+    "jsx": "preserve",
     "allowJs": true,
     "pretty": true,
     "diagnostics": true,

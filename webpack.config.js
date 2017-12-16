@@ -78,7 +78,7 @@ module.exports = {
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
-        loader: 'awesome-typescript-loader'
+        loaders: ['babel-loader', 'awesome-typescript-loader']
       },
       {
         test: /\.hbs$/,

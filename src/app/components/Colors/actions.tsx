@@ -1,4 +1,4 @@
-import * as v4 from "uuid/v4";
+import v4 from "uuid/v4";
 import C from "./constants";
 
 export const removeColor = (id) =>
@@ -22,21 +22,6 @@ export const sortColors = (sortBy) => (
     type: "SORT_COLORS",
   }
 );
-// export const sortColors = (sortedBy) =>
-//   (sortedBy === "rating") ?
-//     ({
-//       sortBy: "SORTED_BY_RATING",
-//       type: C.SORT_COLORS,
-//     }) :
-//     (sortedBy === "title") ?
-//       ({
-//         sortBy: "SORTED_BY_TITLE",
-//         type: C.SORT_COLORS,
-//       }) :
-//     ({
-//       sortBy: "SORTED_BY_DATE",
-//       type: C.SORT_COLORS,
-//     });
 
 export const addColor = (title, color) =>
     ({

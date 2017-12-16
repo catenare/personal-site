@@ -5,6 +5,7 @@ import {HashRouter, Redirect, Route, Switch } from "react-router-dom"; // eslint
 
 import {ReduxApp} from "./components/Colors/ReduxApp";
 import storeFactory from "./components/Colors/store";
+import {Game} from "./components/tictactoe/game";
 
 const store = storeFactory();
 // console.log(store.getState());
@@ -13,12 +14,15 @@ const AppRoute = (props) => ( // eslint-disable-line
   <HashRouter>
     <main>
       <Switch>
-        <Route path="/" render = {() => (
+        <Route path="/colors" render = {() => (
           <Provider store={store}>
             <ReduxApp />
           </Provider>
         )} />
-        <Redirect to="/" />
+        <Route path="/game" render = {() => (
+          <Game />
+        )} />
+        <Route path="/" render = {() => <div>Home Page</div>}/>
       </Switch>
     </main>
   </HashRouter>
