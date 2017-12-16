@@ -1,11 +1,6 @@
 {
   "presets": [
-    ["env", {
-      "targets": {
-        "browsers": ["last 2 versions", "safari >= 7"]
-      },
-      "debug": true
-    }],
+    "env",
     "react",
     "stage-0"
   ],
@@ -13,7 +8,6 @@
     "transform-class-properties",
     "transform-decorators",
     "transform-react-constant-elements",
-    "transform-react-inline-elements",
-    "transform-react-jsx-source"
+    "transform-react-inline-elements"
   ]
 }
