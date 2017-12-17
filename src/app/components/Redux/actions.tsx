@@ -1,3 +1,4 @@
+import axios from "axios";
 import v4 from "uuid/v4";
 import {C} from "./reducers";
 
@@ -44,5 +45,12 @@ export const addColor = (title, color) => (
       title,
     },
     type: C.ADD_COLOR,
+  }
+);
+
+export const getUsers = (url) => (
+  {
+    payload: axios.get(url),
+    type: "POSTS",
   }
 );
