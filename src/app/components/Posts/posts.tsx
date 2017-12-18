@@ -8,23 +8,32 @@ class Posts extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {
+      featured: {},
       loaded: false,
       posts: [],
     };
+    this.getPosts = this.getPosts.bind(this);
+  }
+
+  public getPosts() {
+    axios.get("http://paseo.demo/wp-json/wp/v2/posts?_embed")
+    .then( (response) => {
+      this.setState({posts: response.data});
+      this.setState(
+        {featured: response.data.filter((p) => p.sticky === true)}
+      );
+      this.setState({loaded: true});
+    } )
+    .catch( (e) => console.log("error:", e));
   }
 
   public componentWillMount() {
-    // this.setState({posts: Content});
-    axios.get("http://paseo.demo/wp-json/wp/v2/posts")
-      .then( (response) => {
-        this.setState({posts: response.data});
-        this.setState({loaded: true});
-      } )
-      .catch( (e) => console.log("error:", e));
+    this.getPosts();
   }
 
   public render() {
     if (this.state.loaded) {
+    const featured = this.state.featured[0];
     const posts = this.state.posts.map((c, i) => <Post post={c} index={i} />);
     return (<div className="grid-x">
         <div className="small-12 large-9 cell">
@@ -35,7 +44,7 @@ class Posts extends React.Component<any, any> {
             </div>
           </div>
         </div>
-        <Article />
+        <Article featured={featured} />
   </div>);
   } else {
     return <div className="loader">Loading...</div>;
