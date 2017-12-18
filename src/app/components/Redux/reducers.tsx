@@ -78,7 +78,7 @@ export const users = (state = initialState, action) => {
     return {...state, fetching: false, error: action.payload};
   }
   case C.POSTS_FULFILLED: {
-    return {...state, fetching: false, fetched: true, users: action.payload};
+    return {...state, fetching: false, fetched: true, users: action.payload.data.results};
   }
   default:
     return state;

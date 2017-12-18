@@ -1,6 +1,9 @@
 import * as React from "react";
-import store from "./store";
+import C from "./constants";
+import UserList from "./containers/userList";
 
-const list = <div>Hello again!</div>;
+const List = () => (
+  <UserList />
+);
 
-export {list};
+export default List;

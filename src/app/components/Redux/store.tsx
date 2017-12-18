@@ -10,6 +10,7 @@ import {
   sortColors,
 } from "./actions";
 import { initialState } from "./initialState";
+import api from "./middleware/api";
 import { C, colors, sort, users } from "./reducers";
 
 const reducers = combineReducers({colors, sort, users});
@@ -28,12 +29,14 @@ const crashReport = (store) => (next) => (action) => {
   }
 };
 
-const middleware = applyMiddleware(crashReport, logger, promise(), saver, thunk);
+const middleware = applyMiddleware(crashReport, logger, promise(), saver, api);
 
-const mystore: any = createStore(reducers,
-  localStorage["redux-store"]
-    ? JSON.parse(localStorage["redux-store"])
-    : initialState, middleware,
-);
+// const mystore: any = createStore(reducers,
+//   localStorage["redux-store"]
+//     ? JSON.parse(localStorage["redux-store"])
+//     : initialState, middleware,
+// );
+
+const mystore: any = createStore(reducers, initialState, middleware);
 
 export default mystore;
