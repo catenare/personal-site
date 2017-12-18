@@ -1,12 +1,13 @@
 import * as React from "react";
 
 const User = (u) => {
-  const {user, index} = u;
+  const user = u.user;
+  const index = u.index;
+  const profile = () => u.setProfile(index);
   return (
- <li>
-    key: {index}
-    Name: {user.name.first} {user.name.last}
+ <li onClick={profile}>
     <img src={user.picture.medium} />
+    <span className="user-name">{user.name.first}</span>
   </li>
  );
 };

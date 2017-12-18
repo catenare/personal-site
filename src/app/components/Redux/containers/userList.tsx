@@ -1,6 +1,7 @@
 import {connect} from "react-redux";
-import {getUsers} from "../actions";
+import {getUsers, setUser} from "../actions";
 import C from "../constants";
+import profile from "../ui/profile";
 import Users from "../ui/users";
 
 const UserList = connect (
@@ -11,7 +12,16 @@ const UserList = connect (
     fetchUsers() {
       dispatch(getUsers(C.URL));
     },
+    setUser(id) {
+      dispatch(setUser(id));
+    },
   }),
 )(Users);
+
+export const ProfileUser = connect (
+  (state) => ({
+    users: state.users,
+  }),
+)(profile);
 
 export default UserList;

@@ -54,3 +54,12 @@ export const getUsers = (url) => (
     type: "POSTS",
   }
 );
+
+export const setUser = (id) => (
+  {
+    payload: {
+      id,
+    },
+    type: C.SET_USER,
+  }
+);

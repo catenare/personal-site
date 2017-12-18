@@ -15,11 +15,4 @@ console.log(
 
 const unsubscribe = store.subscribe(() => console.log(store.getState()));
 
-// store.dispatch(addTodo("learn about actions"));
-// store.dispatch(addTodo("learn about reducers"));
-// store.dispatch(addTodo("Learn about store"));
-// store.dispatch(toggleTodo(0));
-// store.dispatch(toggleTodo(1));
-// store.dispatch(setVisibilityFilter(C.SHOW_COMPLETED));
-
 export default store;
