@@ -2,7 +2,6 @@ import axios from "axios";
 import * as React from "react";
 import Article from "./article";
 import Post from "./post";
-import Content from "./post_data";
 
 class Posts extends React.Component<any, any> {
   constructor(props) {
