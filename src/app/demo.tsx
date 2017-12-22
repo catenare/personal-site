@@ -23,5 +23,3 @@ ReactDOM.render(
   </Provider>,
   profile,
 );
-
-
