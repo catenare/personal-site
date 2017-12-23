@@ -1,55 +1,65 @@
+import expect from "expect";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-
-import {AppRoute} from "./Router";
+import {createStore} from "redux";
 
 import "../scss/app.scss";
 
-const createStore = (reducer) => {
-  let state: number;
-  let listeners = [];
+const ADD_TODO = "ADD_TODO";
+const TOGGLE_TODO = "TOGGLE_TODO";
 
-  const getState = () => state;
-
-  const dispatch = (action) => {
-    state = reducer(state, action);
-    listeners.forEach((listener) => listener());
-  };
-
-  const subscribe = (listener) => {
-    listeners.push(listener);
-    return () => {
-      listeners = listeners.filter((l) => l !== listener);
-    };
-  };
-
-  dispatch({});
-
-  return {getState, dispatch, subscribe};
-};
-
-const counter = (state: number = 0, action) => {
+const todo = (state, action) => {
   switch (action.type) {
-    case "INCREMENT":
-      state = state + 1;
-      console.log("Increment: ", state, action);
-      return state;
-    case "DECREMENT":
-      return state - 1;
+    case ADD_TODO:
+      return {
+        completed: false,
+        id: action.id,
+        text: action.text,
+      };
+    case TOGGLE_TODO:
+      if (state.id !== action.id) {
+        return state;
+      }
+      return {
+        ...state, completed: !state.completed,
+      };
     default:
       return state;
   }
 };
 
-const store = createStore(counter);
-const unsub = store.subscribe( () => console.log(store.getState()));
-store.getState();
-store.dispatch({type: "INCREMENT"});
-store.dispatch({type: "DECREMENT"});
 
-const el = document.getElementById("blog");
+const todos = (state = [], action) => {
+  switch (action.type) {
+    case ADD_TODO:
+      return [
+        ...state, todo(undefined, action),
+      ];
+    case TOGGLE_TODO:
+      return state.map((t) => todo(t, action));
+    default:
+      return state;
+  }
+};
 
-ReactDOM.render (
-  <AppRoute />,
-  el,
-);
+const testAddTodo = () => {
+  const stateBefore = [];
+  const action = {
+    id: 0,
+    text: "Learn Redux",
+    type: ADD_TODO,
+  };
+
+  const stateAfter = [{
+    completed: false,
+    id: 0,
+    text: "Learn Redux",
+  }];
+
+  expect(
+    todos(stateBefore, action),
+  ).toEqual(stateAfter);
+};
+
+testAddTodo();
+console.log("All tests passed");
