@@ -2,7 +2,7 @@ import {combineReducers} from 'redux'
 
 import * as C from './actions'
 
-function selectSubreddit(state='reactjs', action ) => {
+function selectedSubreddit (state = 'reactjs', action) {
   switch (action.type) {
     case C.SELECT_SUBREDDIT:
       return action.subreddit
@@ -11,10 +11,16 @@ function selectSubreddit(state='reactjs', action ) => {
   }
 }
 
-function posts(state={isFetching: false, didInvalidate: false, items: []}, action) {
+function posts (
+  state = {
+    isFetching: false,
+    didInvalidate: false,
+    items: []
+  }, action) {
   switch (action.type) {
     case C.INVALIDATE_SUBREDDIT:
-      return Object.assign({}, state, { didInvalidate: true})
+      return Object.assign({}, state,
+        {didInvalidate: true})
     case C.REQUEST_POSTS:
       return Object.assign({}, state, {
         isFetching: true,
@@ -32,7 +38,7 @@ function posts(state={isFetching: false, didInvalidate: false, items: []}, actio
   }
 }
 
-function postsBySubreddit(state = {}, action) {
+function postsBySubreddit (state = {}, action) {
   switch (action.type) {
     case C.INVALIDATE_SUBREDDIT:
     case C.RECEIVE_POSTS:
@@ -49,3 +55,5 @@ const rootReducer = combineReducers({
   postsBySubreddit,
   selectedSubreddit
 })
+
+export default rootReducer

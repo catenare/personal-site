@@ -3,10 +3,9 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import * as C from '../actions'
 import Picker from '../components/Picker'
-import Posts from './components/Posts'
+import Posts from '../components/Posts'
 
 class AsyncApp extends Component {
-
   constructor (props) {
     super(props)
     this.handleChange = this.handleChange.bind(this)
@@ -19,9 +18,9 @@ class AsyncApp extends Component {
   }
 
   componentDidUpdate (prevProps) {
-    if (this.props.selectedSubReddit !== prevProps.selectedSubReddit) {
-      const {dispatch, selectedSubReddit} = this.props
-      dispatch(C.fetchPostsIfNeeded(selectedSubReddit))
+    if (this.props.selectedSubreddit !== prevProps.selectedSubreddit) {
+      const {dispatch, selectedSubreddit} = this.props
+      dispatch(C.fetchPostsIfNeeded(selectedSubreddit))
     }
   }
 

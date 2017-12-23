@@ -38,7 +38,22 @@ function receivePosts(subreddit, json) {
 function fetchPosts(subreddit) {
   return dispatch => {
     dispatch(requestPosts(subreddit))
-    return axios(`https://www.reddit.com/r/${subreddit}.js`).then(response => response.json()).then(json => dispatch(receivePosts(subreddit, json)))
+    return axios(
+      {
+        url: `https://www.reddit.com/r/${subreddit}.js`,
+        headers: {'Access-Control-Allow-Origin': 'http://fc0f0e2d.ngrok.io'}
+      }).then(response => response.json()).then(json => dispatch(receivePosts(subreddit, json)))
+  }
+}
+
+function shouldFetchPosts(state, subreddit) {
+  const posts = state.postsBySubreddit[subreddit]
+  if (!posts) {
+    return true
+  } else if (posts.isFetching) {
+    return false
+  } else {
+    return posts.didInvalidate
   }
 }
 
