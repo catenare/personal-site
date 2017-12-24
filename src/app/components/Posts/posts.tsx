@@ -1,6 +1,6 @@
 import axios from "axios";
 import * as React from "react";
-import Article from "./article";
+import Article from "./featurePost";
 import Post from "./post";
 
 class Posts extends React.Component<any, any> {

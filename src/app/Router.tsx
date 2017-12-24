@@ -9,8 +9,8 @@ const AppRoute = (props) => ( // eslint-disable-line
   <HashRouter>
     <main>
       <Switch>
-        {/* <Route path="/" render = {() => <Posts />}/>, */}
-        <Route path="/" component={Root} />
+        <Route path="/" render = {() => <Posts />}/>,
+        {/* <Route path="/" component={Root} /> */}
       </Switch>
     </main>
   </HashRouter>

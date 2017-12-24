@@ -40,8 +40,7 @@ function fetchPosts(subreddit) {
     dispatch(requestPosts(subreddit))
     return axios(
       {
-        url: `https://www.reddit.com/r/${subreddit}.js`,
-        headers: {'Access-Control-Allow-Origin': 'http://fc0f0e2d.ngrok.io'}
+        url: `https://www.reddit.com/r/${subreddit}.js`
       }).then(response => response.json()).then(json => dispatch(receivePosts(subreddit, json)))
   }
 }
