@@ -1,7 +1,7 @@
 {
-  "name": "multi_page_template",
+  "name": "johan_martin",
   "version": "0.0.1",
-  "description": "Basic Multipage Template",
+  "description": "Personal Web Site",
   "main": "index.js",
   "directories": {
     "test": "tests"
@@ -131,6 +131,10 @@
     "plugins": [
       "stylelint-scss"
     ],
-    "extends": "stylelint-config-sass-guidelines"
+    "extends": "stylelint-config-sass-guidelines",
+    "rules": {
+      "max-nesting-depth": 3,
+      "order/properties-alphabetical-order": false
+    }
   }
 }

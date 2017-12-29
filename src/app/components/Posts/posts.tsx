@@ -3,6 +3,9 @@ import * as React from "react";
 import Article from "./featurePost";
 import Post from "./post";
 
+// https://api.paseo.org.za/johan/wp-json/wp/v2/posts?_embed
+// http://paseo.demo
+
 class Posts extends React.Component<any, any> {
   constructor(props) {
     super(props);
@@ -15,7 +18,7 @@ class Posts extends React.Component<any, any> {
   }
 
   public getPosts() {
-    axios.get("http://paseo.demo/wp-json/wp/v2/posts?_embed")
+    axios.get("https://api.paseo.org.za/johan/wp-json/wp/v2/posts?_embed")
     .then( (response) => {
       this.setState({posts: response.data});
       this.setState(
