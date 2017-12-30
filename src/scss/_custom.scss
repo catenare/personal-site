@@ -1,18 +1,5 @@
+@import 'components/base';
+@import 'components/header';
 @import 'components/footer';
-@import 'components/article';
-@import 'components/card';
-@import 'components/carousel';
 @import 'components/hero';
-@import 'components/article_row';
-
-
-// @include card-container(rgba(0, 0, 0, 0.2), $color, $margin, $border, $radius, $shadow);
-section {
-  margin-bottom: 2rem;
-}
-
-
-//tutorial
-.ingredients li {
-  font-style: italic;
-}
+@import 'components/utils';

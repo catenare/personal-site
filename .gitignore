@@ -2,3 +2,4 @@ node_modules/
 .idea
 dist/
 blocks/
+src/img/video/*.mov

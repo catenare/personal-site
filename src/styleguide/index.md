@@ -1,3 +1,43 @@
+# Header
+```html_example
+<header class="grid-container full">
+    <div class="title-bar">
+        <div class="title-bar-left">
+          <button class="menu-icon" type="button"></button>
+          <span class="title-bar-title">Johan N. Martin</span>
+        </div>
+      </div>
+  <nav class="top-bar icons">
+      <ul class="menu align-left">
+        <li class="menu-text">Johan N. Martin</li>
+        </ul>
+        <ul class="menu align-center icons">
+        <li>
+          <a href="{{root}}/index.html">Home</a>
+        </li>
+        <li>
+          <a href="{{root}}/notebook.html">Notebook</a>
+        </li>
+        <li>
+          <a href="{{root}}/lab.html">Lab</a>
+        </li>
+      </ul>
+      <ul class="menu align-right">
+        <li>
+          <a href="#">
+              <i class="fa fa-mobile" aria-hidden="true"></i>
+            <span>Phone</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-envelope"><span>Email</span></i></a>
+        </li>
+        <li><a href="#"><i class="fa fa-github-square"><span>GitHub</span></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin-square"><span>LinkedIn</span></i></a></li>
+      </ul>
+  </nav>
+</header>
+```
+---
 # Cards
 ```html
 <div class="card">
@@ -14,28 +54,6 @@
   </div>
 </div>
 ```
-<div class="grid-x">
-<div class="small-6 medium-4 cell">
-<div class="card">
-  <a href="#" class="card-image">
-    <div class="background-card-image">
-    <img src="http://placehold.it/640x427" alt="">
-    </div>
-    <div class="image-hover"></div>
-  </a>
-  <div class="card-section">
-    <div class="category">category</div>
-    <h4 class="title"><a href="#">title</a></h4>
-    <p class="meta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, repellendus?<span class="date">24 nov 2017</span> </p>
-    <div class="excerpt"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum labore vel corrupti earum cum natus voluptatibus corporis harum libero perspiciatis possimus reiciendis, praesentium maxime asperiores consectetur? Quas error magnam quisquam.</p></div>
-    <div class="tail"><a href="#">Read more</a></div>
-  </div>
-</div>
-</div>
-<div class="cell auto">
-</div>
-</div>
-
 ---
 
 ## Nesting grid-x

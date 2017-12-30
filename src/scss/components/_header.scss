@@ -1,0 +1,30 @@
+header {
+  position: relative;
+
+  .title-bar {
+    @include breakpoint(large up) {
+      display: none;
+    }
+
+    a span {
+      display: none;
+    }
+
+    i {
+      color: $white;
+    }
+  }
+
+  .top-bar {
+    @include breakpoint(medium down) {
+      display: none;
+    }
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+}

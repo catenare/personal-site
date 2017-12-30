@@ -25,7 +25,7 @@ function loadConfig () {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
-  gulp.series(clean, pages, styleGuide))
+  gulp.series(clean, images, pages))
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -37,8 +37,15 @@ gulp.task('clean',
 gulp.task('watch',
   gulp.series(watch))
 
-gulp.task('style',
-  gulp.series(styleGuide))
+gulp.task('images',
+  gulp.series(images))
+
+// Copy images to the "dist" folder
+// In production, the images are compressed
+function images () {
+  return gulp.src('src/app/img/**/*')
+    .pipe(gulp.dest(PATHS.dist + '/img'))
+}
 
 // Generate a style guide from the Markdown content and HTML template in styleguide/
 function styleGuide (done) {
@@ -78,4 +85,5 @@ function watch () {
   gulp.watch('src/panini/pages/**/*.html').on('all', gulp.series(pages))
   gulp.watch('src/panini/{layouts,partials}/**/*.html').on('all', gulp.series(resetPages, pages))
   gulp.watch('src/styleguide/*.*').on('all', gulp.series(styleGuide, resetPages, pages))
+  gulp.watch('src/app/img/**/*').on('all', gulp.series(images, resetPages, pages))
 }
