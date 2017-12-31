@@ -44,7 +44,11 @@ $height: 80vh;
   .menu {
     font-size: 2rem;
     position: relative;
-    top: 65%;
+    top: 55%;
     width: 100%;
+
+    a {
+      margin-right: 1rem;
+    }
   }
 }
