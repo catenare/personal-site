@@ -12,7 +12,7 @@ import "../scss/app.scss";
 
 const el = document.getElementById("blog");
 
-ReactDOM.render (
-  <AppRoute />,
-  el,
-);
+// ReactDOM.render (
+//   <AppRoute />,
+//   el,
+// );

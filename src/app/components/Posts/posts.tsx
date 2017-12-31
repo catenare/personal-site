@@ -40,7 +40,6 @@ class Posts extends React.Component<any, any> {
     const posts = this.state.posts.map((c, i) => <Post post={c} index={i} />);
     return (
       <React.Fragment>
-        <h1>Posts</h1>
       <div className="grid-x grid-margin-x grid-padding-x">
         <div className="large-9 cell">
               {posts}
