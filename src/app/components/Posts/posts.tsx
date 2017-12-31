@@ -38,17 +38,19 @@ class Posts extends React.Component<any, any> {
     if (this.state.loaded) {
     const featured = this.state.featured[0];
     const posts = this.state.posts.map((c, i) => <Post post={c} index={i} />);
-    return (<div className="grid-x">
-        <div className="small-12 large-9 cell">
-          <div className="article-row-section">
-            <div className="article-row-section-inner">
-              <h2 className="article-row-section-header">Blog News</h2>
+    return (
+      <React.Fragment>
+        <h1>Posts</h1>
+      <div className="grid-x grid-margin-x grid-padding-x">
+        <div className="large-9 cell">
               {posts}
-            </div>
-          </div>
         </div>
-        <Article featured={featured} />
-  </div>);
+        <div className="large-3 cell">
+          <Article featured={featured} />
+        </div>
+        </div>
+        </React.Fragment>
+      );
   } else {
     return <div className="loader">Loading...</div>;
   }

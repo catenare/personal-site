@@ -5,17 +5,17 @@ const post = (props) => {
   const dateCreated = new Date(props.post.date).toDateString();
   return (
     <a href="#">
-          <article className="article-row">
-            <div className="article-row-img">
+          <article className="grid-x grid-margin-x grid-padding-x">
+            <div className="large-3 cell">
               <img src={(featureImage) ? featureImage[0].source_url :
-                 "https://placehold.it/200"} width="200px" alt="picture of a whale eating a donkey" />
+                 "https://placehold.it/400"} width="200px" alt="picture of a whale eating a donkey" />
             </div>
-            <div className="article-row-content">
-              <h1 className="article-row-content-header"> {props.post.title.rendered}</h1>
-                <p className="article-row-content-description"
+            <div className="large-9 cell">
+              <h1>{props.post.title.rendered}</h1>
+                <p
                 dangerouslySetInnerHTML={{__html: props.post.excerpt.rendered}} />
-              <p className="article-row-content-author">{props.post._embedded.author[0].name}</p>
-              <time className="article-row-content-time" dateTime={props.post.date}>{dateCreated}</time>
+              <p>{props.post._embedded.author[0].name}</p>
+              <time dateTime={props.post.date}>{dateCreated}</time>
             </div>
           </article>
         </a>
