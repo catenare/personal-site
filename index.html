@@ -8,59 +8,157 @@
     <link rel="stylesheet" href="assets/app.css">
   </head>
   <body>
-    <div class="grid-container fluid">
-      <header>
-        <nav>
-          <div class="top-bar">
-            <ul class="menu top-bar-left">
+    <div class="grid-container full">
+      <header class="grid-container full">
+          <div class="title-bar">
+              <div class="title-bar-left">
+                <button class="menu-icon" type="button"></button>
+                <span class="title-bar-title">Johan N. Martin</span>
+              </div>
+              <div class="title-bar-right">
+                  <ul class="menu align-right">
+                      <li>
+                        <a href="#">
+                            <i class="fa fa-mobile" aria-hidden="true">
+                          <span>Phone</span></i></a>
+                      </li>
+                      <li>
+                        <a href="#"><i class="fa fa-envelope"><span>Email</span></i></a>
+                      </li>
+                      <li><a href="#"><i class="fa fa-github-square"><span>GitHub</span></i></a></li>
+                      <li><a href="#"><i class="fa fa-linkedin-square"><span>LinkedIn</span></i></a></li>
+                    </ul>
+              </div>
+            </div>
+        <nav class="top-bar icons">
+            <ul class="menu align-left">
               <li class="menu-text">Johan N. Martin</li>
+              </ul>
+              <ul class="menu align-center icons">
               <li>
                 <a href="/index.html">Home</a>
               </li>
               <li>
-                <a href="/article.html">Notebook</a>
+                <a href="/notebook.html">Notebook</a>
               </li>
               <li>
                 <a href="/lab.html">Lab</a>
               </li>
             </ul>
-            <ul class="menu top-bar-right">
+            <ul class="menu align-right">
               <li>
-                <a href="#">Phone</a>
+                <a href="#">
+                    <i class="fa fa-mobile" aria-hidden="true"></i>
+                  <span>Phone</span></a>
               </li>
               <li>
-                <a href="#">Email</a>
+                <a href="#"><i class="fa fa-envelope"><span>Email</span></i></a>
               </li>
+              <li><a href="#"><i class="fa fa-github-square"><span>GitHub</span></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin-square"><span>LinkedIn</span></i></a></li>
             </ul>
-          </div>
         </nav>
       </header>
-      <main>
-      <section>
-        <div class="marketing-site-hero">
-            <div class="marketing-site-hero-content">
-              <h1>Yeti Snowcone Agency</h1>
-              <p class="subheader"><cite>Having knowledge but lacking the power to express it clearly is no better than never having any ideas at all</cite></p>
-              <a href="#" class="round button">learn more</a>
+      
+      <main class="offset-margin-top">
+        <section class="cn-c-hero cn-l-section">
+          <div class="content">
+            <h1>Web Application Developer</h1>
+            <blockquote>Having knowledge but lacking the power to express it clearly is no better than never having any ideas at all <cite> Pericles</cite></blockquote>
+          </div>
+          <ul class="menu align-center">
+              <li><a class="button secondary" href="#about">About</a></li>
+              <li><a class="button secondary" href="#projects">Projects</a></li>
+              <li><a class="button secondary" href="#interest">Interest</a></li>
+          </ul>
+          
+        </section>
+        <section class="cn-c-blog grid-container cn-l-section">
+          <h1>Posts</h1>
+          <div id="blog"></div>
+        </section>
+        <section class="cn-c-projects grid-container cn-l-section" id="projects">
+          <h1>Projects</h1>
+          <div class="grid-x grid-margin-x grid-padding-x">
+          <div class="large-4 cell"><div class="card-article-hover card">
+              <a href="">
+                <img src="https://unsplash.it/600/400">
+              </a>
+              <div class="card-section">
+                <p class="meta-data article-subtext">Paseo</p>
+                <a href="">
+                  <h3 class="article-title">Succulents, how much water do they need?</h3>
+                </a>
+                <p class="article-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos corporis autem, iusto impedit veniam unde earum neque...</p>
+              </div>
+              <div class="card-divider flex-container align-middle">
+                <img class="avatar" src="https://placehold.it/50x50" alt="avatar">
+                <a href="" class="author">BEAN MCGRUBER</a>
+              </div>
+              <div class="hover-border">
+              </div>
             </div>
           </div>
-      </section>
-      <section>
-          <div id="blog"></div>
-      </section>
+          <div class="large-4 cell"><div class="card-article-hover card">
+              <a href="">
+                <img src="https://unsplash.it/600/400">
+              </a>
+              <div class="card-section">
+                <p class="meta-data article-subtext">OpenCode</p>
+                <a href="">
+                  <h3 class="article-title">Succulents, how much water do they need?</h3>
+                </a>
+                <p class="article-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos corporis autem, iusto impedit veniam unde earum neque...</p>
+              </div>
+              <div class="card-divider flex-container align-middle">
+                <img class="avatar" src="https://placehold.it/50x50" alt="avatar">
+                <a href="" class="author">BEAN MCGRUBER</a>
+              </div>
+              <div class="hover-border">
+              </div>
+            </div>
+          </div>
+          <div class="large-4 cell"><div class="card-article-hover card">
+              <a href="">
+                <img src="https://unsplash.it/600/400">
+              </a>
+              <div class="card-section">
+                <p class="meta-data article-subtext">LookFindMe</p>
+                <a href="">
+                  <h3 class="article-title">Succulents, how much water do they need?</h3>
+                </a>
+                <p class="article-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos corporis autem, iusto impedit veniam unde earum neque...</p>
+              </div>
+              <div class="card-divider flex-container align-middle">
+                <img class="avatar" src="https://placehold.it/50x50" alt="avatar">
+                <a href="" class="author">BEAN MCGRUBER</a>
+              </div>
+              <div class="hover-border">
+              </div>
+            </div>
+          </div>
+          </div>
+        </section>
+        <section class="cn-c-gallery grid-container cn-l-section">
+          <h1>Gallery</h1>
+        </section>
       </main>
       
-      <footer>
-        <div>
-          <h2>my title</h2>
+      <footer class="grid-container full" id="about">
+        <div class="grid-x grid-margin-x grid-padding-x">
+        <div class="large-4 cell">
+          <h1>Johan N. Martin</h1>
           <img src="http://via.placeholder.com/200x200" alt="image">
         </div>
+        <div class="large-4 cell">
         <div>
           <h2>experience</h2>
           <ul>
-            <li>experience</li>
-            <li>experience</li>
-            <li>experience</li>
+            <li>LaGuardia Community College</li>
+            <li>Experian</li>
+            <li>CNBC</li>
+            <li>Rent The Runway</li>
+            <li>NightAgency</li>
           </ul>
         </div>
         <div>
@@ -71,7 +169,8 @@
             <li>skills</li>
           </ul>
         </div>
-        <div>
+      </div>
+        <div class="large-4 cell">
           <h2>contact me</h2>
           <form>
             <label for="name"><input type="text" name="name" aria-describedby="nameHelpText" required></label>
@@ -93,6 +192,7 @@
           <button></button>
           </form>
         </div>
+        <div class="large-12 cell">
         <div class="marketing-site-footer-bottom">
             <div class="row large-unstack align-middle">
               <div class="column">
@@ -109,6 +209,8 @@
                 </ul>
               </div>
             </div>
+            </div>
+          </div>
           </div>
       </footer>
     </div>
