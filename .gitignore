@@ -3,3 +3,4 @@ node_modules/
 dist/
 blocks/
 src/img/video/*.mov
+*.mp*
