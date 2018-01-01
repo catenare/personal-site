@@ -1,7 +1,18 @@
 // import Rx from "rxjs";
 import * as React from "react";
 import * as ReactDom from "react-dom";
+import * as Webfont from "webfontloader";
 import Users from "../components/Users/Users";
+
+Webfont.load({
+  google: {
+    families: [
+      "Annie Use Your Telescope",
+      "PT Sans Narrow",
+      "Roboto",
+  ],
+  },
+});
 
 import "../../scss/app.scss";
 
