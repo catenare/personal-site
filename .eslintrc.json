@@ -1,6 +1,12 @@
 {
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "plugins":[
+    "react",
     "standard"
   ],
-  "extends": ["standard"]
+  "extends": ["standard", "standard-react"]
 }
