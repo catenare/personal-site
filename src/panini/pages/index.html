@@ -1,11 +1,21 @@
-<section class="home">
-<h1>Home Page</h1>
-<div class="grid-x grid-padding-x">
-  <div class="medium-3 cell">
-    <h2>Users</h2>
-  </div>
-  <div class="medium-9 cell">
+<section class="grid-container">
+  <section>
+    {{>hero}}
+  </section>
+  <section>
+    <h1>Posts</h1>
+    {{>posts}}
+  </section>
+  <section>
+    <h1>User List</h1>
     {{>list users=users.results}}
-  </div>
-</div>
+  </section>
+  <section>
+    <h1>Projects</h1>
+    {{>projects}}
+  </section>
+  <section>
+    <h1>Gallery</h1>
+    {{>gallery}}
+  </section>
 </section>

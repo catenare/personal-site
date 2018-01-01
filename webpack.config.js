@@ -25,7 +25,7 @@ setupEnv()
 
 module.exports = {
   entry: {
-    app: './src/app/ts/app.ts',
+    app: './src/app/ts/app.tsx',
     vendor: Object.keys(vendorPackages.dependencies).filter(name => (name !== 'font-awesome' && name !== 'csspin'))
   },
   output: {
@@ -78,11 +78,7 @@ module.exports = {
           fallback: 'style-loader',
           use: combineLoaders([
             {
-              loader: 'css-loader',
-              query: {
-                modules: true,
-                localIdentName: '[name]__[local]__[hash:base64:5]'
-              }
+              loader: 'css-loader'
             },
             {
               loader: 'postcss-loader'
@@ -98,13 +94,8 @@ module.exports = {
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
-        loader: 'awesome-typescript-loader'
+        use: ['babel-loader', 'awesome-typescript-loader']
       },
-      // {
-      //   test: /\.hbs$/,
-      //   exclude: /node_modules/,
-      //   use: 'handlebars-loader'
-      // },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         exclude: /node_modules(\/?!font-awesome)/,

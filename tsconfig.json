@@ -1,14 +1,17 @@
 {
   "compilerOptions": {
-    "target": "ESNEXT",
-    "module": "ESNEXT",
-    "lib": [
-      "dom",
-      "es2016"
-    ],
-     "moduleResolution": "node",
-     "allowSyntheticDefaultImports": true,
-     "experimentalDecorators": true,
-     "emitDecoratorMetadata": true
-  }
+    "target": "es6",
+    "module": "es6",
+    "jsx": "preserve",
+    "allowJs": true,
+    "pretty": true,
+    "diagnostics": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }
