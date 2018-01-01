@@ -1,52 +1,7 @@
-<footer class="marketing-site-footer">
-  <div class="grid-x medium-unstack">
-    <div class="medium-4 cell">
-      <h4 class="marketing-site-footer-name">{{settings.site}}</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita dolorem accusantium architecto id quidem, itaque nesciunt quam ducimus atque.</p>
-      <ul class="menu marketing-site-footer-menu-social simple">
-        <li><a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
-         <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-         <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-      </ul>
-    </div>
-    <div class="medium-4 cell">
-       <h4 class="marketing-site-footer-title">Contact Info</h4>
-      <div class="marketing-site-footer-block">
-        <i class="fa fa-map-marker" aria-hidden="true"></i>
-        <p>100 W Rincon<br>San Francisco, CA 94015</p>
-      </div>
-      <div class="marketing-site-footer-block">
-        <i class="fa fa-phone" aria-hidden="true"></i>
-        <p>1 (800) 555-5555</p>
-      </div>
-      <div class="marketing-site-footer-block">
-        <i class="fa fa-envelope-o" aria-hidden="true"></i>
-        <p>yetirules@fakeemail.com</p>
-      </div>
-    </div>
-    <div class="medium-4 cell">
-      <h4 class="marketing-site-footer-title">Join Our Email List</h4>
-      <div class="grid-x">
-        <div class="auto cell">
-          <label for="email">Enter your email address<input type="text" placeholder="Email" name="email" id="email"></label>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="marketing-site-footer-bottom">
-    <div class="grid-x large-unstack align-middle">
-      <div class="auto cell">
-        <p>&copy; 2017 No rights reserved</p>
-      </div>
-      <div class="auto cell">
-        <ul class="menu marketing-site-footer-bottom-links">
-          {{>menu}}
-          <li {{#ifpage 'about'}}class="is-active"{{/ifpage}}><a href="{{root}}about.html">About</a></li>
-          <li {{#ifpage 'privacy'}}class="is-active"{{/ifpage}}><a href="{{root}}privacy.html">Privacy</a></li>
-          <li {{#ifpage 'terms'}}class="is-active"{{/ifpage}}><a href="{{root}}terms.html">Terms and Conditions</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<footer>
+  <ul class="menu align-center">
+      <li class="menu-text">&copy; 2017 No rights reserved</li>
+      {{>menu}}
+  </ul>
 </footer>
 
