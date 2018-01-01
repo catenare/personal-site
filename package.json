@@ -106,6 +106,7 @@
     "postcss-loader": "^2.0.9",
     "postcss-scss": "^1.0.2",
     "raw-loader": "^0.5.1",
+    "rxjs": "^5.5.6",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
     "style-sherpa": "^1.0.2",

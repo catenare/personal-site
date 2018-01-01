@@ -8,10 +8,24 @@ const combineLoaders = require('webpack-combine-loaders')
 const StylelintPlugin = require('stylelint-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
+let hostEnv
+
+const setupEnv = () => {
+  switch (process.env.NODE_ENV) {
+    case 'production':
+      hostEnv = true
+      break
+    default:
+      hostEnv = false
+      break
+  }
+}
+
+setupEnv()
+
 module.exports = {
   entry: {
-    app: './src/app/js/app.js',
-    index: './src/app/ts/index.ts',
+    app: './src/app/ts/app.ts',
     vendor: Object.keys(vendorPackages.dependencies).filter(name => (name !== 'font-awesome' && name !== 'csspin'))
   },
   output: {
@@ -31,6 +45,9 @@ module.exports = {
       name: 'vendor',
       async: true,
       minChunks: Infinity
+    }),
+    new webpack.DefinePlugin({
+      __IS_PROD__: hostEnv
     }),
     new StylelintPlugin({syntax: 'scss', emitErrors: false, lintDirtyModulesOnly: true})
   ],
