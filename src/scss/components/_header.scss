@@ -6,8 +6,10 @@ header {
       display: none;
     }
 
-    a span {
-      display: none;
+    a {
+      span {
+        display: none;
+      }
     }
 
     i {
@@ -15,7 +17,24 @@ header {
     }
   }
 
+  .menu {
+    span {
+      display: none;
+    }
+
+    a {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+
+  .menu-text {
+    font-family: $font-family-highlight;
+    font-size: 3rem;
+  }
+
   .top-bar {
+
     @include breakpoint(medium down) {
       display: none;
     }

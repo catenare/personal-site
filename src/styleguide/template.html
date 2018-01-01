@@ -54,35 +54,43 @@
         height: 100px;
         margin-bottom: 0.42857rem;
       }
+      .main {
+        margin-top: 50px;
+      }
     </style>
   </head>
   <body>
+    <div class="grid-container">
+      <div class="column row main">
+        <h1>johan-martin.com Style Guide</h1>
+        <p class="lead">This style guide was built with Foundation for Sites. For more information on
+          how to use this responsive front-end framework, check out the documentation,
+          get help from the Foundation community, or request immediate technical support.</p>
+      </div>
 
-    <div class="column row">
-      <h1>johan-martin.com Style Guide</h1>
-      <p class="lead">This style guide was built with Foundation for Sites. For more information on how to use this responsive front-end framework, check out the documentation, get help from the Foundation community, or request immediate technical support.</p>
+      <div class="column row">
+        <div class="row collapse">
+
+          <div class="large-3 medium-4 columns" data-sticky-container>
+            <ul class="vertical menu">
+              {{#each pages}}
+                <li>
+                  <a href="#{{ anchor }}">{{ title }}</a>
+                </li>
+              {{/each}}
+            </ul>
+          </div>
+
+          <div class="large-9 medium-8 columns">
+            {{#each pages}}
+              <section class="ss-section" id="{{ anchor }}">
+                {{ body }}
+              </section>
+            {{/each}}
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="column row">
-      <div class="row collapse">
-
-      <div class="large-3 medium-4 columns" data-sticky-container>
-        <ul class="vertical menu">
-          {{#each pages}}
-            <li><a href="#{{ anchor }}">{{ title }}</a></li>
-          {{/each}}
-        </ul>
-      </div>
-
-      <div class="large-9 medium-8 columns">
-        {{#each pages}}
-          <section class="ss-section" id="{{ anchor }}">
-            {{ body }}
-          </section>
-        {{/each}}
-      </div>
-
-    </div></div>
 
     <script src="assets/js/app.js"></script>
   </body>

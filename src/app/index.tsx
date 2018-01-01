@@ -1,12 +1,17 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import * as Webfont from "webfontloader";
 import {AppRoute} from "./Router";
 
-import chai from "chai";
-
-const foo = "string";
-
-chai.assert.typeOf(foo, "string", "foo is a string");
+Webfont.load({
+  google: {
+    families: [
+      "Annie Use Your Telescope",
+      "PT Sans Narrow",
+      "Roboto",
+  ],
+  },
+});
 
 import "../scss/app.scss";
 

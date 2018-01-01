@@ -1,53 +1,40 @@
 // Hero
-$height: 80vh;
+$height: 60vh;
 
 .cn-c-hero {
 
-  background: url('https://placeimg.com/2400/640/tech/sepia') no-repeat center;
+  background: url('https://res.cloudinary.com/paseo/image/upload/v1514746754/johan-martin/bali_countryside_iuuhtc.jpg') no-repeat center;
   background-attachment: fixed;
   background-size: cover;
   height: $height;
+  position: relative;
+  width: 100%;
 
-  // .hero-video {
-  //   height: auto;
-  //   // left: 50%;
-  //   min-height: 100%;
-  //   min-width: 100%;
-  //   position: fixed;
-  //   top: 50%;
-  //   // transform: translateX(-50%) translateY(-50%);
-  //   transition: 1s opacity;
-  //   width: auto;
-  //   z-index: -100;
-  //   @include breakpoint(medium down) {
-  //     display: none;
-  //   }
-  // }
-
-  @include breakpoint(medium down) {
-    background: url('https://placeimg.com/2400/640/tech/sepia') no-repeat center;
-    background-attachment: fixed;
-    background-size: cover;
-  }
 
   /* Add some content at the bottom of the video/page */
   .content {
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
-    padding: 20px;
     position: relative;
     text-align: center;
-    top: 20%;
-    width: 100%;
+    top: 30%;
+
+    h1 {
+      color: $primary-color;
+      font-size: 6rem;
+      font-weight: bold;
+      text-align: center;
+
+    }
+
   }
 
   .menu {
     font-size: 2rem;
     position: relative;
-    top: 55%;
-    width: 100%;
+    top: 35%;
+    // width: 100%;
 
     a {
+      font-size: 2rem;
       margin-right: 1rem;
     }
   }
