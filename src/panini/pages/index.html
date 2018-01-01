@@ -1,14 +1,12 @@
 <section class="grid-container">
-  <section>
     {{>hero}}
-  </section>
   <section>
     <h1>Posts</h1>
     {{>posts}}
   </section>
-  <section>
+  <section class="cn-c-user-list">
     <h1>User List</h1>
-    {{>list users=users.results}}
+    <div id="user-list"></div>
   </section>
   <section>
     <h1>Projects</h1>
