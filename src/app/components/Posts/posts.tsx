@@ -2,6 +2,7 @@ import axios from "axios";
 import * as React from "react";
 import Article from "./featurePost";
 import Post from "./post";
+import * as actions from "./store/actions";
 
 // https://api.paseo.org.za/johan/wp-json/wp/v2/posts?_embed
 // http://paseo.demo
@@ -9,6 +10,16 @@ import Post from "./post";
 class Posts extends React.Component<any, any> {
   constructor(props) {
     super(props);
+  }
+
+  public componentDidMount() {
+    // console.log('url', this.props.url);
+    // const postUrl = "http://paseo.demo/wp-json/wp/v2/posts?_embed";
+    axios.get(this.props.url)
+      .then( (response) => {
+        this.props.dispatch(actions.setPosts(response.data));
+      })
+      .catch((e) => console.log("error", e));
   }
 
   public render() {

@@ -1,10 +1,20 @@
 import axios from "axios";
 import * as React from "react";
+import * as actions from "./store/actions";
 import User from "./User";
 
 class Users extends React.Component<any, any> {
   constructor(props) {
     super(props);
+  }
+
+  public componentDidMount() {
+    const siteUrl = this.props.url;
+    axios.get(siteUrl)
+      .then( (response) => {
+        this.props.dispatch(actions.setUsers(response.data.results));
+      } )
+      .catch((e) => console.log("error", e));
   }
 
   public render() {

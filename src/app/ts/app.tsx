@@ -22,6 +22,8 @@ Webfont.load({
 
 import "../../scss/app.scss";
 
+console.log("environment", process.env.NODE_ENV);
+
 let siteUrl: string; // eslint-disable-line
 if (__IS_PROD__) {
   siteUrl = "https://api.paseo.org.za/johan/";
@@ -32,40 +34,19 @@ siteUrl = "https://randomuser.me/api/?results=50&noinfo";
 
 const postUrl = "http://paseo.demo/wp-json/wp/v2/posts?_embed";
 
-/*
-axios.get(this.props.url)
-      .then((response) => {
-        this.setState({users: response.data.results});
-        this.setState({loaded: true});
-      }).catch( (e) => console.log("error", e));
-*/
-axios.get(siteUrl)
-      .then( (response) => {
-        store.dispatch(actions.setUsers(response.data.results));
-      } )
-      .catch((e) => console.log("error", e));
-
-axios.get(postUrl)
-      .then( (response) => {
-        store.dispatch(postActions.setPosts(response.data));
-        console.log(store.getState());
-      })
-      .catch((e) => console.log("error", e));
-
 const users = document.getElementById("user-list");
 const posts = document.getElementById("posts");
 
 ReactDom.render (
   <Provider store={store}>
-    <UserList />
+    <UserList url={siteUrl} />
   </Provider>,
   users,
 );
 
 ReactDom.render (
   <Provider store={store}>
-    <PostList />
+    <PostList url={postUrl} />
   </Provider>,
   posts,
 );
-
