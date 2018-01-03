@@ -1,8 +1,14 @@
 // import Rx from "rxjs";
+import axios from "axios";
 import * as React from "react";
 import * as ReactDom from "react-dom";
+import {Provider} from "react-redux";
 import * as Webfont from "webfontloader";
-import Users from "../components/Users/Users";
+import * as actions from "../components/Users/store/actions";
+import UserList from "../components/Users/store/containers";
+import store from "../components/Users/store/store";
+
+
 
 Webfont.load({
   google: {
@@ -24,9 +30,26 @@ if (__IS_PROD__) {
 }
 siteUrl = "https://randomuser.me/api/?results=50&noinfo";
 
+/*
+axios.get(this.props.url)
+      .then((response) => {
+        this.setState({users: response.data.results});
+        this.setState({loaded: true});
+      }).catch( (e) => console.log("error", e));
+*/
+axios.get(siteUrl)
+      .then( (response) => {
+        store.dispatch(actions.setUsers(response.data.results));
+      } )
+      .catch((e) => console.log("error", e));
+
+store.dispatch(actions.getUsers());
+
 const el = document.getElementById("user-list");
 
 ReactDom.render (
-  <Users url={siteUrl} />,
+  <Provider store={store}>
+    <UserList />
+  </Provider>,
   el,
 );
