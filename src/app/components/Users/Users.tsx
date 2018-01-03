@@ -8,10 +8,9 @@ class Users extends React.Component<any, any> {
   }
 
   public render() {
-    console.log(this.props);
-    const {loaded} = this.props;
+    const {loaded} = this.props.users;
     if (loaded) {
-      const {users} = this.props;
+      const {users} = this.props.users;
       const UserList = users.map((user, i) => <User User={user} index={i} />);
       return (
         <React.Fragment>

@@ -16,30 +16,31 @@ export function getPost(id) {
 
 export function getPosts() {
   return {
-    payload: {},
     type: GET_POSTS,
   };
 }
 
 export function getFeaturedPost() {
   return {
-    payload: {},
     type: GET_FEATURED_POST,
   };
 }
 
 export function setFeaturedPost(post) {
   return {
-    payload: {post},
+    payload: {
+      loaded: true,
+      post},
     type: SET_FEATURED_POST,
   };
 }
 
 export function setPosts(posts) {
   return {
-    payload: {posts},
+    payload: {
+      loaded: true,
+      posts,
+    },
     type: SET_POSTS,
   };
 }
-
-
