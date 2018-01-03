@@ -35,7 +35,7 @@ export const post = (state = {}, action) => {
  * @param state object
  * @param action string
  */
-export const feature = (state = {}, action) => {
+export const feature = (state = {loaded: false, post: {}}, action) => {
   switch (action.type) {
     case C.SET_FEATURED_POST:
       return Object.assign({}, state, action.payload);

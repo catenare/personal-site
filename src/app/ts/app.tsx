@@ -22,8 +22,6 @@ Webfont.load({
 
 import "../../scss/app.scss";
 
-console.log("environment", process.env.NODE_ENV);
-
 let siteUrl: string; // eslint-disable-line
 if (__IS_PROD__) {
   siteUrl = "https://api.paseo.org.za/johan/";

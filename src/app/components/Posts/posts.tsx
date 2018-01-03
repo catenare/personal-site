@@ -13,18 +13,17 @@ class Posts extends React.Component<any, any> {
   }
 
   public componentDidMount() {
-    // console.log('url', this.props.url);
-    // const postUrl = "http://paseo.demo/wp-json/wp/v2/posts?_embed";
     axios.get(this.props.url)
       .then( (response) => {
         this.props.dispatch(actions.setPosts(response.data));
+        this.props.dispatch(actions.setFeaturedPost(response.data));
       })
       .catch((e) => console.log("error", e));
   }
 
   public render() {
     if (this.props.posts.loaded) {
-    // const featured = this.props.featured[0];
+    const feature = this.props.feature;
     const posts = this.props.posts.posts.map((c, i) => <Post post={c} index={i} />);
     return (
       <React.Fragment>
@@ -32,9 +31,9 @@ class Posts extends React.Component<any, any> {
         <div className="large-9 cell">
               {posts}
         </div>
-        {/* <div className="large-3 cell">
-          <Article featured={featured} />
-        </div> */}
+        <div className="large-3 cell">
+          <Article featured={feature} />
+        </div>
         </div>
         </React.Fragment>
       );

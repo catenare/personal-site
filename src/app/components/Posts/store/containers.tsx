@@ -4,6 +4,7 @@ import Posts from "../posts";
 const PostList = connect(
   (state) => {
     return {
+      feature: state.feature,
       posts: state.posts,
     };
   },
