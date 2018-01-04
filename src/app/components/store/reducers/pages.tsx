@@ -1,4 +1,4 @@
-import * as actions from "../actions/actions";
+import * as C from "../constants";
 
 const initialState = {
   error: null,
@@ -14,15 +14,15 @@ const initialState = {
  */
 export const pages = (state = initialState, action) => {
   switch (action.type) {
-    case actions.SET_PAGES:
+    case C.SET_PAGES:
       return Object.assign(
         {},
         state,
         {pages: action.payload.pages, loaded: true},
       );
-    case actions.GET_PAGES:
+    case C.GET_PAGES:
       return state;
-    case actions.PAGES_PENDING:
+    case C.PAGES_PENDING:
       return Object.assign(
         {},
         state,
@@ -32,16 +32,5 @@ export const pages = (state = initialState, action) => {
       return state;
   }
 };
-
-// export const pages = (state = initialState, action) => {
-//   switch (action.type) {
-//     case actions.SET_PAGES:
-//       return Object.assign({}, state, action.payload);
-//     case actions.GET_PAGES:
-//       return state;
-//     default:
-//       return state;
-//   }
-// };
 
 export default pages;

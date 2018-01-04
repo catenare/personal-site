@@ -1,16 +1,11 @@
-// import Rx from "rxjs";
 import axios from "axios";
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import {Provider} from "react-redux";
 import * as Webfont from "webfontloader";
-import * as postActions from "../components/Posts/store/actions";
-import PostList from "../components/Posts/store/containers";
-import PageList from "../components/store/containers/containers";
+import {PageList, PostList, UserList} from "../components/store/containers/containers";
 import store from "../components/store/store";
-import * as actions from "../components/Users/store/actions";
-import UserList from "../components/Users/store/containers";
-
+// import UserList from "../components/Users/store/containers";
 
 Webfont.load({
   google: {
@@ -30,9 +25,9 @@ if (__IS_PROD__) {
 } else {
   siteUrl = "http://paseo.demo";
 }
-siteUrl = "https://randomuser.me/api/?results=50&noinfo";
+siteUrl = "https://randomuser.me/api/";
 
-const postUrl = "http://paseo.demo/wp-json/wp/v2/posts?_embed";
+// const postUrl = "http://paseo.demo/wp-json/wp/v2/posts?_embed";
 const baseUrl = "http://paseo.demo/";
 
 const users = document.getElementById("user-list");
@@ -48,7 +43,7 @@ ReactDom.render (
 
 ReactDom.render (
   <Provider store={store}>
-    <PostList url={postUrl} />
+    <PostList url={baseUrl} />
   </Provider>,
   posts,
 );

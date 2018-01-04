@@ -14,7 +14,6 @@ class Pages extends React.Component<any, any> {
 
   public render() {
     const {isLoaded, pages} = this.props;
-    console.log("Props:", isLoaded, pages);
     if (isLoaded) {
       const pageList = pages.map((page, i) => <Page Page={page} />);
       return (

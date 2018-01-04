@@ -1,4 +1,4 @@
-import * as C from "./actions";
+import * as C from "../../store/constants";
 
 const initialState = {
   error: null,
@@ -39,18 +39,4 @@ export const post = (state = {}, action) => {
   }
 };
 
-/**
- * Get and set the feature post
- * @param state object
- * @param action string
- */
-export const feature = (state = {loaded: false, post: {}}, action) => {
-  switch (action.type) {
-    case C.SET_FEATURED_POST:
-      return Object.assign({}, state, action.payload);
-    case C.GET_FEATURED_POST:
-      return state;
-    default:
-      return state;
-  }
-};
+export default posts;

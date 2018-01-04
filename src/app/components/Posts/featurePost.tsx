@@ -2,11 +2,10 @@ import * as React from "react";
 
 const article = (props) => {
 
-  if (props && props.featured.loaded) {
-    console.log("Feature:", props.featured);
-    const featureImage = props.featured.post._embedded["wp:featuredmedia"];
-    const dateCreated = new Date(props.featured.post.date).toDateString();
-    const feature = props.featured.post;
+  if (props) {
+    const featureImage = props.featured._embedded["wp:featuredmedia"];
+    const dateCreated = new Date(props.featured.date).toDateString();
+    const feature = props.featured;
     return (
       <div className="large-3 cell">
         <div className="card news-card">

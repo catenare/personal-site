@@ -1,15 +1,13 @@
-import axios from "axios";
 import {applyMiddleware, combineReducers, createStore} from "redux";
 import logger from "redux-logger";
-import promise from "redux-promise-middleware";
-import {feature, posts} from "../Posts/store/reducers";
 import pages from "../store/reducers/pages";
-import users from "../Users/store/reducers";
+import {posts} from "../store/reducers/posts";
+import users from "../store/reducers/users";
 import api from "./middleware/api";
 
-const reducers = combineReducers({feature, users, pages, posts});
+const reducers = combineReducers({users, pages, posts});
 
-const middleware = applyMiddleware(logger, promise(), api);
+const middleware = applyMiddleware(logger, api);
 
 const store = createStore(reducers, middleware);
 
