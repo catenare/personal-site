@@ -6,9 +6,11 @@ import {Provider} from "react-redux";
 import * as Webfont from "webfontloader";
 import * as postActions from "../components/Posts/store/actions";
 import PostList from "../components/Posts/store/containers";
-import store from "../components/store";
+import PageList from "../components/store/containers/containers";
+import store from "../components/store/store";
 import * as actions from "../components/Users/store/actions";
 import UserList from "../components/Users/store/containers";
+
 
 Webfont.load({
   google: {
@@ -31,9 +33,11 @@ if (__IS_PROD__) {
 siteUrl = "https://randomuser.me/api/?results=50&noinfo";
 
 const postUrl = "http://paseo.demo/wp-json/wp/v2/posts?_embed";
+const baseUrl = "http://paseo.demo/";
 
 const users = document.getElementById("user-list");
 const posts = document.getElementById("posts");
+const pages = document.getElementById("pages");
 
 ReactDom.render (
   <Provider store={store}>
@@ -47,4 +51,11 @@ ReactDom.render (
     <PostList url={postUrl} />
   </Provider>,
   posts,
+);
+
+ReactDom.render (
+  <Provider store={store}>
+    <PageList url={baseUrl} />
+  </Provider>,
+  pages,
 );

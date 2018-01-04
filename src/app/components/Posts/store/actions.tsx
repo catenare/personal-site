@@ -32,13 +32,6 @@ export const getAllPosts = (dispatch, url) => {
   }).catch((e) => dispatch(setError(e)));
 };
 
-// axios.get(this.props.url)
-    //   .then( (response) => {
-    //     this.props.dispatch(actions.setPosts(response.data));
-    //     this.props.dispatch(actions.setFeaturedPost(response.data));
-    //   })
-    //   .catch((e) => console.log("error", e));
-
 export const getFeaturedPost = () => {
   return {
     type: GET_FEATURED_POST,
