@@ -21,14 +21,12 @@ import "../../scss/app.scss";
 
 let siteUrl: string; // eslint-disable-line
 if (__IS_PROD__) {
-  siteUrl = "https://api.paseo.org.za/johan/";
+  siteUrl = "https://randomuser.me/api/";
 } else {
-  siteUrl = "http://paseo.demo";
+  siteUrl = "https://randomuser.me/api/";
 }
-siteUrl = "https://randomuser.me/api/";
 
-// const postUrl = "http://paseo.demo/wp-json/wp/v2/posts?_embed";
-const baseUrl = "http://paseo.demo/";
+const baseUrl = "https://demo.wp-api.org/";
 
 const users = document.getElementById("user-list");
 const posts = document.getElementById("posts");

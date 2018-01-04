@@ -46,14 +46,16 @@ class Posts extends React.Component<any, any> {
    * @param posts
    */
   private getFeaturedPost(posts) {
+
     let post;
     const stickyPosts = posts.filter((p) => p.sticky === true);
-    if (!stickyPosts) {
-      post = posts[0];
-    } else {
+
+    if (stickyPosts.length > 0) {
       post = stickyPosts[0];
+    } else {
+      post = posts[0];
     }
-    // console.log("Post: ", post);
+
     return post;
   }
 }
