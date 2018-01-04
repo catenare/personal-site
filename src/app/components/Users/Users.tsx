@@ -9,12 +9,7 @@ class Users extends React.Component<any, any> {
   }
 
   public componentDidMount() {
-    const siteUrl = this.props.url;
-    axios.get(siteUrl)
-      .then( (response) => {
-        this.props.dispatch(actions.setUsers(response.data.results));
-      } )
-      .catch((e) => console.log("error", e));
+    this.props.dispatch(actions.getAllUsers(this.props.url));
   }
 
   public render() {

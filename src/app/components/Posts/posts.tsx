@@ -13,12 +13,7 @@ class Posts extends React.Component<any, any> {
   }
 
   public componentDidMount() {
-    axios.get(this.props.url)
-      .then( (response) => {
-        this.props.dispatch(actions.setPosts(response.data));
-        this.props.dispatch(actions.setFeaturedPost(response.data));
-      })
-      .catch((e) => console.log("error", e));
+    actions.getAllPosts(this.props.dispatch, this.props.url);
   }
 
   public render() {

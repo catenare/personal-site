@@ -1,16 +1,25 @@
 import * as C from "./actions";
 
+const initialState = {
+  error: null,
+  loaded: false,
+  loading: false,
+  posts: [],
+};
+
 /**
  * Get and set all posts
  * @param state array
  * @param action string
  */
-export const posts = (state = [], action) => {
+export const posts = (state = initialState, action) => {
   switch (action.type) {
+    case C.POSTS_FULFILLED:
     case C.SET_POSTS:
-      return Object.assign({}, state, action.payload);
+      return Object.assign({}, state, {posts: action.payload.posts, loaded: true});
     case C.GET_POSTS:
       return state;
+    case C.POSTS_PENDING:
     default:
       return state;
   }
