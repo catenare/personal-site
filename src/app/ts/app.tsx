@@ -27,6 +27,7 @@ if (__IS_PROD__) {
 }
 
 const baseUrl = "https://demo.wp-api.org/";
+// const baseUrl = "http://paseo.demo/";
 
 const users = document.getElementById("user-list");
 const posts = document.getElementById("posts");
