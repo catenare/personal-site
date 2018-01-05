@@ -3,12 +3,13 @@ import * as React from "react";
 const user = (props) => {
   const {User} = props;
   return (
+    <div className="large-4 cell">
   <div className="grid-x grid-padding-x">
-    <div className="medium-2 medium-offset-3 cell text-center">
-      <img src={User.picture.large} alt={User.name.first} className="rounded"/>
-      <a href="#" className="button success rounded hollow margin-top-1">Select</a>
+    <div className="medium-3 cell text-center">
+      <img src={User.picture.large} alt={User.name.first} />
+      <a href="#" className="button success hollow margin-top-1">Select</a>
     </div>
-    <div className="medium-7 cell">
+    <div className="medium-9 cell">
       <ul className="no-bullet">
         <li className="text-capitalize">{User.name.first} {User.name.last}</li>
         <li className="text-capitalize">{User.location.street}</li>
@@ -19,6 +20,7 @@ const user = (props) => {
         <li><img src="../img/map_img.png" alt="Map Image" width="50%"/></li>
       </ul>
     </div>
+  </div>
   </div>
   );
 };
