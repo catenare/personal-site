@@ -1,8 +1,51 @@
-<header>
-  <nav class="cn-c-top-bar top-bar">
-    <ul class="menu">
-      <li class="menu-text">{{settings.site}}</li>
-      {{>menu}}
-    </ul>
+<header class="grid-container full">
+    <div class="title-bar">
+        <div class="title-bar-left">
+          <button class="menu-icon" type="button"></button>
+          <span class="title-bar-title">Johan N. Martin</span>
+        </div>
+        <div class="title-bar-right">
+            <ul class="menu align-right">
+                <li>
+                  <a href="#" title="telephone">
+                      <i class="fa fa-phone" aria-hidden="true">
+                    <span>Phone</span></i></a>
+                </li>
+                <li>
+                  <a href="#" title="email"><i class="fa fa-envelope"><span>Email</span></i></a>
+                </li>
+                <li><a href="#" title="GitHub"><i class="fa fa-github-square"><span>GitHub</span></i></a></li>
+                <li><a href="#" title="LinkedIn"><i class="fa fa-linkedin-square"><span>LinkedIn</span></i></a></li>
+              </ul>
+        </div>
+      </div>
+  <nav class="top-bar icons">
+      <ul class="menu align-left">
+        <li class="menu-text">Johan N. Martin</li>
+        </ul>
+        <ul class="menu align-center icons">
+        <li>
+          <a href="{{root}}/index.html">Home</a>
+        </li>
+        <li>
+          <a href="{{root}}/notebook.html">Notebook</a>
+        </li>
+        <li>
+          <a href="{{root}}/lab.html">Lab</a>
+        </li>
+      </ul>
+      <ul class="menu align-right">
+        <li>
+          <a href="#">
+              <i class="fa fa-mobile" aria-hidden="true"></i>
+            <span>Phone</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-envelope"><span>Email</span></i></a>
+        </li>
+        <li><a href="#"><i class="fa fa-github-square"><span>GitHub</span></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin-square"><span>LinkedIn</span></i></a></li>
+      </ul>
   </nav>
 </header>
+
