@@ -6,20 +6,11 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}} | Johan N. Martin</title>
-    <link rel="stylesheet" href="{{root}}assets/{{#if css}}{{css}}{{else}}app.css{{/if}}">
-    {{#ifpage 'demo'}}
-    <link rel="stylesheet" href="{{root}}assets/demo.css">
-    {{/ifpage}}
+    <link rel="stylesheet" href="{{root}}assets/{{#if css}}{{css}}{{else}}demo.css{{/if}}">
   </head>
   <body>
       {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
       {{>body}}
     <script src="{{root}}assets/vendor.js"></script>
-    {{#ifpage 'index'}}
-    <script src="{{root}}assets/{{#if js}}{{js}}{{else}}app.js{{/if}}"></script>
-    {{/ifpage}}
-    {{#ifpage 'demo'}}
     <script src="{{root}}assets/{{#if js}}{{js}}{{else}}demo.js{{/if}}"></script>
-    {{/ifpage}}
-  </body>
 </html>

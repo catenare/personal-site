@@ -1,0 +1,35 @@
+projects:
+  -
+    title: Paseo
+    image: https://placeimg.com/480/240/any/sepia
+    description: |
+      Wordpress based multi-site for Paseo Baptist Church and Paseo Preschool and Daycare center.
+    highlights:
+      - Wordpress multi-site
+      - Vue.js for front-end development
+      - Firebase for static hosting
+      - Amazon lightsail for Wordpress hosting
+      - Buddypress for community
+      - WooCommerce for ecommerce
+  -
+    title: OpenCode
+    image: https://placeimg.com/480/240/any/sepia
+    description: |
+      Wordpress based multi-site for Paseo Baptist Church and Paseo Preschool and Daycare center.
+    highlights:
+      - Wordpress multi-site
+      - Vue.js for front-end development
+      - Firebase for static hosting
+      - Amazon lightsail for Wordpress hosting
+      - Buddypress for community
+      - WooCommerce for ecommerce
+  -
+    title: KinderCare
+    image: https://placeimg.com/480/240/any/sepia
+    description: |
+      Daycare information and invoicing system. Keep track of the children's information. Track their payment information. Reporting
+    highlights:
+      - Python command line application
+      - BIRT to generate reports and account statements
+      - PostgreSQL database backend
+      - Automated matching of electronic payments. Just upload the account csv file.

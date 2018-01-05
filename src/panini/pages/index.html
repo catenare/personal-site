@@ -1,34 +1,21 @@
 ---
 title: Home
 ---
-<main>
-    {{!--
-<div class="grid-x grid-margin-x">
-  <div class="small-6 cell">
-    <div id="root"></div>
-  </div>
-  <div class="small-6 cell">
-    <div id="react-container"></div>
-  </div>
-</div>
---}}
-<section>
-  {{>hero}}
-</section>
-{{!--
-<section class="articles">
+<main class="grid-container full">
 
-  <div class="grid-x grid-margin-x grid-margin-y">
-    {{#repeat 4}}
-    <div class="small-12 medium-6 large-3 cell">
-      {{>card}}
-    </div>
-    {{/repeat}}
-  </div>
-</section>
---}}
-<section>
-    <div id="root"></div>
-  {{>article-row}}
-</section>
+  <section class="cn-c-hero cn-l-section">
+    {{>hero}}
+  </section>
+
+  <section class="cn-c-blog grid-container cn-l-section">
+    {{>blog}}
+  </section>
+
+  <section class="cn-c-projects grid-container cn-l-section" id="projects">
+    {{>projects}}
+  </section>
+  <section class="cn-c-gallery grid-container cn-l-section">
+    {{>gallery}}
+  </section>
+
 </main>

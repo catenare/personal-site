@@ -1,3 +1,43 @@
+# Header
+```html_example
+<header class="grid-container full">
+    <div class="title-bar">
+        <div class="title-bar-left">
+          <button class="menu-icon" type="button"></button>
+          <span class="title-bar-title">Johan N. Martin</span>
+        </div>
+      </div>
+  <nav class="top-bar icons">
+      <ul class="menu align-left">
+        <li class="menu-text">Johan N. Martin</li>
+        </ul>
+        <ul class="menu align-center icons">
+        <li>
+          <a href="{{root}}/index.html">Home</a>
+        </li>
+        <li>
+          <a href="{{root}}/notebook.html">Notebook</a>
+        </li>
+        <li>
+          <a href="{{root}}/lab.html">Lab</a>
+        </li>
+      </ul>
+      <ul class="menu align-right">
+        <li>
+          <a href="#">
+              <i class="fa fa-mobile" aria-hidden="true"></i>
+            <span>Phone</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-envelope"><span>Email</span></i></a>
+        </li>
+        <li><a href="#"><i class="fa fa-github-square"><span>GitHub</span></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin-square"><span>LinkedIn</span></i></a></li>
+      </ul>
+  </nav>
+</header>
+```
+---
 # Cards
 ```html
 <div class="card">
@@ -14,28 +54,6 @@
   </div>
 </div>
 ```
-<div class="grid-x">
-<div class="small-6 medium-4 cell">
-<div class="card">
-  <a href="#" class="card-image">
-    <div class="background-card-image">
-    <img src="http://placehold.it/640x427" alt="">
-    </div>
-    <div class="image-hover"></div>
-  </a>
-  <div class="card-section">
-    <div class="category">category</div>
-    <h4 class="title"><a href="#">title</a></h4>
-    <p class="meta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, repellendus?<span class="date">24 nov 2017</span> </p>
-    <div class="excerpt"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum labore vel corrupti earum cum natus voluptatibus corporis harum libero perspiciatis possimus reiciendis, praesentium maxime asperiores consectetur? Quas error magnam quisquam.</p></div>
-    <div class="tail"><a href="#">Read more</a></div>
-  </div>
-</div>
-</div>
-<div class="cell auto">
-</div>
-</div>
-
 ---
 
 ## Nesting grid-x
@@ -107,36 +125,126 @@ As you've probably noticed in the examples above, you have access to a small, me
 <p class="lead">Below you can find the different values we created that support the primary color variable you can change at any time in <code>\_settings.scss</code></p>
 
 ---
-
-<div class="row up-1 medium-up-3 large-up-5">
+<div class="grid-container">
+<div class="auto cell">
   <div class="column">
     <div class="color-block">
-      <span style="background: #2199e8"></span>
-      #2199e8
+      <span style="background: #3d4a31"></span>
+      #3d4a31 Primary
     </div>
   </div>
-  <div class="column">
+  <div class="auto cell">
     <div class="color-block">
-      <span style="background: #3adb76"></span>
-      #3adb76
+      <span style="background: #6e8983"></span>
+      #6e8983 Secondary
     </div>
   </div>
-  <div class="column">
+  <div class="auto cell">
     <div class="color-block">
-      <span style="background: #ffae00"></span>
-      #ffae00
+      <span style="background: #f4f4f4"></span>
+      #f4f4f4 Background
     </div>
   </div>
-  <div class="column">
+  <div class="auto cell">
     <div class="color-block">
-      <span style="background: #ec5840"></span>
-      #ec5840
+      <span style="background: #063d79"></span>
+      #063d79 Success
     </div>
   </div>
-  <div class="column">
+  <div class="auto cell">
     <div class="color-block">
-      <span style="background: #0a0a0a"></span>
-      #0a0a0a
+      <span style="background: #ff6418"></span>
+      #ff6418 Warn
+    </div>
+  </div>
+    <div class="auto cell">
+    <div class="color-block">
+      <span style="background: #ece50b"></span>
+      #ece50b 
+    </div>
+  </div>
+    <div class="auto cell">
+    <div class="color-block">
+      <span style="background: #5f770e"></span>
+      #5f770e
+    </div>
+  </div>
+  <div class="auto cell">
+    <div class="color-block">
+      <span style="background: #030303"></span>
+      #030303
+    </div>
+  </div>
+  <div class="auto cell">
+    <div class="color-block">
+      <span style="background: #fffb18"></span>
+      #fffb18 Yellow
+    </div>
+  </div>
+  <div class="auto cell">
+    <div class="color-block">
+      <span style="background: #a578ff"></span>
+      #a578ff Purple
+    </div>
+  </div>
+  <div class="auto cell">
+    <div class="color-block">
+      <span style="background: #92c9ff"></span>
+      #92c9ff
+    </div>
+  </div>
+  <div class="auto cell">
+    <div class="color-block">
+      <span style="background: #8fd16f"></span>
+      #8fd16f
+    </div>
+  </div>
+  <div class="auto cell">
+    <div class="color-block">
+      <span style="background: #108757"></span>
+      #108757
+    </div>
+  </div>
+  <div class="auto cell">
+    <div class="color-block">
+      <span style="background: #0b3a42"></span>
+      #0b3a42
+    </div>
+  </div>
+  <div class="auto cell">
+    <div class="color-block">
+      <span style="background: #ff404a"></span>
+      #ff404a
+    </div>
+  </div>
+  <div class="auto cell">
+    <div class="color-block">
+      <span style="background: #5ca0f2"></span>
+      #5ca0f2
+    </div>
+  </div>
+  <div class="auto cell">
+    <div class="color-block">
+      <span style="background: #ff881d"></span>
+      #ff881d
+    </div>
+  </div>
+  <div class="auto cell">
+    <div class="color-block">
+      <span style="background: #2e47ea"></span>
+      #2e47ea
+    </div>
+  </div>
+  <div class="auto cell">
+    <div class="color-block">
+      <span style="background: #f7ffb1"></span>
+      #f7ffb1
+    </div>
+  </div>
+  <div class="auto cell">
+    <div class="color-block">
+      <span style="background: #ffe5b4"></span>
+      #ffe5b4
     </div>
   </div>
 </div>

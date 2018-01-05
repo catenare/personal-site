@@ -1,36 +1,41 @@
-$marketing-site-hero-height: 40vh;
+// Hero
+$height: 60vh;
 
-.marketing-site-hero {
-  background: url('https://images.pexels.com/photos/8264/pexels-photo.jpg?h=350&auto=compress&cs=tinysrgb') top right no-repeat;
-  height: $marketing-site-hero-height;
+.cn-c-hero {
+
+  background: url('https://res.cloudinary.com/paseo/image/upload/v1514746754/johan-martin/bali_countryside_iuuhtc.jpg') no-repeat center;
+  background-attachment: fixed;
   background-size: cover;
-  display: flex;
-  align-items: center;
+  height: $height;
+  position: relative;
+  width: 100%;
 
-  @media screen and (min-width: 40em) {
-    background-position: center center;
+
+  /* Add some content at the bottom of the video/page */
+  .content {
+    position: relative;
+    text-align: center;
+    top: 30%;
+
+    h1 {
+      color: $primary-color;
+      font-size: 6rem;
+      font-weight: bold;
+      text-align: center;
+
+    }
+
+  }
+
+  .menu {
+    font-size: 2rem;
+    position: relative;
+    top: 35%;
+    // width: 100%;
+
+    a {
+      font-size: 2rem;
+      margin-right: 1rem;
+    }
   }
 }
-
-.marketing-site-hero-content {
-  max-width: $global-width;
-  margin: 0 auto;
-  padding-left: 5%;
-  padding-right: 5%;
-
-  h1 {
-    font-size: 32px;
-  }
-
-  .button.round {
-    border-radius: 5000px;
-    text-transform: uppercase;
-    font-size: 12px;
-    margin-bottom: 0;
-  }
-
-  @media screen and (min-width: 40em) {
-    padding-left: 50%;
-  }
-}
-
