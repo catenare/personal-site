@@ -3,7 +3,7 @@ import * as React from "react";
 import * as ReactDom from "react-dom";
 import {Provider} from "react-redux";
 import * as Webfont from "webfontloader";
-import {PageList, PostList, UserList} from "../components/store/containers/containers";
+import {PageList, PostList} from "../components/store/containers/containers";
 import store from "../components/store/store";
 // import UserList from "../components/Users/store/containers";
 
@@ -19,25 +19,17 @@ Webfont.load({
 
 import "../../scss/app.scss";
 
-let siteUrl: string; // eslint-disable-line
+let baseUrl: string; // eslint-disable-line
 if (__IS_PROD__) {
-  siteUrl = "https://randomuser.me/api/";
+  baseUrl = "https://randomuser.me/api/";
 } else {
-  siteUrl = "https://randomuser.me/api/";
+  baseUrl = "https://demo.wp-api.org/";
 }
 
-const baseUrl = "https://demo.wp-api.org/";
+// const baseUrl = "https://demo.wp-api.org/";
 
-const users = document.getElementById("user-list");
 const posts = document.getElementById("posts");
 const pages = document.getElementById("pages");
-
-ReactDom.render (
-  <Provider store={store}>
-    <UserList url={siteUrl} />
-  </Provider>,
-  users,
-);
 
 ReactDom.render (
   <Provider store={store}>

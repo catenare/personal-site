@@ -2,13 +2,8 @@ import * as React from "react";
 
 const page = (props) => {
   const {Page} = props;
-  // console.log("Page:", Page.title.rendered);
   return (
   <div className="large-3 cell">
-      <div className="news-card-tag">
-        <span className="label"><a href="#">Angular 2</a></span>
-        <span className="label"><a href="#">Angular 4</a></span>
-      </div>
     <div className="card news-card">
       <img src="https://i.imgur.com/6jMbuU1.jpg" alt={Page.title.rendered} className="rounded"/>
       <div className="news-card-date">Sunday, 16th April</div>
@@ -20,7 +15,7 @@ const page = (props) => {
       </article>
       <div className="news-card-author">
         <div className="news-card-author-image">
-          <img src="https://i.imgur.com/lAMD2kS.jpg" alt="user" />>
+          <img src="https://i.imgur.com/lAMD2kS.jpg" alt="user" />
         </div>
         <div className="news-card-author-name">
           By <a href="#">{Page._embedded.author.name}</a>
