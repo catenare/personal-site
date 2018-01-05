@@ -1,0 +1,134 @@
+name: Johan N. Martin
+profile-image: https://res.cloudinary.com/paseo/image/upload/w_300,h_300,c_thumb,g_face,r_max/v1514746806/johan-martin/cooper_coding_cvj6u6.png
+email: martin.johan@johan-martin.com
+phone: 6467839811
+telephone: (646) 783-9811
+social:
+  -
+    title: github
+    link: https://github.com/catenare
+    icon:
+  -
+    title: linkedin
+    link: https://www.linkedin.com/in/jnmartin
+    icon:
+  - title: twitter
+    link: https://twitter.com/catenarellc
+    icon:
+interests:
+  -
+    title: flickr
+    link: https://www.flickr.com/photos/martin_johan/
+    icon:
+  -
+    title: 500px
+    link: https://500px.com/jnm_/galleries
+    icon:
+  -
+    title: tumblr
+    link: http://catenare.tumblr.com/
+    icon:
+summary:
+  - Over 10 years of web application development experience.
+  - Ecommerce development on a multi-million dollar website.
+  - Network and server administration experience.
+  - Comfortable with front-end and back-end development.
+  - Zend Framework Certified.
+  - Java Programmer Certification.
+skills:
+  - Server Administration:
+    - Linux, Mac OS X, Windows
+    - Apache, Nginx
+  - Database Engines:
+    - MySql, PostgreSQL, MongoDB
+  - Frameworks:
+    - Symfony, Zend Framework, Drupal, CodeIgniter, Wordpress, Reat, Vue.js, Angular
+  - Development Tools:
+    - Git, PHPUnit, Selenium, Jenkins, WebPack, NPM
+  - Languages:
+    - PHP, Python, JavaScript, Java, HTML5, CSS
+
+experience:
+  -
+    company: LaGuardia Community College
+    logo: laguardia-community-college-logo.gif
+    title: Open Code Instructor
+    description:
+      - Developed a curriculum which gives students an introduction of web development principles and teaches them basic HTML, CSS, along with commonly used frameworks and design principles.
+    list:
+      - Setup Moodle as an online learning repository
+      - Schedule industry people to come and talk to students about opportunities and challenges in web development
+      - Help students with personal projects
+
+  -
+    company: Experian
+    logo: exp-logo.png
+    title: Senior Web Developer
+    description:
+      - Developed and maintained custom email marketing solution front-end that was integrated into main Cheetahmail platform. API support for Amazon web services including S3, CDN services. Additional work included working with Adobe Omniture APIs.
+    list:
+      - Setup Gerrit for code review with remote team.
+      - Provided basic API layer to integrate 3rd parties into main email system.
+      - Worked with Google on email with Adwords integration.
+      - Worked with 3rd party vendor on an extensive security review and fixes to system.
+  -
+    company: CNBC
+    logo: cnbc-hdr-logo2.png
+    title: Web Application Developer
+    description:
+      - Convert Microsoft provided content management solution to PHP based solution. Worked on architecture and implementation of content management solution and public website. Combination of Drupal and Zend Framework libraries. Used Smarty for public website templates. Implemented Gearmand for API based backend for processing background jobs.
+  -
+    company: Rent The Runway
+    logo: rtr_logo.svg
+    title: Web Application Developer
+    description:
+    - Drupal based ecommerce site. Modules written include customized CDN module using ImageCache, Authorize.net checkout module using their credit card storage service and a custom product reviews module. Also used Drupal services to provide backend support for an iPhone app. Implemented version control and basic unit testing. Integrated Facebook into the site using the PHP client. Used Bronto for our email communications through Drupal. Built API integration with Authorize.net for credit card processing and secure credit card storage.
+    list:
+      - Custom review system for users to rate the dresses they have rented.
+      - Implemented Subversion for version control and managed roll-outs.
+      - Created a BIRT server for sales reporting.
+      - Implemented functional testing using PHPUnit, Selenium and Hudson.
+      - Initiated Symfony project for testing converting site to MVC.
+  -
+    company: NightAgency
+    logo: night_agency.svg
+    title: Web Developer
+    description:
+    - Build interactive sites for a variety of clients including Hanes, Soft Scrub and Purex. Majority of development is done using PHP. Frameworks included CakePHP and Zend Framework. Work with online services such as Amazon S3 for storage. Rapid development environment for clients with strict deadlines for product launches.
+    list:
+      - Localize multi-lingual promotion sites.
+      - Provide web services using AMF for Flash based site.
+      - Amazon S3 for asset storage.
+      - 3rd party APIs for language moderation using SOAP.
+highlights:
+  -
+    title: Wineries of the Sierra Foothills
+    link: http://www.wineriesofthesierrafoothills.com/
+    description: |
+      <h1 class="display-4">I'm a published photographer.</h1>
+      <p>Six weeks of taking pictures, thousands of miles later, hours of editing and I'm a published photographer. Out running forest fires, barely missing deer at night and the occasional fallen tree blocking all exits only made the experience more memorable. Thank you to my friend <a href="https://www.facebook.com/barbara.keck.writes" target="_blank">Barbara Keck</a> who invited me along on her quest to write the ultimate guide to the people and the wineries of the Sierra Foothills. This book consists of personal stories, family recipes and a complete directory of the 10 counties of the California Sierra Foothills.</p>
+      <p>Yes, I did build the website. Check it out and buy the book at <a href="http://www.wineriesofthesierrafoothills.com/" target="_blank">Wineries Of The Sierra Foothills</a>.
+    gallery:
+      - gallery-1.jpg
+      - gallery-10.jpg
+      - gallery-2.jpg
+      - gallery-3.jpg
+      - gallery-4.jpg
+      - gallery-5.jpg
+      - gallery-6.jpg
+      - gallery-7.jpg
+      - gallery-8.jpg
+      - gallery-9.jpg
+  -
+    title: LaGuardia Community College Open Code
+    link: http://www.laguardia.edu/opencode/
+    description: |
+      <h1 class="display-4">Teaching Introduction to Web Development <small class="text-muted"> at LaGuardia Community College</small></h1>
+      <p>Discover the basics of HTML5, CSS3 and JavaScript. Use developer resources such as CodePen.io, GitHub and MSDN to experiment, track your code and find out how to create with your code. LaGuardia Community College provides a beautiful computer lab with high-speed Internet for students to practice what they learn. Class work will consist of exercises and projects to get all the students comfortable with developing and confident about where to go for answers. This class is for people with no or limited web development experience. After this class, jQuery, the box model and sections will no longer be foreign terms or swear words. Classes start April 7th. <a href="http://www.laguardia.edu/opencode/" target="_blank">Register</a> now!</p>
+services:
+  -
+    title: Shopify
+    link: https://www.shopify.com
+    img: shopify_logo_whitebg.svg
+    description: |
+      <p>Shopify is the solution recommended by my friends at <a href="http://www.baronfig.com/" target="_blank">Baron Fig</a> when I was researching an ecommerce solution for Wineries of the Sierra Foothills. It's a hosted solution that gives you extraordinary control over the both the look and functionality of your site. With their templating language, you have complete control over the design of the site. Their API and webhooks allow you integrate with a variety of third-party services and let you build your own. You get all the benefits of a hosted solution plus the control of having your own hosted site. Check out my <a href="http://bootstrap-theme-store.myshopify.com" target="_blank">demo shop</a> in progress using Bootstrap as the base. </p>

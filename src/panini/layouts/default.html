@@ -5,19 +5,22 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{page}} | Prototype Template</title>
-    <link rel="stylesheet" href="{{root}}assets/app.css">
+    <title>{{title}} | Johan N. Martin</title>
+    <link rel="stylesheet" href="{{root}}assets/{{#if css}}{{css}}{{else}}app.css{{/if}}">
   </head>
   <body>
-    <div class="wrapper">
+    <div>
       {{>header}}
-      <main>
       {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
       {{>body}}
-      </main>
       {{>footer}}
     </div>
     <script src="{{root}}assets/vendor.js"></script>
-    <script src="{{root}}assets/app.js"></script>
+    {{#ifpage 'index'}}
+    <script src="{{root}}assets/{{#if js}}{{js}}{{else}}app.js{{/if}}"></script>
+    {{/ifpage}}
+    {{#ifpage 'demo'}}
+    <script src="{{root}}assets/{{#if js}}{{js}}{{else}}demo.js{{/if}}"></script>
+    {{/ifpage}}
   </body>
 </html>

@@ -18,7 +18,7 @@ class Pages extends React.Component<any, any> {
       const pageList = pages.map((page, i) => <Page Page={page} />);
       return (
         <React.Fragment>
-          {pageList}
+          <div>{pageList}</div>
         </React.Fragment>
       );
     } else {

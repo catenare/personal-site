@@ -1,7 +1,7 @@
-# Getting React to work with Wordpress API
+# Johan Martin Personal Site
 
 ## Goal
-* Create base framework for React with Wordpress API.
+* My Personal Website Repo
 
 ## Notes
 * 3 Nov. 2017
@@ -14,6 +14,7 @@
   * Got emmet to work. Got rid of a bunch of extensions. Enabled tab in preferences for emmet. Delete any emmet related extensions.
 
 * 1 January 2017 - cleanup and updated current prototype template with latest from other projects. Still focused on React.
+* 5 January 2017 - merge updates from React Wordpress SPA to this repo.
 
 ## npm run options
 * `npm run dev` - startup webpack-dev-server in dev mode
