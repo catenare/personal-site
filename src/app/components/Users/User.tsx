@@ -6,8 +6,8 @@ const user = (props) => {
     <div className="large-4 cell">
   <div className="grid-x grid-padding-x">
     <div className="medium-3 cell text-center">
-      <img src={User.picture.large} alt={User.name.first} className="rounded"/>
-      <a href="#" className="button success rounded hollow margin-top-1">Select</a>
+      <img src={User.picture.large} alt={User.name.first} />
+      <a href="#" className="button success hollow margin-top-1">Select</a>
     </div>
     <div className="medium-9 cell">
       <ul className="no-bullet">
