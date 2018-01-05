@@ -5,7 +5,6 @@ import Article from "./featurePost";
 import Post from "./post";
 // import * as actions from "./store/actions";
 
-
 // https://api.paseo.org.za/johan/wp-json/wp/v2/posts?_embed
 // http://paseo.demo
 
@@ -13,8 +12,6 @@ class Posts extends React.Component<any, any> {
   constructor(props) {
     super(props);
   }
-
-
 
   public componentDidMount() {
     this.props.dispatch(actions.getAllPosts(this.props.url));
@@ -26,14 +23,20 @@ class Posts extends React.Component<any, any> {
     const posts = this.props.posts.posts.map((c, i) => <Post post={c} index={i} />);
     return (
       <React.Fragment>
-      <div className="grid-x grid-margin-x grid-padding-x">
-        <div className="large-9 cell">
+      <div className="article-row-section">
+      <div className="article-row-section-inner">
+        <h2 className="article-row-section-header">Post</h2>
+        <div className="grid-x grid-padding-x">
+          <div className="large-8 cell">
               {posts}
+          </div>
+          <div className="large-4 cell">
+            <Article featured={feature} />
+          </div>
         </div>
-        <div className="large-3 cell">
-          <Article featured={feature} />
-        </div>
-        </div>
+      </div>
+      </div>
+
         </React.Fragment>
       );
   } else {

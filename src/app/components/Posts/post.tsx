@@ -3,22 +3,23 @@ import * as React from "react";
 const post = (props) => {
   const featureImage = props.post._embedded["wp:featuredmedia"];
   const dateCreated = new Date(props.post.date).toDateString();
+  const isOdd = (props.index % 2) ? "article-row" : "article-row article-row-reversed";
   return (
     <a href="#">
-          <article className="grid-x grid-margin-x grid-padding-x">
-            <div className="large-3 cell">
-              <img src={(featureImage) ? featureImage[0].source_url :
-                 "https://placehold.it/400"} width="200px" alt="picture of a whale eating a donkey" />
+      <article className={isOdd}>
+          <div className="article-row-img">
+              <img src="https://placehold.it/200"
+              alt="picture of a whale eating a donkey" />
             </div>
-            <div className="large-9 cell">
-              <h1>{props.post.title.rendered}</h1>
-                <p
+            <div className="article-row-content">
+              <h1 className="article-row-content-header">{props.post.title.rendered}</h1>
+              <p className="article-row-content-description"
                 dangerouslySetInnerHTML={{__html: props.post.excerpt.rendered}} />
-              <p>{props.post._embedded.author[0].name}</p>
-              <time dateTime={props.post.date}>{dateCreated}</time>
+              <p className="article-row-content-author">{props.post._embedded.author[0].name}</p>
+              <time className="article-row-content-time" dateTime={props.post.date}>{dateCreated}</time>
             </div>
-          </article>
-        </a>
+      </article>
+    </a>
   );
 };
 export default post;
