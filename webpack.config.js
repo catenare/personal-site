@@ -1,5 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
+// const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebPackPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const vendorPackages = require('./package.json')
@@ -7,9 +8,24 @@ const combineLoaders = require('webpack-combine-loaders')
 const StylelintPlugin = require('stylelint-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
+let hostEnv
+
+const setupEnv = () => {
+  switch (process.env.NODE_ENV) {
+    case 'production':
+      hostEnv = true
+      break
+    default:
+      hostEnv = false
+      break
+  }
+}
+
+setupEnv()
+
 module.exports = {
   entry: {
-    app: './src/app/index.tsx',
+    app: './src/app/ts/app.tsx',
     vendor: Object.keys(vendorPackages.dependencies).filter(name => (name !== 'font-awesome' && name !== 'csspin'))
   },
   output: {
@@ -30,9 +46,10 @@ module.exports = {
       async: true,
       minChunks: Infinity
     }),
-    // new DashboardPlugin(),
+    new webpack.DefinePlugin({
+      __IS_PROD__: hostEnv
+    }),
     new StylelintPlugin({syntax: 'scss', emitErrors: false, lintDirtyModulesOnly: true})
-
   ],
   module: {
     rules: [
@@ -72,17 +89,12 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules(\/?!foundation-sites)/,
-        use: 'babel-loader'
+        loader: 'babel-loader'
       },
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         use: ['babel-loader', 'awesome-typescript-loader']
-      },
-      {
-        test: /\.hbs$/,
-        exclude: /node_modules/,
-        use: 'handlebars-loader'
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

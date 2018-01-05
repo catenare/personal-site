@@ -1,7 +1,10 @@
 import axios from "axios";
 import * as React from "react";
+import * as actions from "../store/actions/actions";
 import Article from "./featurePost";
 import Post from "./post";
+// import * as actions from "./store/actions";
+
 
 // https://api.paseo.org.za/johan/wp-json/wp/v2/posts?_embed
 // http://paseo.demo
@@ -9,35 +12,18 @@ import Post from "./post";
 class Posts extends React.Component<any, any> {
   constructor(props) {
     super(props);
-    this.state = {
-      featured: {},
-      loaded: false,
-      posts: [],
-    };
-    this.getPosts = this.getPosts.bind(this);
   }
 
-  public getPosts() {
-    // axios.get("https://api.paseo.org.za/johan/wp-json/wp/v2/posts?_embed")
-    axios.get("http://paseo.demo/wp-json/wp/v2/posts?_embed")
-    .then( (response) => {
-      this.setState({posts: response.data});
-      this.setState(
-        {featured: response.data.filter((p) => p.sticky === true)}
-      );
-      this.setState({loaded: true});
-    } )
-    .catch( (e) => console.log("error:", e));
-  }
 
-  public componentWillMount() {
-    this.getPosts();
+
+  public componentDidMount() {
+    this.props.dispatch(actions.getAllPosts(this.props.url));
   }
 
   public render() {
-    if (this.state.loaded) {
-    const featured = this.state.featured[0];
-    const posts = this.state.posts.map((c, i) => <Post post={c} index={i} />);
+    if (this.props.posts.loaded) {
+    const feature = this.getFeaturedPost(this.props.posts.posts);
+    const posts = this.props.posts.posts.map((c, i) => <Post post={c} index={i} />);
     return (
       <React.Fragment>
       <div className="grid-x grid-margin-x grid-padding-x">
@@ -45,7 +31,7 @@ class Posts extends React.Component<any, any> {
               {posts}
         </div>
         <div className="large-3 cell">
-          <Article featured={featured} />
+          <Article featured={feature} />
         </div>
         </div>
         </React.Fragment>
@@ -53,6 +39,24 @@ class Posts extends React.Component<any, any> {
   } else {
     return <div className="loader">Loading...</div>;
   }
+  }
+
+  /**
+   * Retrieve the latest sticky post or first post if no sticky post.
+   * @param posts
+   */
+  private getFeaturedPost(posts) {
+
+    let post;
+    const stickyPosts = posts.filter((p) => p.sticky === true);
+
+    if (stickyPosts.length > 0) {
+      post = stickyPosts[0];
+    } else {
+      post = posts[0];
+    }
+
+    return post;
   }
 }
 
