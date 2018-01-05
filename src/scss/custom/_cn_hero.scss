@@ -1,31 +1,28 @@
 
 .cn-c-hero {
-  // @include xy-grid-container;
+  @include xy-grid-container;
   background: url('https://res.cloudinary.com/paseo/image/upload/v1514746754/johan-martin/bali_countryside_iuuhtc.jpg') no-repeat center;
   background-attachment: fixed;
   background-size: cover;
-  box-shadow: 1px 2px 4px 5px rgba(0, 0, 0, 0.5);
   height: $hero-height;
   position: relative;
   width: 100%;
-
 
   &--content {
     position: relative;
     text-align: center;
     // top: -($hero-height * 0.8);
-    top: $hero-height/3;
+    top: $hero-height/2;
 
     h1 {
       color: $secondary-color;
       font-family: $font-family-highlight;
-      font-size: 5rem;
+      font-size: 3rem;
       font-weight: bold;
     }
 
     p {
-      color: $dark-gray;
-      font-size: 2rem;
+      color: $primary-color;
       font-style: italic;
     }
   }
