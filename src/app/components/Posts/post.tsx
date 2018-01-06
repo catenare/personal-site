@@ -1,14 +1,17 @@
 import * as React from "react";
 
 const post = (props) => {
-  const featureImage = props.post._embedded["wp:featuredmedia"];
+  // const featureImage = props.post._embedded["wp:featuredmedia"];
+  const featureImage = (props.post._embedded["wp:featuredmedia"]) ?
+  (props.post._embedded["wp:featuredmedia"][0].source_url) :
+  "https://placeimg.com/400/200/arch";
   const dateCreated = new Date(props.post.date).toDateString();
   const isOdd = (props.index % 2) ? "article-row" : "article-row article-row-reversed";
   return (
     <a href="#">
       <article className={isOdd}>
           <div className="article-row-img">
-              <img src="https://placehold.it/200"
+              <img src={featureImage}
               alt="picture of a whale eating a donkey" />
             </div>
             <div className="article-row-content">

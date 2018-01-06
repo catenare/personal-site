@@ -27,11 +27,11 @@ class Posts extends React.Component<any, any> {
       <div className="article-row-section-inner">
         <h2 className="article-row-section-header">Post</h2>
         <div className="grid-x grid-padding-x">
-          <div className="large-8 cell">
+          <Article featured={feature} />
+        </div>
+        <div className="grid-x grid-padding-x">
+          <div className="large-12 cell">
               {posts}
-          </div>
-          <div className="large-4 cell">
-            <Article featured={feature} />
           </div>
         </div>
       </div>

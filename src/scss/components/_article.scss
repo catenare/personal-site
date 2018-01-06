@@ -1,3 +1,7 @@
+.background-card-image {
+  width: 100%;
+}
+
 .article-row-section {
   @include flex-grid-row(null, $global-width, 12);
   justify-content: center;
@@ -29,11 +33,11 @@
 }
 
 .article-row-img img {
-  width: 100%;
+  width: 20rem;
 
   @include breakpoint(medium) {
     max-width: none;
-    width: auto;
+    width: 20rem;
   }
 }
 

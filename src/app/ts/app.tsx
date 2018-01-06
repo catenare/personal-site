@@ -21,9 +21,9 @@ import "../../scss/app.scss";
 
 let baseUrl: string; // eslint-disable-line
 if (__IS_PROD__) {
-  baseUrl = "https://randomuser.me/api/";
+  baseUrl = "https://api.paseo.org.za/johan/";
 } else {
-  baseUrl = "https://demo.wp-api.org/";
+  baseUrl = "http://paseo.demo/";
 }
 
 // const baseUrl = "https://demo.wp-api.org/";
