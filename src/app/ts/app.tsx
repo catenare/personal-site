@@ -1,4 +1,3 @@
-import axios from "axios";
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import {Provider} from "react-redux";
@@ -18,6 +17,7 @@ Webfont.load({
 });
 
 import "../../scss/app.scss";
+import "../timeline";
 
 let baseUrl: string; // eslint-disable-line
 if (__IS_PROD__) {

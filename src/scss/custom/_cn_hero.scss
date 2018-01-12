@@ -1,24 +1,38 @@
 
+$hero-height: 80vh;
+
 .cn-c-hero {
   background: url('https://res.cloudinary.com/paseo/image/upload/v1514746754/johan-martin/bali_countryside_iuuhtc.jpg') no-repeat center;
   background-attachment: fixed;
   background-size: cover;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.25);
   height: $hero-height;
   position: relative;
   width: 100%;
 
+
   &--content {
     position: relative;
     text-align: center;
-    // top: -($hero-height * 0.8);
-    top: $hero-height/2;
+    top: $hero-height/4;
+
+    blockquote {
+      font-size: 2rem;
+    }
 
     h1 {
       color: $secondary-color;
       font-family: $font-family-highlight;
-      font-size: 3rem;
+      font-size: 30rem;
       font-weight: bold;
+      line-height: 15rem;
+
+      span {
+        display: block;
+        font-size: 5rem;
+      }
     }
+
 
     p {
       color: $primary-color;
@@ -26,17 +40,68 @@
     }
   }
 
-  &--video {
-    bottom: 0;
-    height: auto;
-    min-height: 100%;
-    min-width: 100%;
-    position: fixed;
-    right: 0;
-    width: auto;
-    z-index: -100;
+  .menu {
+    font-size: 2rem;
+    margin-top: 2rem;
+
+    a {
+      font-size: 2rem;
+      margin-right: 1rem;
+    }
   }
 
-
+  // &--video {
+  //   bottom: 0;
+  //   height: auto;
+  //   min-height: 100%;
+  //   min-width: 100%;
+  //   position: fixed;
+  //   right: 0;
+  //   width: auto;
+  //   z-index: -100;
+  // }
 
 }
+
+/*
+$height: 60vh;
+
+.cn-c-hero {
+
+  background: url('https://res.cloudinary.com/paseo/image/upload/v1514746754/johan-martin/bali_countryside_iuuhtc.jpg') no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: $height;
+  position: relative;
+  width: 100%;
+
+
+  // Add some content at the bottom of the video/page
+  .content {
+    position: relative;
+    text-align: center;
+    top: 30%;
+
+    h1 {
+      color: $primary-color;
+      font-size: 6rem;
+      font-weight: bold;
+      text-align: center;
+
+    }
+
+  }
+
+  .menu {
+    font-size: 2rem;
+    position: relative;
+    top: 35%;
+    // width: 100%;
+
+    a {
+      font-size: 2rem;
+      margin-right: 1rem;
+    }
+  }
+}
+*/
