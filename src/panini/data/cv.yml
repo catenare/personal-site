@@ -36,22 +36,67 @@ summary:
   - Zend Framework Certified.
   - Java Programmer Certification.
 skills:
-  - Server Administration:
-    - Linux, Mac OS X, Windows
-    - Apache, Nginx
-  - Database Engines:
-    - MySql, PostgreSQL, MongoDB
-  - Frameworks:
-    - Symfony, Zend Framework, Drupal, CodeIgniter, Wordpress, Reat, Vue.js, Angular
-  - Development Tools:
-    - Git, PHPUnit, Selenium, Jenkins, WebPack, NPM
-  - Languages:
-    - PHP, Python, JavaScript, Java, HTML5, CSS
+  -
+    title: System Administration
+    icon: fa-cloud
+    items:
+      - Linux
+      - Mac OS X
+      - Windows
+      - Apache
+      - Nginx
+  -
+    title: Databases
+    icon: fa-database
+    items:
+      - MySql
+      - PostgreSQL
+      - MongoDB
+  -
+    title: Cloud Service
+    icon: fa-cloud
+    items:
+      - Azure
+      - Amazon Web Services
+      - Google Cloud
+  -
+    title: Developer Tools
+    icon: fa-cogs
+    items:
+      - Git
+      - Jenkins
+  -
+    title: Languages
+    icon: fa-language
+    items:
+    -
+      title: PHP
+      items:
+        - Zend Framework
+        - Symfony
+        - Drupal
+        - WordPress
+    -
+      title: Python
+      items:
+        - Flask
+        - Django
+    -
+      title: JavaScript
+      items:
+        - Reactjs
+        - Vuejs
+        - jQuery
+        - Angular
+    -
+      title: Java
+      items:
+        - Spring
 
 experience:
   -
     company: LaGuardia Community College
-    logo: laguardia-community-college-logo.gif
+    logo: https://res.cloudinary.com/paseo/image/upload/v1514747415/johan-martin/experience/laguardia-community-college-logo.gif
     title: Open Code Instructor
     description:
       - Developed a curriculum which gives students an introduction of web development principles and teaches them basic HTML, CSS, along with commonly used frameworks and design principles.
@@ -62,7 +107,7 @@ experience:
 
   -
     company: Experian
-    logo: exp-logo.png
+    logo: https://res.cloudinary.com/paseo/image/upload/v1514747415/johan-martin/experience/exp-logo.png
     title: Senior Web Developer
     description:
       - Developed and maintained custom email marketing solution front-end that was integrated into main Cheetahmail platform. API support for Amazon web services including S3, CDN services. Additional work included working with Adobe Omniture APIs.
@@ -73,13 +118,13 @@ experience:
       - Worked with 3rd party vendor on an extensive security review and fixes to system.
   -
     company: CNBC
-    logo: cnbc-hdr-logo2.png
+    logo: https://res.cloudinary.com/paseo/image/upload/v1514747416/johan-martin/experience/cnbc-hdr-logo2.png
     title: Web Application Developer
     description:
       - Convert Microsoft provided content management solution to PHP based solution. Worked on architecture and implementation of content management solution and public website. Combination of Drupal and Zend Framework libraries. Used Smarty for public website templates. Implemented Gearmand for API based backend for processing background jobs.
   -
     company: Rent The Runway
-    logo: rtr_logo.svg
+    logo: https://res.cloudinary.com/paseo/image/upload/v1514747414/johan-martin/experience/rtr_logo.svg
     title: Web Application Developer
     description:
     - Drupal based ecommerce site. Modules written include customized CDN module using ImageCache, Authorize.net checkout module using their credit card storage service and a custom product reviews module. Also used Drupal services to provide backend support for an iPhone app. Implemented version control and basic unit testing. Integrated Facebook into the site using the PHP client. Used Bronto for our email communications through Drupal. Built API integration with Authorize.net for credit card processing and secure credit card storage.
@@ -91,7 +136,7 @@ experience:
       - Initiated Symfony project for testing converting site to MVC.
   -
     company: NightAgency
-    logo: night_agency.svg
+    logo: https://res.cloudinary.com/paseo/image/upload/v1514747415/johan-martin/experience/night_agency.svg
     title: Web Developer
     description:
     - Build interactive sites for a variety of clients including Hanes, Soft Scrub and Purex. Majority of development is done using PHP. Frameworks included CakePHP and Zend Framework. Work with online services such as Amazon S3 for storage. Rapid development environment for clients with strict deadlines for product launches.
