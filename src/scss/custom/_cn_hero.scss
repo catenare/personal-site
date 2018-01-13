@@ -19,7 +19,8 @@ $hero-height: 80vh;
 
 
     blockquote {
-      background-color: rgba($light-gray, 0.7);
+      // background-color: rgba($light-gray, 0.7);
+      background-color: rgba($site-background, 0.5);
       color: rgba(11, 58, 66, 1);
       font-size: 2rem;
       border: 0;

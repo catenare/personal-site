@@ -80,8 +80,8 @@
       padding: 20px 30px;
       position: relative;
 
-      // $flip-card-height: rem-calc(320);
-      $flip-card-height: 14vh;
+      $flip-card-height: rem-calc(320);
+      // $flip-card-height: 14vh;
       $flip-card-transition-speed: 0.6s;
 
       .flip-card {
@@ -99,7 +99,7 @@
       .flip-card-inner-front,
       .flip-card-inner-back {
         height: $flip-card-height;
-        width: 100%;
+        // width: 100%;
       }
 
       .flip-card-inner {
@@ -110,6 +110,11 @@
 
         .company-logo {
           padding: 10px 5px;
+          background-color: rgba(112, 112, 112, 1);
+        }
+
+        p {
+          font-size: 1rem;
         }
       }
 
@@ -124,19 +129,23 @@
       .flip-card-inner-front {
         align-items: 'center';
         // background: url('https://images.pexels.com/photos/179124/pexels-photo-179124.jpeg?w=940&h=650&auto=compress&cs=tinysrg') 0 0 no-repeat;
-        background-color: $dark-gray;
+
         color: $white;
         display: flex;
         justify-content: center;
         z-index: 2;
+        text-align: left;
 
         span {
           background: rgba($white, 0.8);
           font-size: 1.25rem;
           font-weight: bold;
           padding: 0.25rem 0;
-          text-align: center;
+          text-align: left;
           width: 100%;
+          p {
+            // text-align: left;
+          }
         }
       }
 
