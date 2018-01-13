@@ -2,12 +2,13 @@
     <div class="product-feature-section-outer">
       <h1 class="product-feature-section-headline">Skills</h1>
       <div class="product-feature-section-inner">
+
         {{#each cv.skills}}
         <div class="product-feature-section-feature top-left">
             <i class="fa {{icon}}" aria-hidden="true"></i>
           <div>
             <h2 class="feature-title">{{this.title}}</h2>
-            <p class="feature-desc">Can withstand extreme cold</p>
+            <!-- <p class="feature-desc">Can withstand extreme cold</p> -->
             <ul>
               {{#each this.items}}
                 {{#if this.title}}
@@ -27,6 +28,7 @@
           </div>
         </div>
         {{/each}}
+
 {{!--
         <div class="product-feature-section-feature top-right">
             <i class="fa fa-cogs" aria-hidden="true"></i>

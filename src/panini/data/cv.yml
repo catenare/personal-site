@@ -5,40 +5,43 @@ phone: 6467839811
 telephone: (646) 783-9811
 social:
   -
-    title: github
+    title: Github
     link: https://github.com/catenare
-    icon:
+    icon: fa-github
   -
-    title: linkedin
+    title: Linkedin
     link: https://www.linkedin.com/in/jnmartin
-    icon:
-  - title: twitter
-    link: https://twitter.com/catenarellc
-    icon:
+    icon: fa-linkedin-square
 interests:
   -
     title: flickr
     link: https://www.flickr.com/photos/martin_johan/
-    icon:
+    icon: fa-flickr
   -
     title: 500px
     link: https://500px.com/jnm_/galleries
-    icon:
+    icon: fa-500px
   -
     title: tumblr
     link: http://catenare.tumblr.com/
-    icon:
+    icon: fa-tumbl-square
+  -
+    title: twitter
+    link: https://twitter.com/catenarellc
+    icon: fa-twitter-square
 summary:
-  - Over 10 years of web application development experience.
-  - Ecommerce development on a multi-million dollar website.
-  - Network and server administration experience.
-  - Comfortable with front-end and back-end development.
-  - Zend Framework Certified.
-  - Java Programmer Certification.
+  - 10+ years experience
+  - Team lead and offshore team management experience
+  - Comfortable working remotely
+  - Large scale ecommerce development
+  - Network and server administration
+  - Front-end and back-end development
+  - PHP/Zend framework certification
+  - Java programmer certification
 skills:
   -
     title: System Administration
-    icon: fa-cloud
+    icon: fa-microchip
     items:
       - Linux
       - Mac OS X
@@ -122,6 +125,9 @@ experience:
     title: Web Application Developer
     description:
       - Convert Microsoft provided content management solution to PHP based solution. Worked on architecture and implementation of content management solution and public website. Combination of Drupal and Zend Framework libraries. Used Smarty for public website templates. Implemented Gearmand for API based backend for processing background jobs.
+    list:
+      - Implemented "headless" CMS
+      - Team lead
   -
     company: Rent The Runway
     logo: https://res.cloudinary.com/paseo/image/upload/v1514747414/johan-martin/experience/rtr_logo.svg

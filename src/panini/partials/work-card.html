@@ -13,11 +13,18 @@
             <span>
                 <h3>{{title}}</h3>
                 <h2>{{company}}</h2>
+                <p>{{description}}</p>
             </span>
           </div>
+
           </div>
           <div class="flip-card-inner-back">
-            <p class="flip-card-inner-back-text">{{description}}</p>
+            <ul>
+              {{#each this.list}}
+              <ul>{{this}}</ul>
+              {{/each}}
+            </ul>
+            <!-- <p class="flip-card-inner-back-text">{{description}}</p> -->
           </div>
         </div>
       </div>

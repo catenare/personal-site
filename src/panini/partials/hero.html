@@ -3,18 +3,21 @@
     <div class="large-7 cell">
         <h1>Web <span>Application Developer</span></h1>
     </div>
-    <div class="large-5 cell">
+    <div class="large-5 cell content">
         <blockquote>Having knowledge but lacking the power to express it clearly is no better than
             never having any ideas at all
             <cite> Pericles</cite>
           </blockquote>
           <ul class="menu align-center">
+            {{#each cv.social}}
               <li>
-                <a href="#" title="GitHub"><i class="fa fa-github-square"><span>GitHub</span></i></a>
+                <a href="{{this.link}}" title="{{this.title}}" target="_blank">
+                  <i class="fa {{this.icon}}"></i>{{title}}</a>
               </li>
-              <li>
+              {{/each}}
+              <!-- <li>
                 <a href="#" title="LinkedIn"><i class="fa fa-linkedin-square"><span>LinkedIn</span></i></a>
-              </li>
+              </li> -->
             </ul>
         </div>
 

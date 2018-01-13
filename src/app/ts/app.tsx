@@ -17,7 +17,7 @@ Webfont.load({
 });
 
 import "../../scss/app.scss";
-import "../timeline";
+import "../js/app";
 
 let baseUrl: string; // eslint-disable-line
 if (__IS_PROD__) {

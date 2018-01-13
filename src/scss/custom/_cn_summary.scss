@@ -1,7 +1,8 @@
 .cn-c-summary {
+
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
 
   h1 {
     text-align: center;
@@ -9,11 +10,19 @@
 
   ul {
     list-style: none;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   li {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 0.25rem;
+    padding-bottom: 0.25rem;
+
+    span {
+      display: inline-block;
+      margin-right: 1em;
+      // line-height: 10rem;
+    }
   }
 }
