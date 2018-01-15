@@ -1,53 +1,51 @@
 
-$hero-height: 70vh;
+$hero-height: 80vh;
 
 .cn-c-hero {
-  // background: url('https://res.cloudinary.com/paseo/image/upload/v1514746754/johan-martin/bali_countryside_iuuhtc.jpg') no-repeat center;
-  // background-attachment: fixed;
-  // background-size: cover;
-  // box-shadow: 0 5px rgba(0, 0, 0, 0.25);
   height: $hero-height;
   position: relative;
   width: 100%;
 
-
   &--content {
+    background-color: rgba($site-background, 0.5);
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
     text-align: center;
-    top: $hero-height/4;
-
-
+    top: $hero-height/2.5;
+    width: 50%;
 
     blockquote {
-      // background-color: rgba($light-gray, 0.7);
-      background-color: rgba($site-background, 0.5);
-      color: rgba(11, 58, 66, 1);
-      font-size: 2rem;
       border: 0;
-      text-align: left;
-      border-radius: 10px;
+      color: rgba(11, 58, 66, 1);
+      font-size: 2.25rem;
       padding: 1rem;
+      text-align: left;
+
+      p::after {
+        content: '\201D';
+      }
+
+      p::before {
+        content: "\201C";
+      }
+
       cite {
-        font-size: 1rem;
+        font-size: 1.5rem;
+        color: $dark-gray;
       }
     }
+
 
     h1 {
       color: $secondary-color;
       font-family: $font-family-highlight;
       font-size: 30rem;
       font-weight: bold;
-      line-height: 15rem;
-
-      span {
-        display: block;
-        font-size: 5rem;
-        line-height: 10rem;
-      }
     }
 
     @include breakpoint(medium down) {
-
       h1 {
         font-size: 10rem;
         line-height: 10rem;
@@ -63,81 +61,29 @@ $hero-height: 70vh;
       }
     }
 
-
-
     p {
       color: $primary-color;
-      font-style: italic;
+      font-family: $font-family-quote;
     }
   }
 
   .content {
-    width: 35%;
     color: rgba(112, 112, 112, 1);
-  }
-
-  .menu {
-    font-size: 2rem;
-    margin-top: 2rem;
-
-    a {
-      font-size: 2rem;
-      margin-right: 1rem;
-    }
-  }
-
-  // &--video {
-  //   bottom: 0;
-  //   height: auto;
-  //   min-height: 100%;
-  //   min-width: 100%;
-  //   position: fixed;
-  //   right: 0;
-  //   width: auto;
-  //   z-index: -100;
-  // }
-
-}
-
-/*
-$height: 60vh;
-
-.cn-c-hero {
-
-  background: url('https://res.cloudinary.com/paseo/image/upload/v1514746754/johan-martin/bali_countryside_iuuhtc.jpg') no-repeat center;
-  background-attachment: fixed;
-  background-size: cover;
-  height: $height;
-  position: relative;
-  width: 100%;
-
-
-  // Add some content at the bottom of the video/page
-  .content {
-    position: relative;
-    text-align: center;
-    top: 30%;
-
-    h1 {
-      color: $primary-color;
-      font-size: 6rem;
-      font-weight: bold;
-      text-align: center;
-
-    }
+    width: 35%;
 
   }
 
   .menu {
     font-size: 2rem;
-    position: relative;
-    top: 35%;
-    // width: 100%;
+    padding-bottom: 1rem;
 
     a {
       font-size: 2rem;
       margin-right: 1rem;
+
+      i {
+        margin-right: 0.5rem;
+      }
     }
   }
 }
-*/

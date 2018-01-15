@@ -3,8 +3,6 @@ $product-feature-section-bg: $light-gray;
 $product-feature-section-divider-color: $medium-gray;
 
 .cn-skills {
-  // margin-bottom: 20px;
-  // margin-top: 20px;
 
   .product-feature-section {
     background: $product-feature-section-bg;
@@ -36,30 +34,27 @@ $product-feature-section-divider-color: $medium-gray;
 
   .product-feature-section-feature {
     align-items: flex-start;
+    border-bottom: 1px solid $product-feature-section-divider-color;
     display: flex;
     flex: 1 0 50%;
     flex-direction: column;
     justify-content: flex-start;
     padding: 1rem;
 
-    &.top-left {
-      border-bottom: 1px solid $product-feature-section-divider-color;
+    border: 1px solid green;
+
+    &:nth-child(odd) {
       border-right: 1px solid $product-feature-section-divider-color;
     }
 
-    &.top-right {
-      border-bottom: 1px solid $product-feature-section-divider-color;
-    }
-
-    &.bottom-left {
-      border-right: 1px solid $product-feature-section-divider-color;
+    &:nth-last-child(1) {
+      border-bottom: 0;
+      border-right: 0;
     }
 
     .feature-title {
       line-height: 2rem;
       margin-bottom: 0.25rem;
-
-      // font-size: 0.875rem;
     }
 
     .feature-desc {
@@ -70,6 +65,19 @@ $product-feature-section-divider-color: $medium-gray;
       font-size: 2rem;
       margin-right: 1.25rem;
     }
+
+    .sub-skills {
+      display: flex;
+
+      li {
+        width: 10rem;
+      }
+    }
+
+    // ul {
+    //   display: flex;
+    //   // flex: no-wrap;
+    // }
 
     @include breakpoint(medium) {
       flex: 1 0 50%;

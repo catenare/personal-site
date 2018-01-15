@@ -42,6 +42,7 @@ skills:
   -
     title: System Administration
     icon: fa-microchip
+    class: 0
     items:
       - Linux
       - Mac OS X
@@ -51,6 +52,7 @@ skills:
   -
     title: Databases
     icon: fa-database
+    class: 0
     items:
       - MySql
       - PostgreSQL
@@ -58,6 +60,7 @@ skills:
   -
     title: Cloud Service
     icon: fa-cloud
+    class: 0
     items:
       - Azure
       - Amazon Web Services
@@ -65,12 +68,14 @@ skills:
   -
     title: Developer Tools
     icon: fa-cogs
+    class: 0
     items:
       - Git
       - Jenkins
   -
     title: Languages
     icon: fa-language
+    class: 1
     items:
     -
       title: PHP

@@ -10,6 +10,7 @@ Webfont.load({
   google: {
     families: [
       "Annie Use Your Telescope",
+      "Itim",
       "PT Sans Narrow",
       "Roboto",
   ],

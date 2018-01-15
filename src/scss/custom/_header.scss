@@ -1,23 +1,47 @@
 .cn-c-top-bar {
   position: fixed;
+  text-align: center;
+  top: 0;
   width: 100%;
-  z-index: 10;
-}
+  z-index: 1;
 
+  h1,
+  h2 {
+    font-family: $font-family-highlight;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
 
-$scrollhide-nav-transition-speed: 1s;
+  h1 {
+    font-size: 10rem;
+    line-height: 5rem;
+    padding-top: 2rem;
 
-.js-nav-background {
-  // position: fixed;
-  // right: 0;
-  // top: 0;
-  // left: 0;
-  // transition: transform $scrollhide-nav-transition-speed cubic-bezier(0.86, 0, 0.07, 1);
+    a {
+      font-family: $font-family-highlight;
+    }
+  }
 
-  &.js-background {
+  h2 {
+    color: $primary-color;
+    font-size: 4rem;
+  }
+
+  &-scroll-nav-background {
+    h1,
+    h2 {
+      display: inline-block;
+      font-size: 3rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    h1 {
+      padding-top: 1rem;
+    }
+
     background-color: rgba($site-background, 0.7);
     box-shadow: 0 4px rgba(204, 185, 167, 0.4);
-    // transform: translateY(-100%);
   }
 }
-
