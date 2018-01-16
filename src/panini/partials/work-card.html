@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <div class="content">
       <div
       class="flip-card card"
@@ -28,4 +28,26 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
+
+  <div class="cn-com-catenare-com-demo--inner">
+      <div class="cn-com-catenare-com-demo--logo">
+        <img src={{logo}} alt={{title}} />
+      </div>
+      <div class="cn-com-catenare-com-demo--detail">
+        <div class="cn-com-catenare-com-demo--front">
+        <p>{{description}}</p>
+        </div>
+        <div class="cn-com-catenare-com-demo--back">
+          <ul>
+            {{#each this.list}}
+            <li>{{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+        </div>
+      <div class="cn-com-catenare-com-demo--info">
+          <h1>{{company}}</h1>
+          <h2>{{title}}</h2>
+      </div>
+    </div>

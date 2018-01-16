@@ -41,8 +41,6 @@ $product-feature-section-divider-color: $medium-gray;
     justify-content: flex-start;
     padding: 1rem;
 
-    border: 1px solid green;
-
     &:nth-child(odd) {
       border-right: 1px solid $product-feature-section-divider-color;
     }

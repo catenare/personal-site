@@ -1,0 +1,18 @@
+<div class="cn-com-catenare-timeline--outer">
+  <div class="cn-com-catenare-timeline--inner">
+    <div class="cn-com-catenare-timeline--front">
+      <h2>{{title}}</h2>
+      <p>{{description}}</p>
+    </div>
+    <div class="cn-com-catenare-timeline--back">
+      <ul>
+        {{#each this.list}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  <div class="cn-com-catenare-timeline--logo">
+    <img src={{logo}} alt={{title}} />
+  </div>
+</div>
