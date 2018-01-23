@@ -8,7 +8,7 @@ const post = (props) => {
   const dateCreated = new Date(props.post.date).toDateString();
   const isOdd = (props.index % 2) ? "article-row" : "article-row article-row-reversed";
   return (
-    <a href="#">
+    <li onClick={(e) => props.handleClick(props.post.id, e)}>
       <article className={isOdd}>
           <div className="article-row-img">
               <img src={featureImage}
@@ -22,7 +22,7 @@ const post = (props) => {
               <time className="article-row-content-time" dateTime={props.post.date}>{dateCreated}</time>
             </div>
       </article>
-    </a>
+    </li>
   );
 };
 export default post;

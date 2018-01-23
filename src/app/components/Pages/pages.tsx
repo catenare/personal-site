@@ -4,10 +4,6 @@ import Page from "./page";
 
 class Pages extends React.Component<any, any> {
 
-  constructor(props) {
-    super(props);
-  }
-
   public componentDidMount() {
     this.props.dispatch(actions.getPages(this.props.url));
   }

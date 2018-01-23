@@ -4,7 +4,9 @@ const initialState = {
   error: null,
   loaded: false,
   loading: false,
+  post: {},
   posts: [],
+
 };
 
 /**

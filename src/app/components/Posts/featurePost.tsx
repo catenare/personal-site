@@ -9,13 +9,13 @@ const article = (props) => {
     return (
         <React.Fragment>
           <div className="large-4 cell">
-          <a href="#">
+          <a onClick={(e) => props.handleClick(props.featured.id, e)}>
               <div className="background-card-image">
                   <img src={(featureImage) ? featureImage[0].source_url :
                   "http://placehold.it/1080x640"} alt="" />
               </div>
               <div className="image-hover"></div>
-            </a>
+          </a>
           </div>
           <div className="large-8 cell">
         <div className="card news-card">
@@ -34,7 +34,7 @@ const article = (props) => {
                 dangerouslySetInnerHTML={{__html: feature.excerpt.rendered}}/>
               </article>
               <div className="more">
-                  <a href="#">Read more</a>
+                  <a onClick={(e) => props.handleClick(props.featured.id, e)}>Read more</a>
               </div>
         </div>
       </div>

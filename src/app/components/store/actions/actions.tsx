@@ -18,6 +18,14 @@ export const getPages = (url) => {
     type: C.API,
   };
 };
+//
+// export const getPost =(id) => {
+//   return (
+//     payload: {
+//       success: (post) => setPost(post)
+//     }
+//   )
+// }
 
 export const getPosts = () => {
   return {
