@@ -18,6 +18,4 @@ const Blog = (props) => {
   );
 };
 
-
-
 export default Blog;

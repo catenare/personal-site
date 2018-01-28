@@ -1,4 +1,3 @@
-import axios from "axios";
 import * as React from "react";
 import * as actions from "../store/actions/actions";
 import Article from "./featurePost";
@@ -16,13 +15,15 @@ class Posts extends React.Component<any, any> {
 
   public postClicked(id, e) {
     e.preventDefault();
-    this.props.history.push("/post");
+    this.props.history.push("/post/" + id);
   }
 
   public render() {
-    if (this.props.posts.loaded) {
-    const feature = this.getFeaturedPost(this.props.posts.posts);
-    const posts = this.props.posts.posts.map((c, i) => <Post handleClick={this.postClicked} post={c} index={i} />);
+    if (this.props.state.posts.posts.length > 0) {
+    const feature = this.getFeaturedPost(this.props.state.posts.posts);
+    const posts = this.props.state.posts.posts.map(
+      (c, i) => <Post handleClick={this.postClicked} post={c} index={i} />
+    );
     return (
       <React.Fragment>
       <div className="article-row-section">

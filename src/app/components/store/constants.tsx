@@ -1,5 +1,6 @@
 export const API = "API";
-export const GET_POST = "GET POST";
+export const GET_POST = "GET_POST";
+export const SET_POST = "SET_POST";
 export const GET_POSTS = "GET POSTS";
 export const GET_FEATURED_POST = "GET_FEATURED_POST";
 export const SET_FEATURED_POST = "SET_FEATURED_POST";
@@ -21,4 +22,6 @@ export const USERS_REJECTED = "USERS_REJECTED";
 
 export const PAGE_URL = "wp-json/wp/v2/pages?_embed";
 export const POST_URL = "wp-json/wp/v2/posts?_embed";
+export const GET_POST_URL = "wp-json/wp/v2/posts";
 export const USERS_URL = "?results=50&noinfo";
+// export const VIEW_POST_URL = "wp-json/wp/vw/post";

@@ -53,6 +53,26 @@ export const setPosts = (posts) => {
   };
 };
 
+export const setPost = (post) => {
+  return {
+    payload: {
+      loaded: true,
+      post,
+    },
+    type: C.SET_POST,
+  };
+};
+
+export const getPost = (url, id) => {
+  return {
+    payload: {
+      success: (post) => setPost(post),
+      url: url + C.GET_POST_URL + "/" + id,
+    },
+    type: C.API,
+  };
+};
+
 export const setError = (e) => {
   return {
     payload: {

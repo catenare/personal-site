@@ -1,11 +1,9 @@
 import * as React from "react";
 import * as ReactDom from "react-dom";;
-import {AppRoute} from "./Router";
 import "../js/util";
-
+import {AppRoute} from "./Router";
 
 // import UserList from "../components/Users/store/containers";
-
 
 let baseUrl: string; // eslint-disable-line
 if (__IS_PROD__) {
@@ -17,16 +15,8 @@ if (__IS_PROD__) {
 // const baseUrl = "https://demo.wp-api.org/";
 
 const posts = document.getElementById("posts");
-// const pages = document.getElementById("pages");
 
 ReactDom.render (
   <AppRoute url={baseUrl}/>,
   posts,
 );
-
-// ReactDom.render (
-//   <Provider store={store}>
-//     <PageList url={baseUrl} />
-//   </Provider>,
-//   pages,
-// );
