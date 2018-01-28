@@ -9,7 +9,7 @@ export const setPages = (pages) => ({
   type: C.SET_PAGES,
 });
 
-export const getPages = (url) => {
+export const getAllPages = (url) => {
   return {
     payload: {
     success: (pages) => setPages(pages),
@@ -18,14 +18,6 @@ export const getPages = (url) => {
     type: C.API,
   };
 };
-//
-// export const getPost =(id) => {
-//   return (
-//     payload: {
-//       success: (post) => setPost(post)
-//     }
-//   )
-// }
 
 export const getPosts = () => {
   return {
@@ -67,7 +59,7 @@ export const getPost = (url, id) => {
   return {
     payload: {
       success: (post) => setPost(post),
-      url: url + C.GET_POST_URL + "/" + id,
+      url: url + C.GET_POST_URL + "/" + id + "?_embed",
     },
     type: C.API,
   };

@@ -3,6 +3,7 @@
 // import plugins from 'gulp-load-plugins'
 // import yargs from 'yargs'
 import gulp from 'gulp'
+import babel from 'gulp-babel'
 import panini from 'panini'
 import rimraf from 'rimraf'
 import sherpa from 'style-sherpa'

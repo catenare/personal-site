@@ -1,12 +1,7 @@
 import * as React from "react";
-import * as actions from "../store/actions/actions";
 import Page from "./page";
 
 class Pages extends React.Component<any, any> {
-
-  public componentDidMount() {
-    this.props.dispatch(actions.getPages(this.props.url));
-  }
 
   public render() {
     const {isLoaded, pages} = this.props;

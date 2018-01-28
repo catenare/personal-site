@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import * as actions from "../store/actions/actions";
 
 const PostView = (props) => {
-  console.log("PostView: ", props, "Length: ", props.state.posts.post.id);
-  if ( props.state.posts.post.id) {
-    const post = props.state.posts.post;
+  console.log("PostView: ", props);
+  if ( props.post.post.id) {
+    const post = props.post.post;
     console.log("post: ", post);
     return (
       <section className="cn-c-blog grid-container cn-l-section cn-section-internal">

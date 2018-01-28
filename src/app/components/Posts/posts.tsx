@@ -1,16 +1,12 @@
 import * as React from "react";
-import * as actions from "../store/actions/actions";
 import Article from "./featurePost";
 import Post from "./post";
 
 class Posts extends React.Component<any, any> {
   constructor(props) {
+    console.log("Posts Props: ", props);
     super(props);
     this.postClicked = this.postClicked.bind(this);
-  }
-
-  public componentDidMount() {
-    this.props.dispatch(actions.getAllPosts(this.props.url));
   }
 
   public postClicked(id, e) {
@@ -19,9 +15,9 @@ class Posts extends React.Component<any, any> {
   }
 
   public render() {
-    if (this.props.state.posts.posts.length > 0) {
-    const feature = this.getFeaturedPost(this.props.state.posts.posts);
-    const posts = this.props.state.posts.posts.map(
+    if (this.props.posts.posts.length > 0) {
+    const feature = this.getFeaturedPost(this.props.posts.posts);
+    const posts = this.props.posts.posts.map(
       (c, i) => <Post handleClick={this.postClicked} post={c} index={i} />
     );
     return (

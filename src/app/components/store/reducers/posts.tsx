@@ -4,7 +4,6 @@ const initialState = {
   error: null,
   loaded: false,
   loading: false,
-  post: {},
   posts: [],
 
 };
@@ -21,30 +20,34 @@ export const posts = (state = initialState, action) => {
       return Object.assign({}, state, action.payload);
     case C.GET_POSTS:
       return state;
-    case C.GET_POST:
-      return state;
-    case C.SET_POST:
-      return Object.assign({}, state, action.payload);
     case C.POSTS_PENDING:
     default:
       return state;
   }
 };
 
+
+const postInitialState = {
+  error: null,
+  loaded: false,
+  loading: false,
+  post: {},
+};
+
 /**
-//  * Current post
-//  * @param state object
-//  * @param action string
-//  */
-// export const post = (state = {}, action) => {
-//   switch (action.type) {
-//     case C.GET_POST:
-//       return state;
-//     case C.SET_POST:
-//       return Object.assign({}, state, action.payload.post);
-//     default:
-//       return state;
-//   }
-// };
+ * Current post
+ * @param state object
+ * @param action string
+ */
+export const post = (state = postInitialState, action) => {
+  switch (action.type) {
+    case C.GET_POST:
+      return state;
+    case C.SET_POST:
+      return Object.assign({}, state, action.payload);
+    default:
+      return state;
+  }
+};
 
 export default posts;

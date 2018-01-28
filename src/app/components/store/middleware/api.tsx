@@ -14,6 +14,7 @@ const api = ({dispatch, getState}) => (next) => (action) => {
   axios(url).then((response) => {
       dispatch(success(response.data));
     });
+  next(action);
 };
 
 export default api;
