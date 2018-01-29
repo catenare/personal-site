@@ -1,7 +1,18 @@
 <header class="grid-container full">
   <nav class="cn-c-top-bar js-nav-background">
-    <h1><a class="menu-text" href="{{root}}">Johan N. Martin</a></h1>
-    <h2>Web Application Developer</h2>
+    <h1><a href="{{root}}">Johan N. Martin</a></h1>
+    <ul class="menu align-center">
+      <li>
+        <a href="#about" title="About">
+          <i class="fa fa-envelope"></i>Email</a>
+      </li>
+      {{#each cv.social}}
+      <li>
+        <a href="{{this.link}}" title="{{this.title}}" target="_blank">
+          <i class="fa {{this.icon}}"></i>{{title}}</a>
+      </li>
+      {{/each}}
+    </ul>
   </nav>
 </header>
 

@@ -103,6 +103,16 @@ skills:
 
 experience:
   -
+    company: Paseo Daycare and Preschool
+    logo: https://res.cloudinary.com/paseo/image/upload/v1507550919/daycare/paseo_logo.png
+    title: Center Administrator
+    description:
+      - Organized and automated the daily administration of the center. Created software tools for student account management. Transferred all documents to Microsoft OneDrive to prevent duplicates and to provide access on all devices. Setup reporting software to generate both financial and student reports. Created volunteer program to increase community participation in the center.
+    list:
+      - Built school website using Google Firebase and Amazon Web Services.
+      - Created Python based student account management application.
+      - Setup parent advisory council to give parents more insight into the school.
+  -
     company: LaGuardia Community College
     logo: https://res.cloudinary.com/paseo/image/upload/v1514747415/johan-martin/experience/laguardia-community-college-logo.gif
     title: Open Code Instructor

@@ -1,22 +1,23 @@
-<div class="cn-c-hero--content">
-  <blockquote><p>Having knowledge but lacking the power to express it clearly is no better than never
-    having any ideas at all.</p>
+<div class="cn-c-hero--content js-nav-background">
+    <h1><a class="menu-text" href="{{root}}">Johan N. Martin</a></h1>
+    <h2>Web Application Developer</h2>
+  <ul class="menu align-center">
+  <li>
+  <a href="#about" title="About">
+  <i class="fa fa-envelope"></i>Email</a>
+  </li>
+  {{#each cv.social}}
+  <li>
+  <a href="{{this.link}}" title="{{this.title}}" target="_blank">
+  <i class="fa {{this.icon}}"></i>{{title}}</a>
+  </li>
+  {{/each}}
+  </ul>
+  <blockquote>Having knowledge but lacking the power to express it clearly is no better than never
+    having any ideas at all.
     <cite> Pericles</cite>
   </blockquote>
 
-
-  <ul class="menu align-center">
-    <li>
-      <a href="#about" title="About">
-        <i class="fa fa-envelope"></i>Email</a>
-    </li>
-    {{#each cv.social}}
-      <li>
-        <a href="{{this.link}}" title="{{this.title}}" target="_blank">
-          <i class="fa {{this.icon}}"></i>{{title}}</a>
-      </li>
-    {{/each}}
-  </ul>
 </div>
 
 

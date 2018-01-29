@@ -5,14 +5,18 @@
   position: relative;
   width: 90%;
 
+  h1 {
+    text-align: center;
+  }
+
   header,
   footer {
     text-align: center;
   }
 
   // middle line
-  &:before {
-    background: #e8e8e8;
+  &::before {
+    background-color: $light-gray;
     content: '';
     height: 100%;
     left: 50%;
@@ -22,8 +26,19 @@
     width: 4px;
   }
 
+  &::after {
+    background-color: $light-gray;
+    bottom: 0;
+    content: ' ';
+    left: 50%;
+    margin-left: -3px;
+    position: absolute;
+    top: 0;
+    width: 3px;
+  }
+
   &--logo {
-    // background-color: rgba(#d6d6d6, 0.7);
+     //background-color: rgba(#d6d6d6, 0.7);
     left: 50%;
     margin-left: -80px;
     position: absolute;

@@ -1,88 +1,50 @@
-
-$hero-height: 80vh;
+$height: 40vh;
 
 .cn-c-hero {
-  height: $hero-height;
-  position: relative;
-  width: 100%;
+
+  height: $height;
+  margin-left: 5%;
+  margin-top: 5%;
+  width: 50%;
+
+  .cn-c-top-bar-scroll-nav-background {
+    display: none;
+  }
 
   &--content {
-    background-color: rgba($site-background, 0.5);
+    transition-duration: 2s;
+    background-color: rgba(243, 235, 228, 0.6);
     border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    text-align: center;
-    top: $hero-height/2.5;
-    width: 50%;
+    display: block;
+    font-family: $header-font-family;
+    h1,
+    h2 {
+      color: $primary-color;
+      text-align: center;
+    }
+    h1 {
+      font-size: 5em;
+    }
+
+    h2 {
+      font-size: 3em;
+    }
+
+    .menu {
+      font-size: 2em;
+    }
+
 
     blockquote {
-      border: 0;
-      color: rgba(11, 58, 66, 1);
-      font-size: 2.25rem;
-      padding: 1rem;
-      text-align: left;
-
-      p::after {
-        content: '\201D';
-      }
-
-      p::before {
-        content: "\201C";
-      }
+      border: none;
+      font-family: $font-family-quote;
+      font-size: 2em;
+      font-weight: bold;
+      margin: 0;
+      margin-top: 1%;
 
       cite {
-        font-size: 1.5rem;
-        color: $dark-gray;
-      }
-    }
-
-
-    h1 {
-      color: $secondary-color;
-      font-family: $font-family-highlight;
-      font-size: 30rem;
-      font-weight: bold;
-    }
-
-    @include breakpoint(medium down) {
-      h1 {
-        font-size: 10rem;
-        line-height: 10rem;
-        $hero-height: 20vh;
-      }
-
-      blockquote {
-        display: none;
-      }
-
-      span {
-        font-size: 2rem;
-      }
-    }
-
-    p {
-      color: $primary-color;
-      font-family: $font-family-quote;
-    }
-  }
-
-  .content {
-    color: rgba(112, 112, 112, 1);
-    width: 35%;
-
-  }
-
-  .menu {
-    font-size: 2rem;
-    padding-bottom: 1rem;
-
-    a {
-      font-size: 2rem;
-      margin-right: 1rem;
-
-      i {
-        margin-right: 0.5rem;
+        font-size: 1em;
       }
     }
   }

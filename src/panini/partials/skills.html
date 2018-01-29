@@ -1,32 +1,31 @@
 <section class="product-feature-section">
-    <div class="product-feature-section-outer">
-      <h1 class="product-feature-section-headline">Skills</h1>
-      <div class="product-feature-section-inner">
-
-        {{#each cv.skills}}
-        <div class="product-feature-section-feature">
-            <i class="fa {{icon}}" aria-hidden="true"></i>
-          <div>
-            <h2 class="feature-title">{{this.title}}</h2>
-            <ul {{#if this.class}} class="sub-skills" {{/if}}>
+  <div class="product-feature-section-outer">
+    <h1 class="product-feature-section-headline">Skills</h1>
+    <div class="product-feature-section-inner">
+      {{#each cv.skills}}
+      <div class="product-feature-section-feature">
+        <i class="fa {{icon}}" aria-hidden="true"></i>
+        <div>
+          <h2 class="feature-title">{{this.title}}</h2>
+          <ul {{#if this.class}} class="sub-skills"{{/if}}>
+          {{#each this.items}}
+          {{#if this.title}}
+          <li>
+            <dl>
+              <dt>{{this.title}}</dt>
               {{#each this.items}}
-                {{#if this.title}}
-              <li>
-                <dl>
-                  <dt>{{this.title}}</dt>
-                  {{#each this.items}}
-                  <dd>{{this}}</dd>
-                  {{/each}}
-                </dl>
-              </li>
-                {{else}}
-                <li>{{this}}</li>
-                {{/if}}
+              <dd>{{this}}</dd>
               {{/each}}
-            </ul>
-          </div>
+            </dl>
+          </li>
+          {{else}}
+          <li>{{this}}</li>
+          {{/if}}
+          {{/each}}
+          </ul>
         </div>
-        {{/each}}
       </div>
+      {{/each}}
     </div>
-  </section>
+  </div>
+</section>
