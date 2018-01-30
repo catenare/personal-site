@@ -118,7 +118,15 @@ As you've probably noticed in the examples above, you have access to a small, me
   <div class="small-9 cell">9, last</div>
 </div>
 
-
+/*
+/*
+colors:
+roofs: #684e3c
+walls: #dad8c2
+Clouds: #e5e3e4
+background: #959064
+*/
+*/
 
 # Colors
 
@@ -127,28 +135,28 @@ As you've probably noticed in the examples above, you have access to a small, me
 ---
 <div class="grid-container">
 <div class="auto cell">
-  <div class="column">
+  <div class="auto cell">
     <div class="color-block">
-      <span style="background: #3d4a31"></span>
-      #3d4a31 Primary
+      <span style="background: #a585ad"></span>
+      #a585ad Primary
     </div>
   </div>
   <div class="auto cell">
     <div class="color-block">
-      <span style="background: #6e8983"></span>
-      #6e8983 Secondary
+      <span style="background: #dad8c2"></span>
+      #dad8c2 Walls
     </div>
   </div>
   <div class="auto cell">
     <div class="color-block">
-      <span style="background: #f4f4f4"></span>
-      #f4f4f4 Background
+      <span style="background: #e5e3e4"></span>
+      #e5e3e4 Clouds
     </div>
   </div>
   <div class="auto cell">
     <div class="color-block">
-      <span style="background: #063d79"></span>
-      #063d79 Success
+      <span style="background: #959064"></span>
+      #959064 Background
     </div>
   </div>
   <div class="auto cell">

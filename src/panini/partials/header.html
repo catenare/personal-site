@@ -1,16 +1,12 @@
 <header class="grid-container cn-c-top-bar full">
   <nav class="top-bar js-nav-background">
     <div class="top-bar-left">
-      <h1><a href="{{root}}">Johan N. Martin</a></h1>
+      <h1><a href="#">Johan N. Martin</a></h1>
     </div>
-    <div class="top-bar-righ">
+    <div class="top-bar-right">
       <ul class="menu">
-        <li>
-          <a href="#about" title="About">
-            <i class="fa fa-envelope"></i>Email</a>
-        </li>
         {{#each cv.social}}
-        <li>
+        <li class="social-icon">
           <a href="{{this.link}}" title="{{this.title}}" target="_blank">
             <i class="fa {{this.icon}}"></i>{{title}}</a>
         </li>

@@ -5,6 +5,10 @@ phone: 6467839811
 telephone: (646) 783-9811
 social:
   -
+    title: Email
+    link: '#about'
+    icon: fa-envelope
+  -
     title: Github
     link: https://github.com/catenare
     icon: fa-github

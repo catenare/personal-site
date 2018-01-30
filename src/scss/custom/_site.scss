@@ -1,17 +1,28 @@
-
+$body-color: $primary-color;
+//$primary-color: $body-color;
 $body-font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $header-font-family: 'PT Sans Narrow','Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-family-highlight: 'Annie Use Your Telescope', cursive;
 $font-family-quote: 'Itim';
+$quote-color: $secondary-color;
+$button-color: #108757;
+
 
 body {
-  background: url('https://res.cloudinary.com/paseo/image/upload/v1514746754/johan-martin/bali_countryside_iuuhtc.jpg') no-repeat center;
-  background-attachment: fixed;
-  background-size: cover;
-
-  .cn-section-internal {
-    background-color: rgba($site-background, 0.7);
-  }
+  //background: url('https://res.cloudinary.com/paseo/image/upload/v1514746754/johan-martin/bali_countryside_iuuhtc.jpg') no-repeat center;
+  //background-attachment: fixed;
+  //background-size: cover;
+  background-color: rgba($site-background, 0.6);
+  color: $body-color;
+  font-family: $body-font-family;
 }
+
+.social-icon {
+  i {
+    padding-right: 0.25em;
+  }
+
+}
+
 
 

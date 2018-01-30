@@ -16,7 +16,7 @@ if (__IS_PROD__) {
 
 const posts = document.getElementById("posts");
 
-ReactDom.render (
-  <AppRoute url={baseUrl}/>,
-  posts,
-);
+// ReactDom.render (
+//   <AppRoute url={baseUrl}/>,
+//   posts,
+// );

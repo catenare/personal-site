@@ -7,10 +7,9 @@
 
   h1,
   ul.menu li {
-    display: none;
     font-family: $font-family-highlight;
+    visibility: hidden;
   }
-
 
   &-scroll-nav-background {
     background-color: rgba($site-background, 0.7);
@@ -18,17 +17,18 @@
     transition-duration: 2s;
 
     h1 {
-      color: $primary-color;
-      display: inline-block;
-      font-family: $font-family-highlight;
       font-size: 2em;
       margin: 0;
+      visibility: visible;
+      transition-duration: 3s;
     }
 
     ul.menu li {
       font-size: 1.25em;
       padding-right: 1em;
-      display: inline;
+      visibility: visible;
+      transition-duration: 3s;
+
     }
   }
 }
