@@ -73,7 +73,7 @@ skills:
       - Git
       - Jenkins
   -
-    title: Languages
+    title: Languages & Frameworks
     icon: fa-language
     class: 1
     items:

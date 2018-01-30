@@ -1,13 +1,15 @@
 ---
 title: Main
 ---
+{{>header}}
 <section class="cn-c-hero cn-l-section">
 {{>hero}}
 </section>
 
-<div id="posts"></div>
+{{!-- <div id="posts"></div> --}}
 
-<div id="about" class="cn-c-about grid-container">
+<div id="about" class="cn-c-about grid-container fluid">
+  <div class="grid-container">
 <section class="cn-summary">
   {{>summary}}
 </section>
@@ -19,4 +21,7 @@ title: Main
 <section class="cn-work">
 {{>work}}
 </section>
+  </div>
 </div>
+
+{{>footer}}

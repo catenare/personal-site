@@ -1,6 +1,6 @@
 'use strict'
 
-// import plugins from 'gulp-load-plugins'
+import plugins from 'gulp-load-plugins'
 // import yargs from 'yargs'
 import gulp from 'gulp'
 import babel from 'gulp-babel'
@@ -11,7 +11,7 @@ import yaml from 'js-yaml'
 import fs from 'fs'
 
 // Load all Gulp plugins into one variable
-// const $ = plugins()
+const $ = plugins()
 
 // Check for --production flag
 // const PRODUCTION = !!(yargs.argv.production)
@@ -24,9 +24,14 @@ function loadConfig () {
   return yaml.load(ymlFile)
 }
 
+/*
+gulp.task('build',
+ gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), styleGuide));
+ */
+
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
-  gulp.series(clean, images, pages))
+  gulp.series(clean, gulp.parallel(pages, images), styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -44,7 +49,7 @@ gulp.task('images',
 // Copy images to the "dist" folder
 // In production, the images are compressed
 function images () {
-  return gulp.src('src/app/img/**/*')
+  return gulp.src('src/img/**/*')
     .pipe(gulp.dest(PATHS.dist + '/img'))
 }
 
@@ -83,8 +88,8 @@ function resetPages (done) {
 
 // Watch for changes to static assets, pages, Sass, and JavaScript
 function watch () {
-  gulp.watch('src/panini/pages/**/*.html').on('all', gulp.series(pages))
-  gulp.watch('src/panini/{layouts,partials}/**/*.html').on('all', gulp.series(resetPages, pages))
-  gulp.watch('src/styleguide/*.*').on('all', gulp.series(styleGuide, resetPages, pages))
-  gulp.watch('src/app/img/**/*').on('all', gulp.series(images, resetPages, pages))
+  gulp.watch('src/panini/pages/**/*.html').on('all', gulp.series(pages));
+  gulp.watch('src/panini/{layouts,partials}/**/*.html').on('all', gulp.series(resetPages, pages));
+  gulp.watch('src/styleguide/*.*').on('all', gulp.series(styleGuide));
+  gulp.watch('src/app/img/**/*').on('all', gulp.series(images, resetPages, pages));
 }

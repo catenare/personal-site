@@ -1,18 +1,16 @@
-$height: 50vh;
+$height: 70vh;
 
 .cn-c-hero {
 
   height: $height;
-  margin-left: 5%;
   margin-top: 10%;
-  width: 45%;
 
   .cn-c-top-bar-scroll-nav-background {
     display: none;
   }
 
   &--content {
-    background-color: rgba(243, 235, 228, 0.5);
+    //background-color: rgba(243, 235, 228, 0.5);
     border-radius: 10px;
     display: block;
     font-family: $header-font-family;
@@ -22,15 +20,18 @@ $height: 50vh;
     h1,
     h2 {
       color: $primary-color;
+      font-family: $font-family-highlight;
+      font-weight: bolder;
       text-align: center;
     }
 
     h1 {
-      font-size: 4em;
+      font-size: 6em;
+
     }
 
     h2 {
-      font-size: 2em;
+      font-size: 4em;
     }
 
     .menu {
@@ -42,11 +43,13 @@ $height: 50vh;
     }
 
     blockquote {
+
       border: none;
-      font-family: $font-family-quote;
+      font-family: $font-family-highlight;
       font-size: 1.75em;
       font-weight: bold;
       margin-top: 1%;
+      text-align: center;
 
       cite {
         font-size: 1em;
