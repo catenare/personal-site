@@ -21,22 +21,10 @@ class Posts extends React.Component<any, any> {
       (c, i) => <Post handleClick={this.postClicked} post={c} index={i} />
     );
     return (
-      <React.Fragment>
-      <div className="article-row-section">
-      <div className="article-row-section-inner">
-        <h2 className="article-row-section-header">Post</h2>
-        <div className="grid-x grid-padding-x">
-          <Article handleClick={this.postClicked} featured={feature} />
-        </div>
-        <div className="grid-x grid-padding-x">
-          <div className="large-12 cell">
-              {posts}
-          </div>
-        </div>
-      </div>
-      </div>
-
-        </React.Fragment>
+      <ul className="grid-x grid-margin-x no-bullet">
+        {/*<Article handleClick={this.postClicked} featured={feature} />*/}
+        {posts}
+      </ul>
       );
   } else {
     return <div className="loader">Loading...</div>;

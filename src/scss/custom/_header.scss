@@ -1,10 +1,9 @@
 .cn-c-top-bar {
   position: fixed;
-  text-align: center;
   top: 0;
+  transition-duration: 2s;
   width: 100%;
   z-index: 1;
-  transition-duration: 2s;
 
   h1,
   ul.menu li {
@@ -14,22 +13,22 @@
 
 
   &-scroll-nav-background {
+    background-color: rgba($site-background, 0.7);
+    box-shadow: 0 4px rgba(204, 185, 167, 0.4);
     transition-duration: 2s;
-    h1 {
 
+    h1 {
       color: $primary-color;
       display: inline-block;
       font-family: $font-family-highlight;
-      font-size: 3rem;
+      font-size: 2em;
       margin: 0;
     }
 
     ul.menu li {
-
+      font-size: 1.25em;
+      padding-right: 1em;
       display: inline;
     }
-
-    background-color: rgba($site-background, 0.7);
-    box-shadow: 0 4px rgba(204, 185, 167, 0.4);
   }
 }

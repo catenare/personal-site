@@ -1,51 +1,57 @@
-$height: 40vh;
+$height: 50vh;
 
 .cn-c-hero {
 
   height: $height;
   margin-left: 5%;
-  margin-top: 5%;
-  width: 50%;
+  margin-top: 10%;
+  width: 45%;
 
   .cn-c-top-bar-scroll-nav-background {
     display: none;
   }
 
   &--content {
-    transition-duration: 2s;
-    background-color: rgba(243, 235, 228, 0.6);
+    background-color: rgba(243, 235, 228, 0.5);
     border-radius: 10px;
     display: block;
     font-family: $header-font-family;
+    padding-bottom: 1em;
+    transition-duration: 2s;
+
     h1,
     h2 {
       color: $primary-color;
       text-align: center;
     }
+
     h1 {
-      font-size: 5em;
+      font-size: 4em;
     }
 
     h2 {
-      font-size: 3em;
-    }
-
-    .menu {
       font-size: 2em;
     }
 
+    .menu {
+      font-size: 1.25em;
+
+      .button {
+        margin-left: 1em;
+      }
+    }
 
     blockquote {
       border: none;
       font-family: $font-family-quote;
-      font-size: 2em;
+      font-size: 1.75em;
       font-weight: bold;
-      margin: 0;
       margin-top: 1%;
 
       cite {
         font-size: 1em;
       }
     }
+
   }
 }
