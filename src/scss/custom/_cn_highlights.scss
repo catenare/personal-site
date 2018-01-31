@@ -1,0 +1,18 @@
+.cn-c-highlights {
+
+  &-content {
+    padding: 1em;
+  }
+
+  &-image {
+
+    &--left {
+      transform: rotate(-7deg);
+    }
+
+    &--right {
+      height: 50vh;
+      transform: rotate(7deg);
+    }
+  }
+}

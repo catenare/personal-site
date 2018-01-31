@@ -4,7 +4,6 @@ import Post from "./post";
 
 class Posts extends React.Component<any, any> {
   constructor(props) {
-    console.log("Posts Props: ", props);
     super(props);
     this.postClicked = this.postClicked.bind(this);
   }

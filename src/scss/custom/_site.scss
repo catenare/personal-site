@@ -1,19 +1,15 @@
 $body-color: $primary-color;
-//$primary-color: $body-color;
 $body-font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$header-font-family: 'PT Sans Narrow','Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-header: 'PT Sans Narrow','Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-family-highlight: 'Annie Use Your Telescope', cursive;
-$font-family-quote: 'Itim';
 $quote-color: $secondary-color;
-$button-color: #108757;
-
 
 body {
-  //background: url('https://res.cloudinary.com/paseo/image/upload/v1514746754/johan-martin/bali_countryside_iuuhtc.jpg') no-repeat center;
-  //background-attachment: fixed;
-  //background-size: cover;
+  background: url('https://res.cloudinary.com/paseo/image/upload/v1514746754/johan-martin/bali_countryside_iuuhtc.jpg') no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
   background-color: rgba($site-background, 0.6);
-  color: $body-color;
+  color: $dark-gray;
   font-family: $body-font-family;
 }
 
@@ -21,8 +17,28 @@ body {
   i {
     padding-right: 0.25em;
   }
-
 }
 
+cite {
+  color: $body-color;
+}
 
+h1 {
+  color: $primary-color;
+  font-family: $font-family-header;
+}
 
+.section-heading {
+  //background-color: $secondary-color;
+  background-color: rgba($site-background, 0.4);
+  border-top: 1px solid $secondary-color;
+  border-bottom: 5px solid $secondary-color;
+  //color: $dark-gray;
+  margin-bottom: 1em;
+  margin-top: 2em;
+  text-align: center;
+}
+
+.section-background {
+  background-color: rgba($site-background, 0.8);
+}

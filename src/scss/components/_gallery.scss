@@ -1,0 +1,40 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  //justify-content: space-between;
+  list-style: none;
+  position: relative;
+
+  &-item {
+    padding-right: 0.5em;
+  }
+
+  &-img {
+    img {
+      width: 5vh;
+    }
+
+    .img-hover {
+      border-radius: 5px;
+      bottom: 101%;
+      box-shadow: $light-gray 5px;
+      height: 0;
+      left: 20%;
+      opacity: 0;
+      position: absolute;
+      transition-duration: 1s;
+      transition-property: visibility, opacity;
+      transition-timing-function: ease-in;
+      visibility: hidden;
+    }
+
+    &:hover {
+      .img-hover {
+        height: 40vh;
+        width: 50vh;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}

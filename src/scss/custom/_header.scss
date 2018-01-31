@@ -1,9 +1,11 @@
 .cn-c-top-bar {
+  font-family: $font-family-header;
   position: fixed;
   top: 0;
   transition-duration: 2s;
   width: 100%;
   z-index: 1;
+
 
   h1,
   ul.menu li {
