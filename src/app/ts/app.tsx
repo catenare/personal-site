@@ -23,7 +23,7 @@ const contact = document.getElementById("contact-me");
 //   posts,
 // );
 
-// ReactDom.render (
-//   <ContactForm />,
-//   contact,
-// );
+ReactDom.render (
+  <ContactForm />,
+  contact,
+);

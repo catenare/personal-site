@@ -1,3 +1,4 @@
+import axios from "axios";
 import * as React from "react";
 
 class ContactForm extends React.Component<any, any> {
@@ -7,7 +8,6 @@ class ContactForm extends React.Component<any, any> {
     //   value: "",
     //   };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
   }
 
   // public input;
@@ -16,11 +16,13 @@ class ContactForm extends React.Component<any, any> {
     event.preventDefault();
     // console.log("Event.target", event.target);
     const data = new FormData(event.target);
-    console.log(data.get("email"));
-  }
+    const name = data.get("name");
+    console.log(data.get("name"));
+    // axios.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
 
-  public handleChange(event) {
-    console.log("change", event);
+    axios.post("http://localhost:5000/form", {
+      data: data.get("name"),
+    }).then((response) => console.log(response.data));
   }
 
   public render() {
