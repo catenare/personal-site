@@ -14,14 +14,16 @@ class ContactForm extends React.Component<any, any> {
 
   public handleSubmit(event) {
     event.preventDefault();
-    // console.log("Event.target", event.target);
-    const data = new FormData(event.target);
-    const name = data.get("name");
-    console.log(data.get("name"));
-    // axios.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
+    const form = new FormData(event.target);
+    const data = {
+      email: form.get("email"),
+      message: form.get("message"),
+      name: form.get("name"),
+      phone: form.get("phone"),
+    };
 
     axios.post("http://localhost:5000/form", {
-      data: data.get("name"),
+      data,
     }).then((response) => console.log(response.data));
   }
 
