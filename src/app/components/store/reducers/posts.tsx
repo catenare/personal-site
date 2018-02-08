@@ -26,7 +26,6 @@ export const posts = (state = initialState, action) => {
   }
 };
 
-
 const postInitialState = {
   error: null,
   loaded: false,

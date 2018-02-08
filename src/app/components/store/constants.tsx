@@ -24,4 +24,7 @@ export const PAGE_URL = "wp-json/wp/v2/pages?_embed";
 export const POST_URL = "wp-json/wp/v2/posts?_embed";
 export const GET_POST_URL = "wp-json/wp/v2/posts";
 export const USERS_URL = "?results=50&noinfo";
+
+export const SET_CAPTCHA = "SET CAPTCHA";
+export const GET_CAPTCHA = "GET CAPTCHA";
 // export const VIEW_POST_URL = "wp-json/wp/vw/post";

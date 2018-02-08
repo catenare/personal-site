@@ -1,4 +1,5 @@
 import {connect} from "react-redux";
+import ContactUs from "../../Contact";
 import Pages from "../../Pages/pages";
 import Posts from "../../Posts/posts";
 import PostView from "../../Posts/PostView";
@@ -37,5 +38,16 @@ export const SelectedPost = connect(
     return {getPost: dispatch(Actions.getPost(url, id[0]))};
   },
 )(PostView);
+
+export const ContactUsForm = connect(
+  (state) => (
+    {
+      captcha: state.captcha.captcha,
+    }
+  ),
+  (dispatch, ownProps) => ({
+    getCaptcha: dispatch(Actions.getCaptcha()),
+  }),
+)(ContactUs);
 
 export default PageList;

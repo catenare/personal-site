@@ -1,6 +1,6 @@
 import * as React from "react";
 import {Provider} from "react-redux";
-import {HashRouter, BrowserRouter, Route, Switch } from "react-router-dom"; // eslint-disable-line
+import {BrowserRouter, HashRouter,  Route, Switch } from "react-router-dom"; // eslint-disable-line
 import Blog from "../components/Blog";
 import {SelectedPost} from "../components/store/containers/containers";
 // import PostView from "../components/Posts/PostView";

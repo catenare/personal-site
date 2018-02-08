@@ -1,16 +1,38 @@
 import axios from "axios";
 import * as React from "react";
+import getCaptcha from "./captcha";
 
 class ContactForm extends React.Component<any, any> {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   value: "",
-    //   };
+    this.state = {buttonDisable: true};
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.createCaptcha = this.createCaptcha.bind(this);
+    this.validateCaptcha = this.validateCaptcha.bind(this);
+  }
+  // public input;
+
+  public componentDidMount() {
+    const captcha = getCaptcha;
+    this.createCaptcha(captcha);
   }
 
-  // public input;
+  public createCaptcha = (siteCaptcha) => {
+    siteCaptcha.then((captcha) => {
+      const widgetId = captcha.render("recaptcha", {
+        callback: this.validateCaptcha,
+        sitekey: this.props.captcha,
+      });
+      this.setState({widgetId});
+      this.setState({captcha});
+      // console.log("Captcha:", captcha);
+    });
+  }
+
+  public validateCaptcha(response) {
+    this.setState({captchaResult: response});
+    this.setState({buttonDisable: false});
+  }
 
   public handleSubmit(event) {
     event.preventDefault();
@@ -65,7 +87,8 @@ class ContactForm extends React.Component<any, any> {
             aria-describedby="messageHelpText"/>
         </label>
         <p className="help-text" id="messageHelpText">Your message to us.</p>
-        <button className="button primary" type="submit">Submit</button>
+        <div id="recaptcha"></div>
+        <button className="button primary" type="submit" disabled={this.state.buttonDisable}>Submit</button>
       </form>
     );
   }
