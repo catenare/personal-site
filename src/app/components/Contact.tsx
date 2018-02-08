@@ -84,10 +84,17 @@ class ContactForm extends React.Component<any, any> {
     }
 
     this.resetForm(event);
+    const Captcha = "captcha";
+    data[Captcha] = this.state.captchaResult;
 
-    axios.post(this.props.captcha.url, {
+    const config = {
       data,
-    }).then((response) =>  this.setState({showForm: false}) );
+      headers: {"x-api-key": "xeSQf3MI96bwatnZ2Vdy52pu6nBpUaW7GEtY69ni"},
+      method: "post",
+      url: this.props.captcha.url,
+    };
+
+    axios(config).then((response) =>  this.setState({showForm: false}) );
   }
 
   public render() {

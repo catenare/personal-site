@@ -12,14 +12,16 @@ import {ContactUsForm} from "../components/store/containers/containers";
 
 let baseUrl: string; // eslint-disable-line
 let captchaKey: string; // eslint-disable-line
-let formUrl: string; // eslint-disable-line
+let formUrl: string = "https://7hoyjyn8mc.execute-api.eu-central-1.amazonaws.com/dev"; // eslint-disable-line
 
 if (__IS_PROD__) {
   baseUrl = "https://api.paseo.org.za/johan/";
+  captchaKey = "6Lf9T0UUAAAAANR7b7br5GPEanbxvdXPmCqDr6xN";
+  formUrl = "https://7hoyjyn8mc.execute-api.eu-central-1.amazonaws.com/dev";
 } else {
   baseUrl = "http://paseo.demo/";
-  captchaKey = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
-  formUrl = "http://localhost:5000/form";
+  captchaKey = "6Lf9T0UUAAAAANR7b7br5GPEanbxvdXPmCqDr6xN";
+  formUrl = "https://7hoyjyn8mc.execute-api.eu-central-1.amazonaws.com/dev";
 }
 
 const posts = document.getElementById("posts");
