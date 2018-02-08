@@ -5,12 +5,20 @@ import getCaptcha from "./captcha";
 class ContactForm extends React.Component<any, any> {
   constructor(props) {
     super(props);
-    this.state = {buttonDisable: true};
+    this.state = {
+      buttonDisable: true,
+      fields: ["email", "message", "name", "phone"],
+      hasEmail: "cn-contact-us-form-email-no-error",
+      hasName: "cn-contact-us-form-name-no-error",
+      showForm: true,
+    };
+    // console.log("Props: ", props);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.createCaptcha = this.createCaptcha.bind(this);
     this.validateCaptcha = this.validateCaptcha.bind(this);
+    this.validateForm = this.validateForm.bind(this);
+    this.resetCaptcha = this.resetCaptcha.bind(this);
   }
-  // public input;
 
   public componentDidMount() {
     const captcha = getCaptcha;
@@ -21,11 +29,10 @@ class ContactForm extends React.Component<any, any> {
     siteCaptcha.then((captcha) => {
       const widgetId = captcha.render("recaptcha", {
         callback: this.validateCaptcha,
-        sitekey: this.props.captcha,
+        sitekey: this.props.captcha.captcha,
       });
       this.setState({widgetId});
       this.setState({captcha});
-      // console.log("Captcha:", captcha);
     });
   }
 
@@ -34,22 +41,57 @@ class ContactForm extends React.Component<any, any> {
     this.setState({buttonDisable: false});
   }
 
+  public resetCaptcha() {
+    this.state.captcha.reset();
+  }
+
+  public validateForm(data) {
+    let result = true;
+    const emailCheck = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;   // tslint:disable-line
+
+    const Email = "email";
+    const hasEmail = emailCheck.test(data[Email]);
+    if (!hasEmail) {
+      this.setState({hasEmail: "cn-contact-us-form-email-error"});
+      result = false;
+    }
+
+    const Name = "name";
+    if ( data[Name].length < 3) {
+      this.setState({hasName: "cn-contact-us-form-name-error"});
+      result = false;
+    }
+    return result;
+  }
+
+  public resetForm(form) {
+    this.state.fields.forEach( (field) => form.target[field].value = "" );
+    this.setState({buttonDisable: true});
+  }
+
   public handleSubmit(event) {
     event.preventDefault();
     const form = new FormData(event.target);
-    const data = {
-      email: form.get("email"),
-      message: form.get("message"),
-      name: form.get("name"),
-      phone: form.get("phone"),
-    };
 
-    axios.post("http://localhost:5000/form", {
+    const data = {};
+    this.state.fields.forEach( (field) => data[field] = form.get(field));
+
+    this.resetCaptcha();
+
+    if (!this.validateForm(data)) {
+      this.setState({buttonDisable: true});
+      return;
+    }
+
+    this.resetForm(event);
+
+    axios.post(this.props.captcha.url, {
       data,
-    }).then((response) => null);
+    }).then((response) =>  this.setState({showForm: false}) );
   }
 
   public render() {
+    if (this.state.showForm) {
     return (
       <form onSubmit={this.handleSubmit}>
         <label htmlFor="name">
@@ -61,7 +103,9 @@ class ContactForm extends React.Component<any, any> {
             aria-describedby="nameHelpText"
             required/>
         </label>
+        <p className={this.state.hasName}>Name is too short!</p>
         <p className="help-text" id="nameHelpText">Your first and last name</p>
+
         <label htmlFor="email">
           <input
             placeholder="Email"
@@ -70,7 +114,9 @@ class ContactForm extends React.Component<any, any> {
             id="email"
             aria-describedby="emailHelpText" required/>
         </label>
-        <p className="help-text" id="emailHelpText">Your email address so we can reply.</p>
+        <p className={this.state.hasEmail}>Valid mail required!</p>
+        <p className="help-text" id="emailHelpText">Your email address.</p>
+
         <label htmlFor="phone">
           <input
             placeholder="Phone"
@@ -79,18 +125,24 @@ class ContactForm extends React.Component<any, any> {
             id="phone"
             aria-describedby="phoneHelpText"/>
         </label>
-        <p className="help-text" id="phoneHelpText">Your phone number</p>
+        <p className="help-text" id="phoneHelpText">Your phone number.</p>
         <label htmlFor="message">
           <textarea
             id="message"
             name="message"
+            placeholder="Your message"
             aria-describedby="messageHelpText"/>
         </label>
-        <p className="help-text" id="messageHelpText">Your message to us.</p>
+        <p className="help-text" id="messageHelpText">Your message.</p>
         <div id="recaptcha"></div>
         <button className="button primary" type="submit" disabled={this.state.buttonDisable}>Submit</button>
       </form>
     );
+  } else {
+    return (
+      <h1>Thank you!</h1>
+    );
+  }
   }
 
 }

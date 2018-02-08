@@ -2,6 +2,16 @@
   // margin-top: 2em;
   padding-top: 1em;
 
+  form {
+    input {
+      margin-bottom: 0;
+    }
+
+    .help-text {
+      margin-top: 0.5em;
+    }
+  }
+
   &-image {
     img {
       margin: 1em 2em;
@@ -18,6 +28,10 @@
   i,
   li {
     font-size: 1.75rem;
+  }
+
+  .button {
+    margin-top: 1rem;
   }
 
 }

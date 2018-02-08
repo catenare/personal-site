@@ -11,15 +11,17 @@ import {AppRoute} from "./Router";
 import {ContactUsForm} from "../components/store/containers/containers";
 
 let baseUrl: string; // eslint-disable-line
+let captchaKey: string; // eslint-disable-line
+let formUrl: string; // eslint-disable-line
+
 if (__IS_PROD__) {
   baseUrl = "https://api.paseo.org.za/johan/";
 } else {
   baseUrl = "http://paseo.demo/";
+  captchaKey = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
+  formUrl = "http://localhost:5000/form";
 }
 
-const captchaKey = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
-
-// const baseUrl = "https://demo.wp-api.org/";
 const posts = document.getElementById("posts");
 const contact = document.getElementById("contact-me");
 
@@ -27,7 +29,8 @@ const contact = document.getElementById("contact-me");
 //   <AppRoute url={baseUrl}/>,
 //   posts,
 // );
-store.dispatch(setCaptcha(captchaKey));
+
+store.dispatch(setCaptcha(captchaKey, formUrl));
 
 ReactDom.render (
   <Provider store={store}>

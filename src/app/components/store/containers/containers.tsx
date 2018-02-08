@@ -42,7 +42,7 @@ export const SelectedPost = connect(
 export const ContactUsForm = connect(
   (state) => (
     {
-      captcha: state.captcha.captcha,
+      captcha: state.captcha,
     }
   ),
   (dispatch, ownProps) => ({

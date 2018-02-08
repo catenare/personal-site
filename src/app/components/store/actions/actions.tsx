@@ -96,9 +96,10 @@ export const getAllUsers = (url) => ({
   type: C.API,
 });
 
-export const setCaptcha = (captchaKey) => ({
+export const setCaptcha = (captchaKey, url) => ({
   payload: {
     captcha: captchaKey,
+    url,
   },
   type: C.SET_CAPTCHA,
 });
