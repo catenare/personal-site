@@ -46,7 +46,7 @@ class ContactForm extends React.Component<any, any> {
 
     axios.post("http://localhost:5000/form", {
       data,
-    }).then((response) => console.log(response.data));
+    }).then((response) => null);
   }
 
   public render() {
