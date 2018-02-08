@@ -17,11 +17,11 @@ let formUrl: string = "https://7hoyjyn8mc.execute-api.eu-central-1.amazonaws.com
 if (__IS_PROD__) {
   baseUrl = "https://api.paseo.org.za/johan/";
   captchaKey = "6Lf9T0UUAAAAANR7b7br5GPEanbxvdXPmCqDr6xN";
-  formUrl = "https://7hoyjyn8mc.execute-api.eu-central-1.amazonaws.com/dev";
+  formUrl = "https://gateway.johan-martin.com/addform";
 } else {
   baseUrl = "http://paseo.demo/";
   captchaKey = "6Lf9T0UUAAAAANR7b7br5GPEanbxvdXPmCqDr6xN";
-  formUrl = "https://7hoyjyn8mc.execute-api.eu-central-1.amazonaws.com/dev";
+  formUrl = "https://gateway.johan-martin.com/addform";
 }
 
 const posts = document.getElementById("posts");

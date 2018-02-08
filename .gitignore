@@ -9,3 +9,4 @@ package-lock.json
 aws/*
 !aws/addform.py
 !aws/requirements.txt
+firebase-debug.log
