@@ -3,7 +3,6 @@ $product-feature-section-bg: $light-gray;
 $product-feature-section-divider-color: $medium-gray;
 
 .cn-skills {
-
   .product-feature-section {
     //background: $product-feature-section-bg;
     padding: 1rem;
@@ -51,6 +50,7 @@ $product-feature-section-divider-color: $medium-gray;
     }
 
     .feature-title {
+      font-size: 2rem;
       line-height: 2rem;
       margin-bottom: 0.25rem;
     }

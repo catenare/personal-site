@@ -1,4 +1,4 @@
-$body-color: $primary-color;
+$body-color: $dark-gray;
 $body-font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-family-header: 'PT Sans Narrow','Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-family-highlight: 'Annie Use Your Telescope', cursive;
@@ -9,23 +9,33 @@ body {
   background-attachment: fixed;
   background-color: rgba($site-background, 0.6);
   background-size: cover;
-  color: $dark-gray;
+  color: $body-color;
   font-family: $body-font-family;
 }
 
-.social-icon {
-  i {
-    padding-right: 0.25em;
-  }
+i {
+  color: $secondary-color;
+  padding-right: 0.25em;
 }
 
 cite {
-  color: $body-color;
+  color: $quote-color;
+  font-weight: 900;
 }
 
-h1 {
+a,
+h1,
+h2 {
   color: $primary-color;
+}
+
+h1,
+h2 {
   font-family: $font-family-header;
+}
+
+h2 {
+  color: $secondary-color;
 }
 
 .section-heading {

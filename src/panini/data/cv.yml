@@ -28,7 +28,7 @@ interests:
   -
     title: tumblr
     link: http://catenare.tumblr.com/
-    icon: fa-tumbl-square
+    icon: fa-tumblr-square
   -
     title: twitter
     link: https://twitter.com/catenarellc
@@ -100,10 +100,10 @@ skills:
         - Vuejs
         - jQuery
         - Angular
-    -
-      title: Java
-      items:
-        - Spring
+    # -
+    #   title: Java
+    #   items:
+    #     - Spring
 
 experience:
   -

@@ -69,8 +69,9 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #108757, //R: 16	G: 135	B: 87
-  secondary: #236e50, //R: 35	G: 110	B: 80
+  // primary: #d99228,
+  primary: #1f8a25,
+  secondary: #d99228,
   success: #5ca0f2,
   warning: #ff88ad,
   alert: #ff404a,
@@ -79,7 +80,7 @@ $site-background: rgba(243, 235, 228, 1);
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 //$dark-gray: #8a8a8a;
-$dark-gray: #708090;
+$dark-gray: #595d61;
 $black: #0b3a42;
 $white: #fefefe;
 $background: #f4f4f4;

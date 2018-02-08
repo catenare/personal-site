@@ -1,19 +1,12 @@
 <footer class="grid-container fluid cn-c-footer section-background" id="contact">
   <div class="grid-x grid-margin-x">
-    <div class="large-3 large-offset-3 cell">
+    <div class="large-4 cell cn-c-footer-image">
       <img src="{{cv.profile-image}}" alt="{{cv.name}}">
-      <ul class="menu">
-        {{#each cv.interests}}
-        <li class="social-icon">
-          <a href="{{link}}"><i class="fa {{this.icon}}"></i>{{title}}</a></a>
-        </li>
-        {{/each}}
-      </ul>
     </div>
-    <div class="large-3 cell">
+    <div class="large-4 cell">
     <ul class="menu vertical">
       <li class="social-icon">
-        <a href="mailto:info@johan-martin.com"><i class="fa fa-envelope"></i>info@johan-martin.com</a></a>
+        <a href="mailto:info@johan-martin.com"><i class="fa fa-envelope"></i>info@johan-martin.com</a>
       </li>
       <li class="social-icon">
         <a href="tel:+16467839811"><i class="fa fa-phone"></i>US: +1 (646) 783-9811</a>
@@ -22,28 +15,22 @@
         <a href="tel:+27834438234"><i class="fa fa-phone"></i>SA: +27 (83) 443-8234</a>
       </li>
     </ul>
+    <ul class="menu">
+        {{#each cv.interests}}
+        <li class="social-icon">
+          <a href="{{link}}"><i class="fa {{this.icon}}"></i>{{title}}</a>
+        </li>
+        {{/each}}
+      </ul>
     </div>
-    <div id="contact-me"></div>
-    {{!--
-    <div class="large-6 cell">
+    <div class="large-4 cell">
       <h2>Contact Me</h2>
-      <div id="contact-me"></div>
-     <form>
-        <label for="name"><input placeholder="Name" type="text" id="name" name="name" aria-describedby="nameHelpText" required></label>
-        <p class="help-text" id="nameHelpText">Your first and last name</p>
-        <label for="phone"><input placeholder="Phone" type="text" name="phone" id="phone" aria-describedby="phoneHelpText"></label>
-        <p class="help-text" id="phoneHelpText">Your phone number</p>
-        <label for="email"><input placeholder="Email" type="text" name="email" id="email" aria-describedby="emailHelpText" required></label>
-        <p class="help-text" id="emailHelpText">Your email address so we can reply.</p>
-        <label for="message">
-          <textarea name="message" id="message" cols="20" rows="5" aria-describedby="messageHelpText">Please type your message here
-        </textarea>
-        </label>
-        <p class="help-text" id="messageHelpText">Your message to us.</p>
-        <button class="button primary">Submit</button>
-      </form>
-    </div>
-    --}}
+      <div class="large-8 offset-large-4 cell" id="contact-me"></div>
   </div>
-
+  </div>
+  <ul class="menu align-center">
+    <li class="menu-text">Copyright &copy; 2018</li>
+    <li><a href="#">Johan N. Martin</a></li>
+  </ul>
 </footer>
+

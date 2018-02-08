@@ -30,7 +30,6 @@ class ContactForm extends React.Component<any, any> {
   public render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        {/*<input id="username" name="username" type="text" />*/}
         <label htmlFor="name">
           <input
             placeholder="Name"
@@ -38,20 +37,9 @@ class ContactForm extends React.Component<any, any> {
             id="name"
             name="name"
             aria-describedby="nameHelpText"
-            // value={this.state.name}
-            // onChange={this.handleChange}
             required/>
         </label>
         <p className="help-text" id="nameHelpText">Your first and last name</p>
-        <label htmlFor="phone">
-          <input
-            placeholder="Phone"
-            type="text"
-            name="phone"
-            id="phone"
-            aria-describedby="phoneHelpText"/>
-        </label>
-        <p className="help-text" id="phoneHelpText">Your phone number</p>
         <label htmlFor="email">
           <input
             placeholder="Email"
@@ -61,6 +49,15 @@ class ContactForm extends React.Component<any, any> {
             aria-describedby="emailHelpText" required/>
         </label>
         <p className="help-text" id="emailHelpText">Your email address so we can reply.</p>
+        <label htmlFor="phone">
+          <input
+            placeholder="Phone"
+            type="text"
+            name="phone"
+            id="phone"
+            aria-describedby="phoneHelpText"/>
+        </label>
+        <p className="help-text" id="phoneHelpText">Your phone number</p>
         <label htmlFor="message">
           <textarea
             id="message"

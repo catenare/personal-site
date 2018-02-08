@@ -1,6 +1,13 @@
 .cn-c-footer {
+  // margin-top: 2em;
   padding-top: 1em;
-  margin-top: 2em;
+
+  &-image {
+    img {
+      margin: 1em 2em;
+    }
+  }
+
   //width: 90%;
   &-interests {
     ul {
@@ -8,13 +15,9 @@
     }
   }
 
-  button,
-  form,
-  input,
-  label,
-  textarea,
-  p {
-    margin: 0;
-    padding: 0;
+  i,
+  li {
+    font-size: 1.75rem;
   }
+
 }
