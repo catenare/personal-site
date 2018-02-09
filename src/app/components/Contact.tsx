@@ -70,22 +70,23 @@ class ContactForm extends React.Component<any, any> {
   }
 
   public handleSubmit(event) {
+    const Captcha = "captcha";
+    const Destination = "destination";
+    const data = {};
     event.preventDefault();
     const form = new FormData(event.target);
 
-    const data = {};
     this.state.fields.forEach( (field) => data[field] = form.get(field));
-
     this.resetCaptcha();
 
     if (!this.validateForm(data)) {
       this.setState({buttonDisable: true});
       return;
     }
-
     this.resetForm(event);
-    const Captcha = "captcha";
+
     data[Captcha] = this.state.captchaResult;
+    data[Destination] = this.props.captcha.destination;
 
     const config = {
       data,
@@ -93,7 +94,6 @@ class ContactForm extends React.Component<any, any> {
       method: "post",
       url: this.props.captcha.url,
     };
-
     axios(config).then((response) =>  this.setState({showForm: false}) );
   }
 

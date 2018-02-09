@@ -6,7 +6,5 @@ src/img/video/*.mov
 *.mp*
 package-lock.json
 .vscode
-aws/*
-!aws/addform.py
-!aws/requirements.txt
 firebase-debug.log
+__pycache__

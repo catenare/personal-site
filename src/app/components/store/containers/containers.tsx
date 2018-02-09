@@ -46,7 +46,7 @@ export const ContactUsForm = connect(
     }
   ),
   (dispatch, ownProps) => ({
-    getCaptcha: dispatch(Actions.getCaptcha()),
+    getCaptcha: dispatch(Actions.getFormData()),
   }),
 )(ContactUs);
 
