@@ -1,17 +1,21 @@
 import $ from 'jquery'
 import * as Webfont from 'webfontloader'
-import '../../scss/app.scss'
+import '../../scss/site.scss'
 
 Webfont.load({
   google: {
     families: [
-      'Annie Use Your Telescope',
-      'Itim',
-      'PT Sans Narrow',
-      'Roboto'
+      'Lato',
+      'Rubik',
+      'Tillana'
     ]
   }
 })
+/*
+font-family: 'Lato', sans-serif;
+font-family: 'Rubik', sans-serif;
+font-family: 'Tillana', cursive;
+*/
 
 const prev = 0
 const $window = $(window)

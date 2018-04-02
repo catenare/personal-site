@@ -69,24 +69,29 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  // primary: #d99228,
-  primary: #1f8a25,
-  secondary: #d99228,
+  primary: #ef5735,
+  secondary: #3c9,
   success: #5ca0f2,
   warning: #ff88ad,
   alert: #ff404a,
 );
 $site-background: rgba(243, 235, 228, 1);
+// $light-gray: #838385;
+// $medium-gray: #858588;
+// $dark-gray: #595d61;
+// $black: #0b3a42;
+// $white: #fefefe;
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
-//$dark-gray: #8a8a8a;
-$dark-gray: #595d61;
-$black: #0b3a42;
+$dark-gray: #8a8a8a;
+$black: #0a0a0a;
 $white: #fefefe;
 $background: #f4f4f4;
 $body-background: $background;
-$body-font-color: $black;
-$header-font-family: 'PT Sans Narrow','Helvetica Neue', Helvetica, Arial, sans-serif;
+$body-font-color: $light-gray;
+$body-font-family: 'Lato', Helvetica, Roboto, Arial, sans-serif;
+$header-font-family: 'Rubik','Helvetica Neue', Helvetica, Arial, sans-serif;
+$script-font-family: 'Tillana',cursive;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -165,7 +170,7 @@ $header-small-font-color: $medium-gray;
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
-$code-color: $black;
+$code-color: $light-gray;
 $code-font-family: $font-family-monospace;
 $code-font-weight: $global-weight-normal;
 $code-background: $light-gray;
