@@ -8,3 +8,4 @@ package-lock.json
 .vscode
 firebase-debug.log
 __pycache__
+aws/Archive*

@@ -21,7 +21,7 @@ if __name__ == "__main__":
   data = {
     "captcha": "adjklakd",
     "destination": "johan@paseo.org.za",
-    "email": "sfbushie@gmail.com",
+    "email": "jnm@catenare.com",
     "name": "Johan Martin",
     "message": "This is a test message <script>alert('this is a test')</script>",
     "phone": "+27 81 443 8237"

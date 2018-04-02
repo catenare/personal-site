@@ -4,7 +4,7 @@ from datetime import datetime
 
 #pip install module-name -t /path/to/project-dir
 
-DB_TABLE = os.getenv("db_table", "demo_contact_us")
+DB_TABLE = os.getenv("db_table", "johanmartin")
 DB_KEY = os.getenv("db_key", "email")
 DB_SUBKEY = os.getenv("db_subkey", "name")
 
