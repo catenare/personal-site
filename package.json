@@ -141,5 +141,10 @@
       "max-nesting-depth": 3,
       "order/properties-alphabetical-order": false
     }
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "safari >= 7",
+    ">1%"
+  ]
 }

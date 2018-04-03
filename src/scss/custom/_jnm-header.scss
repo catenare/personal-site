@@ -1,0 +1,12 @@
+.jnm-header {
+  &--top-bar {
+    background-color: $white;
+  }
+  .menu a {
+    color: $black;
+    font-weight: bolder;
+  }
+  .menu-text {
+    color: $primary-color;
+  }
+}

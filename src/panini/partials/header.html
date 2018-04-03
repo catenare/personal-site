@@ -1,23 +1,24 @@
-<header class="grid-container cn-c-top-bar full">
-  <nav class="top-bar js-nav-background">
+<header class="jnm-header">
+  <nav class="top-bar jnm-header--top-bar">
     <div class="top-bar-left">
-      <h1><a href="#">Johan N. Martin</a></h1>
-    </div>
-    <div class="top-bar-right">
-      <ul class="menu">
-        <li class="social-icon">
-          <a href="#contact" title="Email">
-            <i class="fa fa-envelope"></i>Email</a>
-        </li>
-        {{#each cv.social}}
-        <li class="social-icon">
-          <a href="{{this.link}}" title="{{this.title}}" target="_blank">
-            <i class="fa {{this.icon}}"></i>{{title}}</a>
-        </li>
-        {{/each}}
+      <ul class="menu jnm-header--menu">
+        <li class="menu-text">Johan N. Martin</li>
+        <li><a href="#">Latest</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Github</a></li>
+        <li><a href="linkedIn">LinkedIn</a></li>
       </ul>
     </div>
+    <div class="top-bar-right">
+   <ul class="dropdown menu">
+    <li><a href="#">Latest</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Github</a></li>
+    <li><a href="linkedIn">LinkedIn</a></li>
+   </ul>
+  </div>
   </nav>
-  {{>hero}}
 </header>
 
