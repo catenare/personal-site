@@ -5,7 +5,6 @@ const CleanWebPackPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const vendorPackages = require('./package.json')
 const combineLoaders = require('webpack-combine-loaders')
-const StylelintPlugin = require('stylelint-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 let hostEnv
@@ -48,8 +47,7 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       __IS_PROD__: hostEnv
-    }),
-    new StylelintPlugin({syntax: 'scss', emitErrors: false, lintDirtyModulesOnly: true})
+    })
   ],
   module: {
     rules: [

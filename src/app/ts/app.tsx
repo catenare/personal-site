@@ -2,10 +2,22 @@
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import {Provider} from "react-redux";
+import * as Webfont from "webfontloader";
 import {setFormData} from "../components/store/actions/actions";
 import store from "../components/store/store";
-import "../js/util";
 import {AppRoute} from "./Router";
+
+Webfont.load({
+  google: {
+    families: [
+      "Lato",
+      "Rubik",
+      "Tillana",
+    ],
+  },
+});
+
+import "./../../scss/site.scss";
 
 // import ContactForm from "../components/Contact";
 import {ContactUsForm} from "../components/store/containers/containers";
