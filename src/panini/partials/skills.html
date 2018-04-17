@@ -3,27 +3,24 @@
     <h1>Skills</h1>
     <div class="grid-x grid-margin-x">
       {{#each cv.skills}}
-      <div class="cell auto">
-        <i class="fa {{icon}}" aria-hidden="true"></i>
-        <div>
-          <h2>{{this.title}}</h2>
-          <ul {{#if this.class}} class="sub-skills" {{/if}}>
-          {{#each this.items}}
-          {{#if this.title}}
-          <li>
-            <dl>
-              <dt>{{this.title}}</dt>
-              {{#each this.items}}
-              <dd>{{this}}</dd>
-              {{/each}}
-            </dl>
-          </li>
-          {{else}}
-          <li>{{this}}</li>
-          {{/if}}
-          {{/each}}
-          </ul>
-        </div>
+      <div class="cell large-6 medium-10 medium-offset-2">
+        <h2><i class="fa {{icon}}" aria-hidden="true"></i>{{this.title}}</h2>
+        <ul {{#if this.class}} class="sub-skills" {{/if}}>
+        {{#each this.items}}
+        {{#if this.title}}
+        <li>
+          <dl>
+            <dt>{{this.title}}</dt>
+            {{#each this.items}}
+            <dd>{{this}}</dd>
+            {{/each}}
+          </dl>
+        </li>
+        {{else}}
+        <li>{{this}}</li>
+        {{/if}}
+        {{/each}}
+        </ul>
       </div>
       {{/each}}
     </div>
