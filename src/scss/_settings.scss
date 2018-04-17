@@ -68,6 +68,7 @@
 $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
+
 $foundation-palette: (
   primary: #ef5735,
   secondary: #3c9,
@@ -76,11 +77,6 @@ $foundation-palette: (
   alert: #ff404a,
 );
 
-// $light-gray: #838385;
-// $medium-gray: #858588;
-// $dark-gray: #595d61;
-// $black: #0b3a42;
-// $white: #fefefe;
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
@@ -176,7 +172,7 @@ $code-font-weight: $global-weight-normal;
 $code-background: $light-gray;
 $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
-$anchor-color: $primary-color;
+$anchor-color: $secondary-color;
 $anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
@@ -335,7 +331,7 @@ $callout-link-tint: 30%;
 // --------
 
 $card-background: $white;
-//$card-background: $primary-color;
+$card-background: $primary-color;
 $card-font-color: $body-font-color;
 $card-divider-background: $dark-gray;
 $card-border: 3px solid $primary-color;
@@ -855,7 +851,7 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0.5rem;
-// $topbar-background: $light-gray;
+$topbar-background: $light-gray;
 $topbar-background: transparent;
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;

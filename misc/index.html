@@ -6,36 +6,56 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Learn Flexbox</title>
  <style>
- .blue {
-  background-color: blue;
-}
+   html, body, main {
+     height: 100%;
+     width: 100%;
+   }
 
-.green {
-  background-color: green;
-}
+   nav {
+     width: 300px;
+     height: 100%;
+     position: absolute;
+     transform: translate(-300px, 0);
+     transition: transform 0.3s ease;
+   }
 
-.grey {
-  background-color: grey;
-}
+   @media screen and (min-width: 600px) {
+     nav {
+       position: relative;
+       transform: translate(0, 0);
+     }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
+     body {
+       display: flex;
+       flex-flow: row nowrap;
+     }
 
-.box {
-  height: 20vh;
-  width: 150px;
-}
+     main {
+       width: auto;
+       flex-grow: 1;
+     }
+   }
+
+  .blue {
+    background-color: blue;
+  }
+
+  .green {
+    background-color: green;
+  }
+
+  .grey {
+    background-color: grey;
+  }
  </style>
 </head>
 <body>
-  <section class="container">
-    <div class="box green">Green Box</div>
-    <div class="box blue">Blue Box</div>
-    <div class="box grey">Grey Box</div>
-  </section>
+<nav class="drawer blue">
+
+</nav>
+<main class="green">
+
+</main>
 
 </body>
 </html>

@@ -5,10 +5,16 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 50vh;
 
-  h1 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 60vh;
+
+
+  blockquote, h1, cite {
     color: $white;
-    text-align: center;
   }
 }

@@ -1,0 +1,43 @@
+.jnm-header {
+
+  .title-bar a {
+    color: $white;
+  }
+
+  .menu-text {
+    color: $secondary-color;
+  }
+
+  .jnm-header--nav {
+    display: none;
+  }
+
+  .menu-icon {
+    margin-right: 0.5rem;
+  }
+
+  .menu-text, .title-bar-title {
+    font-size: 2rem;
+    font-weight: 900;
+  }
+
+  .menu-text {
+    color: $primary-color;
+  }
+
+  .top-bar-right a {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  @include breakpoint( medium down) {
+    .title-bar, .jnm-header--menu, .vertical {
+      display: none;
+    }
+
+    .jnm-header--nav {
+      display: flex;
+    }
+  }
+}
+
