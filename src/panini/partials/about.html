@@ -1,7 +1,8 @@
 <section id="about" class="about">
-  <div class="overview">
+  <h1>About</h1>
+  <div class="overview grid-x grid-margin-x">
 
-    <section class="summary">
+    <section class="summary cell auto">
       <h1>Summary</h1>
       <ul>
         {{#each cv.summary}}
@@ -10,7 +11,7 @@
       </ul>
     </section>
 
-    <section class="experience">
+    <section class="experience cell auto">
       <h1>Experience</h1>
       <div>
         {{#each cv.experience}}
@@ -41,35 +42,5 @@
       </div>
     </section>
   </div>
-  <section>
-    <div>
-      <h1>Skills</h1>
-      <div>
-        {{#each cv.skills}}
-        <div>
-          <i class="fa {{icon}}" aria-hidden="true"></i>
-          <div>
-            <h2>{{this.title}}</h2>
-            <ul {{#if this.class}} class="sub-skills" {{/if}}>
-            {{#each this.items}}
-            {{#if this.title}}
-            <li>
-              <dl>
-                <dt>{{this.title}}</dt>
-                {{#each this.items}}
-                <dd>{{this}}</dd>
-                {{/each}}
-              </dl>
-            </li>
-            {{else}}
-            <li>{{this}}</li>
-            {{/if}}
-            {{/each}}
-            </ul>
-          </div>
-        </div>
-        {{/each}}
-      </div>
-    </div>
-  </section>
+  {{>skills}}
 </section>

@@ -44,66 +44,61 @@ summary:
   - Java programmer certification
 skills:
   -
+    title: Development
+    icon: fa-cogs
+    class: 0
+    items:
+    - title: Language
+      items:
+      - JavaScript
+      - PHP
+      - Python
+    - title: Frameworks
+      items:
+      - Drupal
+      - Flask
+      - Reactjs
+      - Symfony
+      - Vuejs
+      - WordPress
+      - Zend Framework
+    - title: Cloud Services
+      items:
+      - AWS
+      - Azure
+      - GitHub
+    - title: Tools
+      items:
+      - Git
+      - Jenkins
+      - Trello
+  -
     title: System Administration
     icon: fa-microchip
     class: 0
     items:
+    - title: Operating Systems
+      items:
       - Linux
       - Mac OS X
       - Windows
+    - title: Web Servers
+      items:
       - Apache
       - Nginx
-  -
-    title: Databases
-    icon: fa-database
-    class: 0
-    items:
+    - title: Databases
+      items:
       - MySql
       - PostgreSQL
       - MongoDB
-  -
-    title: Cloud Service
-    icon: fa-cloud
-    class: 0
-    items:
-      - Azure
-      - Amazon Web Services
-      - Google Cloud
-  -
-    title: Developer Tools
-    icon: fa-cogs
-    class: 0
-    items:
-      - Git
-      - Jenkins
-  -
-    title: Languages & Frameworks
-    icon: fa-language
-    class: 1
-    items:
-    -
-      title: PHP
+    - title: Networking
       items:
-        - Zend Framework
-        - Symfony
-        - Drupal
-        - WordPress
-    -
-      title: Python
+      - Firewall Configuration
+      - DHCP
+      - DNS
+    - title: Cloud Environments
       items:
-        - Flask
-        - Django
-    -
-      title: JavaScript
-      items:
-        - Reactjs
-        - Vuejs
-        - jQuery
-        - Angular
-    # -
-    #   title: Java
-    #   items:
-    #     - Spring
+      - AWS
 
 experience:
   -
