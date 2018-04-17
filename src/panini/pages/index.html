@@ -7,21 +7,23 @@ title: Main
       <ul class="menu">
         <li><a href="#">South Africa: +27 83 844 8344</a></li>
         <li><a href="#">United States: +1 646 783 9811</a></li>
-      </ul>
-    </div>
-    <div>
-      <ul>
-        <li class="menu-text">Johan N. Martin</li>
-        <li><a href="#">Latest</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">About</a></li>
         <li><a href="#">Github</a></li>
         <li><a href="linkedIn">LinkedIn</a></li>
       </ul>
     </div>
+    <div>
+      <ul class="menu">
+        <li class="menu-text">Johan N. Martin</li>
+        <li><a href="#">Latest</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+
+      </ul>
+    </div>
   </nav>
 </header>
-<section>
+<!-- Hero Section -->
+<section class="hero">
   <div>
     <h1>Web Application Developer</h1>
   </div>
@@ -30,11 +32,14 @@ title: Main
     <cite> Pericles</cite>
   </blockquote>
 </section>
+
+<!-- Main Section -->
 <main>
-  <section>
+  <section class="news">
   </section>
-  <section>
-    <section>
+
+  <section class="about">
+    <section class="summary">
       <h1>Summary</h1>
       <ul>
         {{#each cv.summary}}
@@ -52,15 +57,15 @@ title: Main
       </div>
 
     </section>
-    <section class="product-feature-section">
-      <div class="product-feature-section-outer">
-        <h1 class="product-feature-section-headline">Skills</h1>
-        <div class="product-feature-section-inner">
+    <section>
+      <div>
+        <h1>Skills</h1>
+        <div>
           {{#each cv.skills}}
-          <div class="product-feature-section-feature">
+          <div>
             <i class="fa {{icon}}" aria-hidden="true"></i>
             <div>
-              <h2 class="feature-title">{{this.title}}</h2>
+              <h2>{{this.title}}</h2>
               <ul {{#if this.class}} class="sub-skills" {{/if}}>
               {{#each this.items}}
               {{#if this.title}}
@@ -87,12 +92,12 @@ title: Main
 </main>
 <footer>
   <div>
-    <div class="large-4 cell cn-c-footer-image">
+    <div>
       <img src="{{cv.profile-image}}" alt="{{cv.name}}">
     </div>
-    <div class="large-4 cell">
-      <ul class="menu vertical">
-        <li class="social-icon">
+    <div>
+      <ul>
+        <li>
           <a href="mailto:info@johan-martin.com"><i class="fa fa-envelope"></i>info@johan-martin.com</a>
         </li>
         <li class="social-icon">
@@ -110,12 +115,12 @@ title: Main
         {{/each}}
       </ul>
     </div>
-    <div class="large-4 cell">
+    <div>
       <h2>Contact Me</h2>
       <div class="large-8 offset-large-4 cell" id="contact-me"></div>
     </div>
   </div>
-  <ul class="menu align-center">
+  <ul>
     <li class="menu-text">Copyright &copy;
       <script type="text/javascript">
         var d = new Date()

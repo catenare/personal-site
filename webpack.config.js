@@ -64,7 +64,11 @@ module.exports = {
               loader: 'postcss-loader'
             },
             {
-              loader: 'sass-loader'
+              loader: 'sass-loader',
+              options: {
+                includePaths: ['src/scss'],
+                data: '@import "src/scss/site";'
+              }
             }
           ])
         })

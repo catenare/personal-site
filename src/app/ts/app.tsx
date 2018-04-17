@@ -17,7 +17,7 @@ Webfont.load({
   },
 });
 
-// import "./../../scss/site.scss";
+import "./../../scss/site.scss";
 
 // import ContactForm from "../components/Contact";
 import {ContactUsForm} from "../components/store/containers/containers";

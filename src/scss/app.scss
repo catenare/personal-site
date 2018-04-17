@@ -5,10 +5,10 @@
 @import '~foundation-sites/scss/foundation';
 
 @include foundation-global-styles;
-// @include foundation-grid;
+@include foundation-grid;
 // @include foundation-flex-grid;
 @include foundation-xy-grid-classes;
-@include foundation-typography;
+//@include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
 // @include foundation-range-input;
@@ -16,15 +16,15 @@
 // @include foundation-accordion-menu;
 // @include foundation-badge;
 // @include foundation-breadcrumbs;
-@include foundation-button-group;
+//@include foundation-button-group;
 // @include foundation-callout;
 // @include foundation-card;
 // @include foundation-close-button;
 @include foundation-menu;
-@include foundation-menu-icon;
-@include foundation-drilldown-menu;
-@include foundation-dropdown;
-@include foundation-dropdown-menu;
+//@include foundation-menu-icon;
+//@include foundation-drilldown-menu;
+//@include foundation-dropdown;
+//@include foundation-dropdown-menu;
 // @include foundation-responsive-embed;
 // @include foundation-label;
 // @include foundation-media-object;
