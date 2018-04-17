@@ -1,0 +1,75 @@
+<section id="about" class="about">
+  <div class="overview">
+
+    <section class="summary">
+      <h1>Summary</h1>
+      <ul>
+        {{#each cv.summary}}
+        <li><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>{{this}}</li>
+        {{/each}}
+      </ul>
+    </section>
+
+    <section class="experience">
+      <h1>Experience</h1>
+      <div>
+        {{#each cv.experience}}
+
+        <div>
+          <div>
+            <img src={{logo}} alt={{title}}/>
+          </div>
+          <div>
+            <div>
+              <p>{{description}}</p>
+            </div>
+            <div>
+              <ul>
+                {{#each this.list}}
+                <li>{{this}}</li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+          <div>
+            <h1>{{company}}</h1>
+            <h2>{{title}}</h2>
+          </div>
+        </div>
+
+        {{/each}}
+      </div>
+    </section>
+  </div>
+  <section>
+    <div>
+      <h1>Skills</h1>
+      <div>
+        {{#each cv.skills}}
+        <div>
+          <i class="fa {{icon}}" aria-hidden="true"></i>
+          <div>
+            <h2>{{this.title}}</h2>
+            <ul {{#if this.class}} class="sub-skills" {{/if}}>
+            {{#each this.items}}
+            {{#if this.title}}
+            <li>
+              <dl>
+                <dt>{{this.title}}</dt>
+                {{#each this.items}}
+                <dd>{{this}}</dd>
+                {{/each}}
+              </dl>
+            </li>
+            {{else}}
+            <li>{{this}}</li>
+            {{/if}}
+            {{/each}}
+            </ul>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+</section>

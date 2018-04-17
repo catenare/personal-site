@@ -1,42 +1,57 @@
 .jnm-header {
+
+  i {
+    margin-right: 0.25rem;
+  }
+
+  span.flag-icon {
+    margin-left: 0.25rem;
+  }
+
   .title-bar a {
     color: $white;
+    font-weight: bolder;
   }
 
-  .menu-text {
-    color: $secondary-color;
-  }
+  nav {
+    display: flex;
+    font-size: 1.25rem;
 
-  .jnm-header--nav {
-    display: none;
-  }
+    .menu-text {
+      color: $primary-color;
+      i {
+        display: none;
+      }
+    }
 
-  .menu-icon {
-    margin-right: 0.5rem;
-  }
+    a {
+      color: $black;
+    }
 
-  .menu-text, .title-bar-title {
-    font-size: 2rem;
-    font-weight: 900;
-  }
-
-  .menu-text {
-    color: $primary-color;
-  }
-
-  .top-bar-right a {
-    font-size: 1.5rem;
-    font-weight: 700;
+    div {
+      margin-left: 25%;
+    }
   }
 
   @include breakpoint( medium down) {
-    .title-bar, .jnm-header--menu, .vertical {
+    ul.menu, .medium-horizontal {
       display: none;
     }
 
-    .jnm-header--nav {
-      display: flex;
+    nav {
+      background-color: $black;
+      .menu-text {
+        i {
+          display: inline;
+        }
+      }
+
+      a {
+        color: $white;
+      }
     }
+
+
   }
 }
 

@@ -1,0 +1,75 @@
+<section class="highlights">
+  {{#each cv.highlights}}
+  <div>
+    {{#ifequal @index 1}}
+    <div>
+      <img src="{{image}}" alt="{{title}}"/>
+    </div>
+    {{/ifequal}}
+    <div>
+      <a href="{{link}}" target="_blank">
+        <h1>{{title}}</h1>
+      </a>
+      {{{description}}}
+      {{#if gallery}}
+      <ul>
+        {{#each gallery}}
+        <li>
+          <figure class="gallery-img">
+            <img src="https://res.cloudinary.com/paseo/image/upload/v1514746880/johan-martin/sierrafoothills/{{this}}"
+                 alt="image"/>
+            <img class="img-hover" src="https://res.cloudinary.com/paseo/image/upload/v1514746880/johan-martin/sierrafoothills/{{this}}"
+                 alt="image"/>
+          </figure>
+        </li>
+        {{/each}}
+      </ul>
+      {{/if}}
+    </div>
+
+    {{#ifequal @index 0}}
+    <div>
+      <img src="{{image}}" alt="{{title}}"/>
+    </div>
+    {{/ifequal}}
+
+  </div>
+  {{/each}}
+</section><section class="highlights">
+  {{#each cv.highlights}}
+  <div>
+    {{#ifequal @index 1}}
+    <div>
+      <img src="{{image}}" alt="{{title}}"/>
+    </div>
+    {{/ifequal}}
+    <div>
+      <a href="{{link}}" target="_blank">
+        <h1>{{title}}</h1>
+      </a>
+      {{{description}}}
+      {{#if gallery}}
+      <ul>
+        {{#each gallery}}
+        <li>
+          <figure class="gallery-img">
+            <img src="https://res.cloudinary.com/paseo/image/upload/v1514746880/johan-martin/sierrafoothills/{{this}}"
+                 alt="image"/>
+            <img class="img-hover" src="https://res.cloudinary.com/paseo/image/upload/v1514746880/johan-martin/sierrafoothills/{{this}}"
+                 alt="image"/>
+          </figure>
+        </li>
+        {{/each}}
+      </ul>
+      {{/if}}
+    </div>
+
+    {{#ifequal @index 0}}
+    <div>
+      <img src="{{image}}" alt="{{title}}"/>
+    </div>
+    {{/ifequal}}
+
+  </div>
+  {{/each}}
+</section>
