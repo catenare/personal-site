@@ -4,7 +4,7 @@
   background-origin: padding-box;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
 
   align-items: center;
   display: flex;
@@ -13,8 +13,25 @@
 
   height: 60vh;
 
-
   blockquote, h1, cite {
     color: $white;
   }
+
+  h1 {
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  blockquote, cite {
+    font-weight: 700;
+  }
+
+  @include breakpoint( medium down ) {
+    h1 {
+      font-size: 3rem;
+    }
+    //background-position: 0 0;
+    //background-size: auto;
+  }
+
 }
