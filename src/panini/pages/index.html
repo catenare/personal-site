@@ -32,7 +32,6 @@ title: Main
   </section>
 <main>
   <section class="news">
-
   </section>
   <section class="about">
       <section class="cn-c-summary">
@@ -43,6 +42,7 @@ title: Main
           {{/each}}
         </ul>
         </section>
+
         <section class="cn-c-work grid-container">
             <h1>Experience</h1>
             <div class="timeline">
@@ -61,7 +61,7 @@ title: Main
                   <i class="fa {{icon}}" aria-hidden="true"></i>
                   <div>
                     <h2 class="feature-title">{{this.title}}</h2>
-                    <ul class="sub-skills" {{#if this.class}} {{ if}}>
+                    <ul {{#if this.class}} class="sub-skills"{{/if}}>
                     {{#each this.items}}
                     {{#if this.title}}
                     <li>
@@ -123,3 +123,4 @@ title: Main
       <li><a href="#">Johan N. Martin</a></li>
     </ul>
 </footer>
+
