@@ -75,7 +75,7 @@ $foundation-palette: (
   warning: #ff88ad,
   alert: #ff404a,
 );
-$site-background: rgba(243, 235, 228, 1);
+
 // $light-gray: #838385;
 // $medium-gray: #858588;
 // $dark-gray: #595d61;
@@ -86,9 +86,9 @@ $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
-$background: #f4f4f4;
+$background: $white;
 $body-background: $background;
-$body-font-color: $light-gray;
+$body-font-color: $black;
 $body-font-family: 'Lato', Helvetica, Roboto, Arial, sans-serif;
 $header-font-family: 'Rubik','Helvetica Neue', Helvetica, Arial, sans-serif;
 $script-font-family: 'Tillana',cursive;
