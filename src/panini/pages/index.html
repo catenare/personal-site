@@ -1,96 +1,96 @@
 ---
 title: Main
 ---
-<header class="jnm-header">
-    <nav class="top-menu">
-      <div class="top-bar-left">
-        <ul class="menu">
-          <li><a href="#">South Africa: +27 83 844 8344</a></li>
-          <li><a href="#">United States: +1 646 783 9811</a></li>
-        </ul>
-      </div>
-      <div class="top-bar-left">
-        <ul class="menu jnm-header--menu">
-          <li class="menu-text">Johan N. Martin</li>
-          <li><a href="#">Latest</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Github</a></li>
-          <li><a href="linkedIn">LinkedIn</a></li>
-        </ul>
-      </div>
-    </nav>
-</header>
-<section class="jnm-header--hero">
+<header>
+  <nav>
     <div>
+      <ul class="menu">
+        <li><a href="#">South Africa: +27 83 844 8344</a></li>
+        <li><a href="#">United States: +1 646 783 9811</a></li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li class="menu-text">Johan N. Martin</li>
+        <li><a href="#">Latest</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Github</a></li>
+        <li><a href="linkedIn">LinkedIn</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<section>
+  <div>
     <h1>Web Application Developer</h1>
   </div>
-    <blockquote>Having knowledge but lacking the power to express it clearly is no better than never
-      having any ideas at all.
-      <cite> Pericles</cite>
-    </blockquote>
-  </section>
+  <blockquote>Having knowledge but lacking the power to express it clearly is no better than never
+    having any ideas at all.
+    <cite> Pericles</cite>
+  </blockquote>
+</section>
 <main>
-  <section class="news">
+  <section>
   </section>
-  <section class="about">
-      <section class="cn-c-summary">
-          <h1>Summary</h1>
-        <ul>
-          {{#each cv.summary}}
-          <li><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>{{this}}</li>
-          {{/each}}
-        </ul>
-        </section>
+  <section>
+    <section>
+      <h1>Summary</h1>
+      <ul>
+        {{#each cv.summary}}
+        <li><span><i class="fa fa-check-square-o" aria-hidden="true"></i></span>{{this}}</li>
+        {{/each}}
+      </ul>
+    </section>
 
-        <section class="cn-c-work grid-container">
-            <h1>Experience</h1>
-            <div class="timeline">
-              {{#each cv.experience}}
-              {{>work-card work=this}}
+    <section>
+      <h1>Experience</h1>
+      <div>
+        {{#each cv.experience}}
+        {{>work-card work=this}}
+        {{/each}}
+      </div>
+
+    </section>
+    <section class="product-feature-section">
+      <div class="product-feature-section-outer">
+        <h1 class="product-feature-section-headline">Skills</h1>
+        <div class="product-feature-section-inner">
+          {{#each cv.skills}}
+          <div class="product-feature-section-feature">
+            <i class="fa {{icon}}" aria-hidden="true"></i>
+            <div>
+              <h2 class="feature-title">{{this.title}}</h2>
+              <ul {{#if this.class}} class="sub-skills" {{/if}}>
+              {{#each this.items}}
+              {{#if this.title}}
+              <li>
+                <dl>
+                  <dt>{{this.title}}</dt>
+                  {{#each this.items}}
+                  <dd>{{this}}</dd>
+                  {{/each}}
+                </dl>
+              </li>
+              {{else}}
+              <li>{{this}}</li>
+              {{/if}}
               {{/each}}
+              </ul>
             </div>
-
-        </section>
-        <section class="product-feature-section">
-            <div class="product-feature-section-outer">
-              <h1 class="product-feature-section-headline">Skills</h1>
-              <div class="product-feature-section-inner">
-                {{#each cv.skills}}
-                <div class="product-feature-section-feature">
-                  <i class="fa {{icon}}" aria-hidden="true"></i>
-                  <div>
-                    <h2 class="feature-title">{{this.title}}</h2>
-                    <ul {{#if this.class}} class="sub-skills"{{/if}}>
-                    {{#each this.items}}
-                    {{#if this.title}}
-                    <li>
-                      <dl>
-                        <dt>{{this.title}}</dt>
-                        {{#each this.items}}
-                        <dd>{{this}}</dd>
-                        {{/each}}
-                      </dl>
-                    </li>
-                    {{else}}
-                    <li>{{this}}</li>
-                    {{/if}}
-                    {{/each}}
-                    </ul>
-                  </div>
-                </div>
-                {{/each}}
-              </div>
-            </div>
-          </section>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </section>
   </section>
 </main>
 <footer>
-    <div class="grid-x grid-margin-x">
-      <div class="large-4 cell cn-c-footer-image">
-        <img src="{{cv.profile-image}}" alt="{{cv.name}}">
-      </div>
-      <div class="large-4 cell">
+  <div>
+    <div class="large-4 cell cn-c-footer-image">
+      <img src="{{cv.profile-image}}" alt="{{cv.name}}">
+    </div>
+    <div class="large-4 cell">
       <ul class="menu vertical">
         <li class="social-icon">
           <a href="mailto:info@johan-martin.com"><i class="fa fa-envelope"></i>info@johan-martin.com</a>
@@ -103,24 +103,26 @@ title: Main
         </li>
       </ul>
       <ul class="menu">
-          {{#each cv.interests}}
-          <li class="social-icon">
-            <a href="{{link}}"><i class="fa {{this.icon}}"></i>{{title}}</a>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
-      <div class="large-4 cell">
-        <h2>Contact Me</h2>
-        <div class="large-8 offset-large-4 cell" id="contact-me"></div>
+        {{#each cv.interests}}
+        <li class="social-icon">
+          <a href="{{link}}"><i class="fa {{this.icon}}"></i>{{title}}</a>
+        </li>
+        {{/each}}
+      </ul>
     </div>
+    <div class="large-4 cell">
+      <h2>Contact Me</h2>
+      <div class="large-8 offset-large-4 cell" id="contact-me"></div>
     </div>
-    <ul class="menu align-center">
-      <li class="menu-text">Copyright &copy; <script type="text/javascript">
+  </div>
+  <ul class="menu align-center">
+    <li class="menu-text">Copyright &copy;
+      <script type="text/javascript">
         var d = new Date()
         document.write(d.getFullYear())
-        </script></li>
-      <li><a href="#">Johan N. Martin</a></li>
-    </ul>
+      </script>
+    </li>
+    <li><a href="#">Johan N. Martin</a></li>
+  </ul>
 </footer>
 
