@@ -1,0 +1,30 @@
+<section class="experience cell auto">
+  <h1>Experience</h1>
+  <div>
+    {{#each cv.experience}}
+
+    <div>
+      <div>
+        <img src={{logo}} alt={{title}}/>
+      </div>
+      <div>
+        <div>
+          <p>{{description}}</p>
+        </div>
+        <div>
+          <ul>
+            {{#each this.list}}
+            <li>{{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h2>{{company}}</h2>
+        <h3>{{title}}</h3>
+      </div>
+    </div>
+
+    {{/each}}
+  </div>
+</section>
