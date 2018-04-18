@@ -1,3 +1,20 @@
 .news {
   margin-top: 2rem;
+
+  .articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    article {
+      padding: 1rem;
+      flex: 1 0 25%;
+      display: flex;
+    }
+  }
+
+  .post-view {
+    height: 80vh;
+    border: 1px solid $black;
+  }
 }

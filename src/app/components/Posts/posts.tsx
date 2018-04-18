@@ -16,14 +16,15 @@ class Posts extends React.Component<any, any> {
   public render() {
     if (this.props.posts.posts.length > 0) {
     const feature = this.getFeaturedPost(this.props.posts.posts);
-    const posts = this.props.posts.posts.map(
-      (c, i) => <Post handleClick={this.postClicked} post={c} index={i} />
+    // const postList = this.props.posts.posts.filter((p) => p !== feature);
+    const posts = this.props.posts.posts.filter((p) => p !== feature).map(
+      (c, i) => <Post handleClick={this.postClicked} post={c} index={i} />,
     );
     return (
-      <ul className="grid-x grid-margin-x no-bullet">
-        {/*<Article handleClick={this.postClicked} featured={feature} />*/}
+      <React.Fragment>
+        <Article handleClick={this.postClicked} featured={feature} />
         {posts}
-      </ul>
+        </React.Fragment>
       );
   } else {
     return <div className="loader">Loading...</div>;

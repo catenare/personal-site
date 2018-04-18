@@ -9,7 +9,7 @@ import store from "../components/store/store";
 const AppRoute = (props) => ( // eslint-disable-line
   <Provider store={store} url={props}>
   <HashRouter>
-    <main>
+    <section className="view-article">
       <Switch>
         <Route path="/post/:postId"
                render={
@@ -18,7 +18,7 @@ const AppRoute = (props) => ( // eslint-disable-line
         />,
         <Route render={({history}) => <Blog  history={history} {...props}/>} />,
       </Switch>
-    </main>
+    </section>
   </HashRouter>
   </Provider>
 

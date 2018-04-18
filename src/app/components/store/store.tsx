@@ -1,6 +1,4 @@
 import {applyMiddleware, combineReducers, createStore} from "redux";
-// import {composeWithDevTools} from "redux-devtools-extension";
-// import logger from "redux-logger";
 import {captcha} from "../store/reducers/captcha";
 import pages from "../store/reducers/pages";
 import {post, posts} from "../store/reducers/posts";

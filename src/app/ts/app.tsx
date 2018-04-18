@@ -3,6 +3,7 @@ import * as React from "react";
 import * as ReactDom from "react-dom";
 import {Provider} from "react-redux";
 import * as Webfont from "webfontloader";
+// import Blog from "../components/Blog";
 import {setFormData} from "../components/store/actions/actions";
 import store from "../components/store/store";
 import {AppRoute} from "./Router";
@@ -49,6 +50,13 @@ ReactDom.render (
   <AppRoute url={baseUrl}/>,
   posts,
 );
+
+// ReactDom.render (
+//   <Provider store={store}>
+//     <Blog url={baseUrl} />
+//   </Provider>,
+//   posts,
+// );
 
 /* contact us form */
 ReactDom.render (
