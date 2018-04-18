@@ -1,0 +1,30 @@
+footer {
+
+  background-attachment: fixed;
+  background-image: url('https://res.cloudinary.com/paseo/image/upload/v1523886839/johan-martin/bali_countryside_iuuhtc.jpg');
+  background-origin: padding-box;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  color: $white;
+
+  .contact-details {
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    img {
+      max-width: 100%;
+    }
+
+    .social-list {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .bottom-menu {
+    background-color: $black;
+  }
+}

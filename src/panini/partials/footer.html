@@ -1,34 +1,36 @@
-<footer id="contact">
-  <div>
+<footer id="contact" class="grid-container full">
+  <div class="contact-details grid-container">
+
     <div>
       <img src="{{cv.profile-image}}" alt="{{cv.name}}">
     </div>
-    <div>
-      <ul>
-        <li>
+
+    <div class="social-list">
+        <span class="social-icon">
           <a href="mailto:info@johan-martin.com"><i class="fa fa-envelope"></i>info@johan-martin.com</a>
-        </li>
-        <li class="social-icon">
+        </span>
+        <span class="social-icon">
           <a href="tel:+16467839811"><i class="fa fa-phone"></i>US: +1 (646) 783-9811</a>
-        </li>
-        <li class="social-icon">
+        </span>
+        <span class="social-icon">
           <a href="tel:+27834438234"><i class="fa fa-phone"></i>SA: +27 (83) 443-8234</a>
-        </li>
-      </ul>
-      <ul class="menu">
+        </span>
+
         {{#each cv.interests}}
-        <li class="social-icon">
+        <span class="social-icon">
           <a href="{{link}}"><i class="fa {{this.icon}}"></i>{{title}}</a>
-        </li>
+        </span>
         {{/each}}
-      </ul>
     </div>
+
     <div>
       <h2>Contact Me</h2>
-      <div class="large-8 offset-large-4 cell" id="contact-me"></div>
+      <div id="contact-me"></div>
     </div>
+
   </div>
-  <ul>
+
+  <ul class="menu align-center bottom-menu">
     <li class="menu-text">Copyright &copy;
       <script type="text/javascript">
         var d = new Date()
@@ -37,4 +39,5 @@
     </li>
     <li><a href="#">Johan N. Martin</a></li>
   </ul>
+
 </footer>

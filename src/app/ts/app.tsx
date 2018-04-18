@@ -40,16 +40,17 @@ if (__IS_PROD__) {
   formUrl = "https://gateway.johan-martin.com/addform";
 }
 
-const posts = document.getElementById("posts");
+store.dispatch(setFormData(captchaKey, formUrl, formDestination));
+const posts = document.getElementById("news");
 const contact = document.getElementById("contact-me");
 
-// ReactDom.render (
-//   <AppRoute url={baseUrl}/>,
-//   posts,
-// );
+/* Posts */
+ReactDom.render (
+  <AppRoute url={baseUrl}/>,
+  posts,
+);
 
-store.dispatch(setFormData(captchaKey, formUrl, formDestination));
-
+/* contact us form */
 ReactDom.render (
   <Provider store={store}>
   <ContactUsForm />

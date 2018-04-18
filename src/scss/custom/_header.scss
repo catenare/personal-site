@@ -8,6 +8,10 @@
     margin-left: 0.25rem;
   }
 
+  ul.menu {
+    display: none;
+  }
+
   .title-bar a {
     color: $white;
     font-weight: bolder;
@@ -16,16 +20,17 @@
   nav {
     display: flex;
     font-size: 1.25rem;
+    background-color: $black;
 
     .menu-text {
       color: $primary-color;
       i {
-        display: none;
+        display: inline;
       }
     }
 
     a {
-      color: $black;
+      color: $white;
     }
 
     div {
@@ -33,25 +38,25 @@
     }
   }
 
-  @include breakpoint( medium down) {
-    ul.menu, .medium-horizontal {
-      display: none;
-    }
+  // @include breakpoint( medium down) {
+  //   ul.menu, .medium-horizontal {
+  //     display: none;
+  //   }
 
-    nav {
-      background-color: $black;
-      .menu-text {
-        i {
-          display: inline;
-        }
-      }
+  //   nav {
+  //     background-color: $black;
+  //     .menu-text {
+  //       i {
+  //         display: inline;
+  //       }
+  //     }
 
-      a {
-        color: $white;
-      }
-    }
+  //     a {
+  //       color: $white;
+  //     }
+  //   }
 
 
-  }
+  // }
 }
 
