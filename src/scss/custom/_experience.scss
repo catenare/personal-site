@@ -1,0 +1,28 @@
+.experience {
+  .timeline {
+
+    &-entry {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    &-item {
+      // flex: 0 0 33%;
+
+      &--img {
+        text-align: center;
+        width: 10rem;
+        // max-width: 100%;
+      }
+    }
+
+    &-description {
+      background-color: $light-gray;
+      padding: 1rem;
+      flex: 0 0 25%;
+      // flex: 1 1 auto;
+    }
+
+  }
+}
