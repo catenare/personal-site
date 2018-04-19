@@ -1,42 +1,50 @@
 .jnm-header {
 
-  i {
-    margin-right: 0.25rem;
-  }
-
-  span.flag-icon {
-    margin-left: 0.25rem;
-  }
-
-  ul.menu {
-    display: none;
-  }
-
-  .title-bar a {
-    color: $white;
-    font-weight: bolder;
-  }
-
   nav {
-    display: flex;
-    font-size: 1.25rem;
     background-color: $black;
-
-    .menu-text {
-      color: $primary-color;
-      i {
-        display: inline;
-      }
-    }
-
+    color: $white;
     a {
       color: $white;
     }
-
-    div {
-      margin-left: 25%;
-    }
   }
+
+  // i {
+  //   margin-right: 0.25rem;
+  // }
+
+  // span.flag-icon {
+  //   margin-left: 0.25rem;
+  // }
+
+  // ul.menu {
+  //   display: none;
+  // }
+
+  // .title-bar a {
+  //   color: $white;
+  //   font-weight: bolder;
+  // }
+
+  // nav {
+  //   display: flex;
+  //   font-size: 1.25rem;
+  //   background-color: $black;
+
+  //   .menu-text {
+  //     color: $primary-color;
+  //     i {
+  //       display: inline;
+  //     }
+  //   }
+
+  //   a {
+  //     color: $white;
+  //   }
+
+  //   div {
+  //     margin-left: 25%;
+  //   }
+  // }
 
   // @include breakpoint( medium down) {
   //   ul.menu, .medium-horizontal {

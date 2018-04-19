@@ -1,0 +1,82 @@
+.experience {
+    /* The actual timeline (the vertical ruler) */
+    .work {
+        position: relative;
+        .position-logo {
+            margin-right: 0.75rem;
+            text-align: center;
+            width: 5vw;
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        /* Ruler */
+        &::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: $secondary-color;
+            top: 0;
+            bottom: 0;
+            left: 0;
+        }
+        /* position content */
+        .position {
+            // border: 1px solid $light-gray;
+            border-radius: 6px;
+            padding: 10px 40px;
+            position: relative;
+            header {
+                display: flex;
+                align-items: flex-start;
+                padding: 1rem;
+                background-color: $secondary-color;
+                border-radius: 6px 6px 0 0;
+            }
+            /* circles */
+            &::after {
+                content: '';
+                position: absolute;
+                width: 2rem;
+                height: 2rem;
+                left: -0.75rem; // left: -17px;
+                background-color: $light-gray;
+                border: 4px solid $secondary-color;
+                top: 15px;
+                border-radius: 50%;
+                z-index: 1;
+            }
+            /* arrows */
+            &::before {
+                content: " ";
+                height: 0;
+                position: absolute;
+                top: 22px;
+                width: 0;
+                z-index: 1;
+                left: 30px;
+                border: medium solid $secondary-color;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent $secondary-color transparent transparent;
+            }
+
+            .position-header {
+              h2 {
+                color: $white;
+                font-size: 2rem;
+              }
+              span {
+                color: $black;
+                font-weight: bold;
+              }
+            }
+        }
+        .content {
+            padding: 20px 30px;
+            position: relative;
+            border: 1px solid $secondary-color;
+            border-radius: 0 0 6px 6px;
+        }
+    }
+}
