@@ -23,8 +23,12 @@ class Posts extends React.Component<any, any> {
     return (
       <React.Fragment>
         <h1>News</h1>
+        <section className="featured">
         <Article handleClick={this.postClicked} featured={feature} />
+        </section>
+        <section className="articles">
         {posts}
+        </section>
         </React.Fragment>
       );
   } else {

@@ -9,16 +9,14 @@ import store from "../components/store/store";
 const AppRoute = (props) => ( // eslint-disable-line
   <Provider store={store} url={props}>
   <HashRouter>
-    <section className="view-article">
-      <Switch>
-        <Route path="/post/:postId"
-               render={
-                 ({history}) => <SelectedPost history={history} location = {location} {...props}/>
-               }
-        />,
-        <Route render={({history}) => <Blog  history={history} {...props}/>} />,
-      </Switch>
-    </section>
+    <Switch>
+      <Route path="/post/:postId"
+              render={
+                ({history}) => <SelectedPost history={history} location = {location} {...props}/>
+              }
+      />,
+      <Route render={({history}) => <Blog  history={history} {...props}/>} />,
+    </Switch>
   </HashRouter>
   </Provider>
 

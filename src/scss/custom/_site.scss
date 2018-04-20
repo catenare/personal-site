@@ -4,12 +4,12 @@
 //   font-weight: 900;
 // }
 
-// section>h1 {
-//   text-align: left;
-//   font-size: 1.75rem;
-//   font-weight: 900;
-//   border-bottom: 1px solid $dark-gray;
-// }
+section > h1 {
+  text-align: left;
+  font-size: 1.75rem;
+  font-weight: 900;
+  border-bottom: 1px solid $dark-gray;
+}
 
 // @include breakpoint(medium up) {
 //   text-align: center;

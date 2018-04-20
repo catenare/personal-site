@@ -33,3 +33,77 @@ projects:
       - BIRT to generate reports and account statements
       - PostgreSQL database backend
       - Automated matching of electronic payments. Just upload the account csv file.
+feature-post:
+  -
+    title: Feature Article
+    image: https://placeimg.com/480/240/any/sepia
+    description: |
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium saepe illum laborum, illo voluptatum, perferendis ipsa libero est itaque nesciunt distinctio, excepturi atque. Optio officiis molestias doloremque dolores, in omnis.
+    time: Wed Dec 20, 2018
+    author: Jeffrey
+    link: http://read.io
+posts:
+  -
+    title: My Article 1
+    image: https://placeimg.com/600/400/any/sepia
+    description: |
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium saepe illum laborum, illo voluptatum, perferendis ipsa libero est itaque nesciunt distinctio, excepturi atque. Optio officiis molestias doloremque dolores, in omnis.
+    time: Wed Dec 21, 2018
+    author: Tom
+    link: http://read.io
+  -
+    title: Article 2 and more
+    image: https://placeimg.com/480/240/any/sepia
+    description: |
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium saepe illum laborum, illo voluptatum, perferendis ipsa libero est itaque nesciunt distinctio, excepturi atque. Optio officiis molestias doloremque dolores, in omnis.
+    time: Wed Dec 20, 2018
+    author: Jeffrey
+    link: http://read.io
+  -
+    title: My Article 3
+    image: https://placeimg.com/600/400/any/sepia
+    description: |
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium saepe illum laborum, illo voluptatum, perferendis ipsa libero est itaque nesciunt distinctio, excepturi atque. Optio officiis molestias doloremque dolores, in omnis.
+    time: Wed Dec 21, 2018
+    author: Tom
+    link: http://read.io
+  -
+    title: Article 4 and more
+    image: https://placeimg.com/480/240/any/sepia
+    description: |
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium saepe illum laborum, illo voluptatum, perferendis ipsa libero est itaque nesciunt distinctio, excepturi atque. Optio officiis molestias doloremque dolores, in omnis.
+    time: Wed Dec 20, 2018
+    author: Random
+    link: http://read.io
+  -
+    title: My Article 1
+    image: https://placeimg.com/600/400/any/sepia
+    description: |
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium saepe illum laborum, illo voluptatum, perferendis ipsa libero est itaque nesciunt distinctio, excepturi atque. Optio officiis molestias doloremque dolores, in omnis.
+    time: Wed Dec 21, 2018
+    author: Tom
+    link: http://read.io
+  -
+    title: Article 2 and more
+    image: https://placeimg.com/480/240/any/sepia
+    description: |
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium saepe illum laborum, illo voluptatum, perferendis ipsa libero est itaque nesciunt distinctio, excepturi atque. Optio officiis molestias doloremque dolores, in omnis.
+    time: Wed Dec 20, 2018
+    author: Jeffrey
+    link: http://read.io
+  -
+    title: My Article 3
+    image: https://placeimg.com/600/400/any/sepia
+    description: |
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium saepe illum laborum, illo voluptatum, perferendis ipsa libero est itaque nesciunt distinctio, excepturi atque. Optio officiis molestias doloremque dolores, in omnis.
+    time: Wed Dec 21, 2018
+    author: Tom
+    link: http://read.io
+  -
+    title: Article 4 and more
+    image: https://placeimg.com/480/240/any/sepia
+    description: |
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium saepe illum laborum, illo voluptatum, perferendis ipsa libero est itaque nesciunt distinctio, excepturi atque. Optio officiis molestias doloremque dolores, in omnis.
+    time: Wed Dec 20, 2018
+    author: Random
+    link: http://read.io

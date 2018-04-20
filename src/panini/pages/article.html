@@ -1,0 +1,56 @@
+<section class="news grid-container">
+  <h1>News</h1>
+  <section class="featured">
+  {{#each cards.feature-post}}
+    <article class="article-post article-post-feature">
+      <div class="post-image">
+        <img src="{{this.image}}" alt="{{this.title}}">
+      </div>
+
+      <div class="post-detail">
+        <h2>{{this.title}}</h2>
+        <div class="post-description">
+          <p>{{this.description}}</p>
+        </div>
+        <footer class="post-footer">
+          <div class="post-meta">
+          <span class="time">{{this.time}}</span>
+          <span class="author">{{this.author}}</span>
+        </div>
+          <a class="post-link" href="#">
+            {{this.link}}
+          </a>
+        </footer>
+      </div>
+
+    </article>
+  {{/each}}
+  </section>
+
+  <section class="articles">
+  {{#each cards.posts}}
+  <article class="article-post">
+    <div class="post-image">
+      <img src="{{this.image}}" alt="{{this.title}}">
+    </div>
+    <div class="post-detail">
+      <h2>{{this.title}}</h2>
+      <div class="post-description">
+        <p>{{this.description}}</p>
+      </div>
+      <footer class="post-footer">
+        <div class="post-meta">
+        <span class="time">{{this.time}}</span>
+        <span class="author">{{this.author}}</span>
+      </div>
+        <a class="post-link" href="#">
+          {{this.link}}
+        </a>
+      </footer>
+    </div>
+  </article>
+{{/each}}
+</section>
+<!-- articles end -->
+
+</section>

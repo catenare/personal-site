@@ -1,47 +1,68 @@
 .news {
-  margin-top: 2rem;
-
-  h1 {
-    text-align: center;
-  }
-
-  .site-loader {
-    text-align: center;
-    height: 100%;
-    font-size: 10rem;
-    font-weight: 900;
-    color: $secondary-color;
-  }
-
-  .articles {
-
-    .feature-post {
-      background-color: $secondary-color;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-start;
-
-
-      .post-image {
-        padding: 0.25rem;
-        border: 1px solid $secondary-color;
-        background-color: $black;
-        border-radius: 5px;
-      }
-
-      .post-detail {
-        padding: 0.25rem;
-      }
-
+    .site-loader {
+        text-align: center;
+        height: 100%;
+        max-width: 100%;
+        font-size: 5rem;
+        font-weight: 900;
+        color: $secondary-color;
+    }
+    .article-post {
+        color: $dark-gray;
+        border-bottom: 2px solid $dark-gray;
+        margin-bottom: 1rem;
+        .post-image {
+            img {
+                max-width: 100%;
+                border-radius: 5px;
+            }
+        }
+        &:last-child {
+            border-bottom: 0;
+            margin-bottom: 0;
+        }
+        .post-detail {
+            h2 {
+                margin-top: 0.75rem;
+                color: $secondary-color;
+                border-bottom: 1px solid $dark-gray;
+            }
+            h2::before {
+                content: "\2668";
+                padding-right: 0.25rem;
+            }
+            .post-description {
+                color: $dark-gray;
+            }
+            footer {
+                display: flex;
+                flex-direction: column;
+                .post-meta {
+                    display: flex;
+                    justify-content: space-between;
+                    font-weight: bolder;
+                }
+                .post-link {
+                    background-color: $primary-color;
+                    text-align: center;
+                    border-radius: 5px;
+                    font-weight: bolder;
+                    padding: 0.25rem;
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+        &-feature {
+            .post-detail {
+                h2::before {
+                    content: "\2646";
+                }
+            }
+        }
     }
 
-    @include breakpoint(medium up) {
-
+    .featured {
+      border-bottom: 2px solid $primary-color;
+      margin-bottom: 0.5rem;
     }
-
-
-
-  }
-
 }

@@ -8,20 +8,23 @@ const post = (props) => {
   const dateCreated = new Date(props.post.date).toDateString();
   // const isOdd = (props.index % 2) ? "article-row" : "article-row article-row-reversed";
   return (
-  <article>
-
-    <header>
+  <article className="article-post">
+    <div className="post-image">
       <img src={featureImage} alt="picture of a whale eating a donkey" />
-      <h1>{props.post.title.rendered}</h1>
-      </header>
-      <div
+      </div>
+      <div className="post-detail">
+      <h2>{props.post.title.rendered}</h2>
+      <div className="post-description"
       dangerouslySetInnerHTML = {{__html: props.post.excerpt.rendered.match(/<p>.*?<\/p>/gm)}} />
-      <footer>
-      <p>{props.post._embedded.author[0].name}</p>
+      <footer className="post-footer">
+      <div className="post-meta">
       <time
         dateTime={props.post.date}>{dateCreated}</time>
+      <span>{props.post._embedded.author[0].name}</span>
+      </div>
+      <a className="post-link" href="#" onClick={(e) => props.handleClick(props.post.id, e)}>Read Article</a>
         </footer>
-        <a href="#" onClick={(e) => props.handleClick(props.post.id, e)}>Read Article</a>
+        </div>
   </article>
   );
 };
