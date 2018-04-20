@@ -24,6 +24,7 @@
         font-size: 1rem;
         color: $secondary-color;
         font-weight: bold;
+        padding-bottom: 0.25rem;
 
         .fa {
           margin-right: 0.5rem;
@@ -37,7 +38,7 @@
 
     .contact-form-details {
       input, textarea {
-        width: 12vw;
+        width: 15vw;
       }
       margin-bottom: 1rem;
       button {
