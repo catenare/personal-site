@@ -67,6 +67,7 @@
     }
   }
     .open-menu {
+      transition: height 2s;
       .menu-list {
         transform: translate(0, 0);
         height: auto;

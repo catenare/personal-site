@@ -1,6 +1,10 @@
 .news {
   margin-top: 2rem;
 
+  h1 {
+    text-align: center;
+  }
+
   .site-loader {
     text-align: center;
     height: 100%;
@@ -10,9 +14,34 @@
   }
 
   .articles {
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: space-between;
+
+    .feature-post {
+      background-color: $secondary-color;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+
+
+      .post-image {
+        padding: 0.25rem;
+        border: 1px solid $secondary-color;
+        background-color: $black;
+        border-radius: 5px;
+      }
+
+      .post-detail {
+        padding: 0.25rem;
+      }
+
+    }
+
+    @include breakpoint(medium up) {
+
+    }
+
+
+
   }
 
 }

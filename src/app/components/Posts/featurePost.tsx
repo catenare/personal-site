@@ -9,17 +9,20 @@ const article = (props) => {
     const feature = props.featured;
     return (
         <article className="feature-post">
-          <header>
-            <img src={(featureImage) ? featureImage[0].source_url :
+          <div className="post-image">
+          <img src={(featureImage) ? featureImage[0].source_url :
                   "http://placehold.it/1080x640"} alt="" />
+          </div>
+          <div className="post-detail">
             <h1 dangerouslySetInnerHTML={{__html: feature.title.rendered}} />
-          </header>
-          <div dangerouslySetInnerHTML={{__html: feature.excerpt.rendered.match(/<p>.*?<\/p>/gm)}}/>
-          <footer>
+          <div className="post-description"
+            dangerouslySetInnerHTML={{__html: feature.excerpt.rendered.match(/<p>.*?<\/p>/gm)}}/>
+          <footer className="post-footer">
           <span className="time">{dateCreated}</span> &#8226;
           <span className="author">{feature._embedded.author[0].name}</span>
-          <a onClick={(e) => props.handleClick(props.featured.id, e)}>Read Article</a>
+          <a className="post-link" onClick={(e) => props.handleClick(props.featured.id, e)}>Read Article</a>
           </footer>
+          </div>
       </article>
     );
 } else {

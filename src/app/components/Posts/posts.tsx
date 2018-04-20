@@ -3,7 +3,6 @@ import Article from "./featurePost";
 import {SiteLoader} from "./loader";
 import Post from "./post";
 
-
 class Posts extends React.Component<any, any> {
   constructor(props) {
     super(props);
