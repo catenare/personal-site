@@ -1,18 +1,12 @@
-// h1 {
-//   text-align: center;
-//   font-size: 1.5rem;
-//   font-weight: 900;
-// }
-
 section > h1 {
   text-align: left;
-  font-size: 1.75rem;
+  font-size: 2.5rem;
   font-weight: 900;
   border-bottom: 1px solid $dark-gray;
 }
 
-// @include breakpoint(medium up) {
-//   text-align: center;
-//   font-size: 2.25rem;
-//   font-weight: 700;
-// }
+h2 {
+  font-size: 2rem;
+  color: $secondary-color;
+  text-align: center;
+}

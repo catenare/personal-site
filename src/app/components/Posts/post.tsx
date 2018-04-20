@@ -1,7 +1,6 @@
 import * as React from "react";
 
 const post = (props) => {
-  // const featureImage = props.post._embedded["wp:featuredmedia"];
   const featureImage = (props.post._embedded["wp:featuredmedia"]) ?
   (props.post._embedded["wp:featuredmedia"][0].source_url) :
   "https://placeimg.com/400/200/arch";
@@ -10,7 +9,7 @@ const post = (props) => {
   return (
   <article className="article-post">
     <div className="post-image">
-      <img src={featureImage} alt="picture of a whale eating a donkey" />
+      <img src={featureImage} alt={props.post.title.rendered} />
       </div>
       <div className="post-detail">
       <h2>{props.post.title.rendered}</h2>

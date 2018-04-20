@@ -1,0 +1,13 @@
+.skills {
+  color: $dark-gray;
+  h3 {
+    color: $primary-color;
+    i {
+      padding-right: 0.25rem;
+    }
+  }
+  dt {
+    color: $secondary-color;
+    font-weight: bolder;
+  }
+}

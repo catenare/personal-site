@@ -1,12 +1,5 @@
 .site-footer {
-
-  background-attachment: fixed;
-  background-image: url('https://res.cloudinary.com/paseo/image/upload/v1523886839/johan-martin/bali_countryside_iuuhtc.jpg');
-  background-origin: padding-box;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: auto;
-
+  background-color: $black;
   color: $white;
 
   .contact-details {
@@ -21,10 +14,24 @@
     .social-list {
       display: flex;
       flex-direction: column;
+      a {
+        font-size: 1rem;
+        color: $secondary-color;
+        font-weight: bold;
+
+        .fa {
+          margin-right: 0.25rem;
+        }
+        &:hover, &:focus {
+          color: $white;
+          border-bottom: 1px solid $secondary-color;
+        }
     }
+  }
   }
 
   .bottom-menu {
+    display: flex;
     background-color: $black;
   }
 }
