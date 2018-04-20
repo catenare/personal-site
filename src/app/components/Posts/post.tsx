@@ -9,7 +9,7 @@ const post = (props) => {
   // const isOdd = (props.index % 2) ? "article-row" : "article-row article-row-reversed";
   return (
   <article>
-    <a href="#" onClick={(e) => props.handleClick(props.post.id, e)}>
+
     <header>
       <img src={featureImage} alt="picture of a whale eating a donkey" />
       <h1>{props.post.title.rendered}</h1>
@@ -21,7 +21,7 @@ const post = (props) => {
       <time
         dateTime={props.post.date}>{dateCreated}</time>
         </footer>
-    </a>
+        <a href="#" onClick={(e) => props.handleClick(props.post.id, e)}>Read Article</a>
   </article>
   );
 };

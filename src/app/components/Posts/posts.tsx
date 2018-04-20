@@ -1,6 +1,8 @@
 import * as React from "react";
 import Article from "./featurePost";
+import {SiteLoader} from "./loader";
 import Post from "./post";
+
 
 class Posts extends React.Component<any, any> {
   constructor(props) {
@@ -16,18 +18,18 @@ class Posts extends React.Component<any, any> {
   public render() {
     if (this.props.posts.posts.length > 0) {
     const feature = this.getFeaturedPost(this.props.posts.posts);
-    // const postList = this.props.posts.posts.filter((p) => p !== feature);
     const posts = this.props.posts.posts.filter((p) => p !== feature).map(
       (c, i) => <Post handleClick={this.postClicked} post={c} index={i} />,
     );
     return (
       <React.Fragment>
+        <h1>News</h1>
         <Article handleClick={this.postClicked} featured={feature} />
         {posts}
         </React.Fragment>
       );
   } else {
-    return <div className="loader">Loading...</div>;
+  return (<SiteLoader />);
   }
   }
 

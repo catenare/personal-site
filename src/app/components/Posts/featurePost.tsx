@@ -1,4 +1,5 @@
 import * as React from "react";
+import {SiteLoader} from "./loader";
 
 const article = (props) => {
 
@@ -7,8 +8,7 @@ const article = (props) => {
     const dateCreated = new Date(props.featured.date).toDateString();
     const feature = props.featured;
     return (
-        <article>
-          <a onClick={(e) => props.handleClick(props.featured.id, e)}>
+        <article className="feature-post">
           <header>
             <img src={(featureImage) ? featureImage[0].source_url :
                   "http://placehold.it/1080x640"} alt="" />
@@ -18,13 +18,13 @@ const article = (props) => {
           <footer>
           <span className="time">{dateCreated}</span> &#8226;
           <span className="author">{feature._embedded.author[0].name}</span>
+          <a onClick={(e) => props.handleClick(props.featured.id, e)}>Read Article</a>
           </footer>
-          </a>
       </article>
     );
 } else {
   return (
-  <div>Loading...</div>
+    <SiteLoader/>
   );
 }
 };
