@@ -1,5 +1,10 @@
 .jnm-header {
 
+  .top-title-bar {
+    transform: translate(0, -30rem);
+    height: 0;
+  }
+
   .main-menu {
     padding: 0.45rem;
     background-color: $black;
@@ -40,10 +45,11 @@
       font-weight: bold;
       color: $white;
       border-bottom: 1px solid $light-gray;
-    }
 
-    a:hover {
-      background-color: $secondary-color;
+      &:hover, &:focus {
+        background-color: $secondary-color;
+        color: $primary-color;
+      }
     }
   }
 
@@ -66,35 +72,55 @@
       }
     }
 
-  .top-title-bar {
-    display: none;
-  }
+
 
   @include breakpoint(medium up) {
+    a {
+      margin-right: 2rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
     .top-title-bar {
-      // padding: 1.25rem;
-      display: flex;
+      height: 2.25rem;
+      transform: translate(0, 0);
       background-color: $black;
+      .title-menu {
+        display: flex;
       a {
         font-size: 1.25rem;
-        padding: 0.5rem;
         color: $white;
         font-weight: bold;
 
         .fa {
           margin-right: 0.25rem;
         }
+        &:hover, &:focus {
+          color: $secondary-color;
+          border-bottom: 1px solid $secondary-color;
+        }
       }
 
       .other-sites {
+        color: $light-gray;
         margin-left: auto;
+        margin-right: 0;
       }
     }
+  }
+
 
     .main-menu {
       flex-direction: row;
       background-color: $white;
       align-items: baseline;
+
+      .top-menu {
+        button {
+          transform: translate(0, -20rem);
+        }
+      }
 
       a {
         color: $black;
@@ -103,15 +129,10 @@
         font-weight: 700;
       }
 
-      .top-menu {
-        button {
-          transform: translate(0, -20rem);
-        }
-      }
-
       .menu-list {
+        margin-left: auto;
         flex-direction: row;
-        height: 0;
+        height: auto;
         transform: translate(0, 0);
       }
     }
