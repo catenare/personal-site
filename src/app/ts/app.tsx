@@ -5,7 +5,9 @@ import {Provider} from "react-redux";
 import * as Webfont from "webfontloader";
 // import Blog from "../components/Blog";
 import {setFormData} from "../components/store/actions/actions";
+import {ContactUsForm} from "../components/store/containers/containers";
 import store from "../components/store/store";
+import {showMenu} from "./mainmenu";
 import {AppRoute} from "./Router";
 
 Webfont.load({
@@ -19,9 +21,6 @@ Webfont.load({
 });
 
 import "./../../scss/site.scss";
-
-// import ContactForm from "../components/Contact";
-import {ContactUsForm} from "../components/store/containers/containers";
 
 let baseUrl: string; // eslint-disable-line
 let captchaKey: string; // eslint-disable-line
@@ -65,3 +64,5 @@ ReactDom.render (
   </Provider>,
   contact,
 );
+
+showMenu("main-menu");

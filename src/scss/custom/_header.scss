@@ -1,70 +1,121 @@
 .jnm-header {
 
-  nav {
+  .main-menu {
+    padding: 0.45rem;
     background-color: $black;
-    color: $white;
+    color: $primary-color;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .top-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: row;
+
+      button {
+        color: $primary-color;
+        outline: 0;
+        padding: 0;
+        padding-top: 0.25rem;
+        font-size: 1.75rem;
+        transform: translate(0, -20rem);
+      }
+    }
+
+    .menu-list {
+      display: flex;
+      flex-direction: column;
+    }
+
     a {
       color: $white;
+      padding: 0.5rem;
+      font-weight: bold;
+      color: $white;
+      border-bottom: 1px solid $light-gray;
+    }
+
+    a:hover {
+      background-color: $secondary-color;
     }
   }
 
-  // i {
-  //   margin-right: 0.25rem;
-  // }
+  .hide-menu {
+    .menu-list {
+      transform: translate(0, -20rem);
+      height: 0;
+    }
 
-  // span.flag-icon {
-  //   margin-left: 0.25rem;
-  // }
+    .top-menu {
+      button {
+        transform: translate(0, 0);
+      }
+    }
+  }
+    .open-menu {
+      .menu-list {
+        transform: translate(0, 0);
+        height: auto;
+      }
+    }
 
-  // ul.menu {
-  //   display: none;
-  // }
+  .top-title-bar {
+    display: none;
+  }
 
-  // .title-bar a {
-  //   color: $white;
-  //   font-weight: bolder;
-  // }
+  @include breakpoint(medium up) {
+    .top-title-bar {
+      // padding: 1.25rem;
+      display: flex;
+      background-color: $black;
+      a {
+        font-size: 1.25rem;
+        padding: 0.5rem;
+        color: $white;
+        font-weight: bold;
 
-  // nav {
-  //   display: flex;
-  //   font-size: 1.25rem;
-  //   background-color: $black;
+        .fa {
+          margin-right: 0.25rem;
+        }
+      }
 
-  //   .menu-text {
-  //     color: $primary-color;
-  //     i {
-  //       display: inline;
-  //     }
-  //   }
+      .other-sites {
+        margin-left: auto;
+      }
+    }
 
-  //   a {
-  //     color: $white;
-  //   }
+    .main-menu {
+      flex-direction: row;
+      background-color: $white;
+      align-items: baseline;
 
-  //   div {
-  //     margin-left: 25%;
-  //   }
-  // }
+      a {
+        color: $black;
+        border-bottom: 0;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
 
-  // @include breakpoint( medium down) {
-  //   ul.menu, .medium-horizontal {
-  //     display: none;
-  //   }
+      .top-menu {
+        button {
+          transform: translate(0, -20rem);
+        }
+      }
 
-  //   nav {
-  //     background-color: $black;
-  //     .menu-text {
-  //       i {
-  //         display: inline;
-  //       }
-  //     }
+      .menu-list {
+        flex-direction: row;
+        height: 0;
+        transform: translate(0, 0);
+      }
+    }
 
-  //     a {
-  //       color: $white;
-  //     }
-  //   }
-
-
-  // }
+  }
 }
 
