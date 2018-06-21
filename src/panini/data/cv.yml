@@ -48,7 +48,7 @@ skills:
     icon: fa-cogs
     class: 0
     items:
-    - title: Language
+    - title: Languages
       items:
       - JavaScript
       - PHP

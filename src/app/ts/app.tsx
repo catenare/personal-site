@@ -34,7 +34,7 @@ if (__IS_PROD__) {
   formUrl = "https://gateway.johan-martin.com/addform";
 
 } else {
-  baseUrl = "http://paseo.demo/";
+  baseUrl = "https://api.paseo.org.za/johan/";
   captchaKey = "6Lf9T0UUAAAAANR7b7br5GPEanbxvdXPmCqDr6xN";
   formDestination = "martin.johan@johan-martin.com";
   formUrl = "https://gateway.johan-martin.com/addform";

@@ -110,7 +110,7 @@ class ContactForm extends React.Component<any, any> {
             aria-describedby="nameHelpText"
             required/>
         </label>
-        {/* <p className={this.state.hasName}>Name is too short!</p> */}
+
         <p className="help-text" id="nameHelpText">Your first and last name</p>
 
         <label htmlFor="email">
@@ -121,7 +121,7 @@ class ContactForm extends React.Component<any, any> {
             id="email"
             aria-describedby="emailHelpText" required/>
         </label>
-        {/* <p className={this.state.hasEmail}>Valid mail required!</p> */}
+
         <p className="help-text" id="emailHelpText">Your email address.</p>
 
         <label htmlFor="phone">

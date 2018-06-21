@@ -1,11 +1,8 @@
 const path = require('path')
 const webpack = require('webpack')
-// const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebPackPlugin = require('clean-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const vendorPackages = require('./package.json')
-const combineLoaders = require('webpack-combine-loaders')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 let hostEnv
 
@@ -36,15 +33,6 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.json']
   },
   plugins: [
-    new ExtractTextPlugin({
-      filename: '[name].css',
-      allChunks: true
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      async: true,
-      minChunks: Infinity
-    }),
     new webpack.DefinePlugin({
       __IS_PROD__: hostEnv
     })
@@ -54,35 +42,21 @@ module.exports = {
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: combineLoaders([
-            {
-              loader: 'css-loader'
-            },
-            {
-              loader: 'postcss-loader'
-            },
-            {
-              loader: 'sass-loader'
-            }
-          ])
-        })
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          { loader: 'postcss-loader' },
+          { loader: 'sass-loader' }
+        ]
       },
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: combineLoaders([
-            {
-              loader: 'css-loader'
-            },
-            {
-              loader: 'postcss-loader'
-            }
-          ])
-        })
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          { loader: 'postcss-loader' }
+        ]
       },
       {
         test: /\.js$/,
@@ -120,8 +94,15 @@ module.exports = {
     historyApiFallback: true,
     watchContentBase: true,
     open: false,
+    host: '0.0.0.0',
     contentBase: 'dist/'
   }
+}
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports.mode = 'production'
+} else {
+  module.exports.mode = 'development'
 }
 
 if (process.env.NODE_ENV === 'production') {
@@ -134,14 +115,14 @@ if (process.env.NODE_ENV === 'production') {
         NODE_ENV: '"production"'
       }
     }),
-    new UglifyJsPlugin({
-      sourceMap: true,
-      uglifyOptions: {
-        compress: {
-          warnings: false
-        }
-      }
-    }),
+    // new UglifyJsPlugin({
+    //   sourceMap: true,
+    //   uglifyOptions: {
+    //     compress: {
+    //       warnings: false
+    //     }
+    //   }
+    // }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
     })
