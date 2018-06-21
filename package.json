@@ -44,6 +44,7 @@
   "homepage": "https://github.com/catenare/personal-site",
   "dependencies": {
     "axios": "^0.18.0",
+    "firebase-functions": "^1.1.0",
     "font-awesome": "^4.7.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
