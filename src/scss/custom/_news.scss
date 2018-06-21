@@ -1,167 +1,155 @@
 .news {
-    .site-loader {
-        text-align: center;
-        height: 100%;
+  pre {
+    background-color: #e6e6e6;
+  }
+
+  code {
+    color: black;
+  }
+
+  .site-loader {
+    text-align: center;
+    height: 100%;
+    max-width: 100%;
+    font-size: 5rem;
+    font-weight: 900;
+    color: $secondary-color;
+  }
+  .article-post {
+    color: $dark-gray;
+    border-bottom: 2px solid $dark-gray;
+    margin-bottom: 1rem;
+    .post-image {
+      img {
         max-width: 100%;
-        font-size: 5rem;
-        font-weight: 900;
-        color: $secondary-color;
-    }
-    .article-post {
-        color: $dark-gray;
-        border-bottom: 2px solid $dark-gray;
-        margin-bottom: 1rem;
-        .post-image {
-            img {
-                max-width: 100%;
-                border-radius: 5px;
-            }
-        }
-        // &:last-child {
-        //     border-bottom: 0;
-        //     margin-bottom: 0;
-        // }
-        .post-detail {
-            h2 {
-                margin-top: 0.75rem;
-                color: $secondary-color;
-                border-bottom: 1px solid $dark-gray;
-            }
-            h2::before {
-                content: "\2668";
-                padding-right: 0.25rem;
-            }
-            .post-description {
-                color: $dark-gray;
-            }
-            footer {
-                display: flex;
-                flex-direction: column;
-                .post-meta {
-                    display: flex;
-                    justify-content: space-between;
-                    font-weight: bolder;
-                }
-                .post-link {
-                    background-color: $primary-color;
-                    text-align: center;
-                    border-radius: 5px;
-                    font-weight: bolder;
-                    padding: 0.25rem;
-                    margin-bottom: 0.5rem;
-                }
-            }
-        }
-        &-feature {
-            .post-detail {
-                h2::before {
-                    content: "\2646";
-                }
-            }
-        }
-    }
-    .featured {
-      border-bottom: 2px solid $primary-color;
-      margin-bottom: 0.5rem;
-    }
-
-    @include breakpoint(medium up) {
+        border-radius: 5px;
+      }
+    } // &:last-child {
+    //     border-bottom: 0;
+    //     margin-bottom: 0;
+    // }
+    .post-detail {
       h2 {
-        font-size: 1.75rem;
-      }
-      display: flex;
-      flex-direction: column;
-
-      .featured {
-        margin-bottom: 1rem;
-
-        .article-post-feature {
-          display: flex;
-          flex-direction: row;
-          align-items: flex-start;
-
-          .post-image {
-            flex: 1 0 37%;
-          }
-
-          .post-detail {
-            margin-left: 1rem;
-            align-items: stretch;
-            flex: 1 1 auto;
-            h2 {
-              margin-top: 0;
-            }
-          }
-        }
-      }
-
-      .articles {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-content: flex-start;
-
-        .article-post {
-          width: 20vw;
-          display: flex;
-          flex-direction: column;
-          flex-wrap: nowrap;
-          justify-content: space-between;
-
-          .post-detail {
-            flex: 1 0 30%;
-          }
-
-          .post-image {
-            flex: 1 0 40%;
-            text-align: center;
-            // height: 30rem;
-          }
-
-          .post-footer {
-            flex: 1 0 30%;
-          }
-        }
-      }
-    }
-
-    .post-view {
-      margin-top: 1rem;
-      padding-bottom: 2rem;
-
-      margin-bottom: 2rem;
-
-      .link-back {
-        width: 20rem;
-        padding: 0.25rem;
-        font-size: 2rem;
-        font-weight: bolder;
-        color: $primary-color;
-      }
-
-      h2 {
-        font-size: 2.25rem;
+        margin-top: 0.75rem;
         color: $secondary-color;
         border-bottom: 1px solid $dark-gray;
       }
-
-      .post-view-image {
-        img {
-          border: 1px solid $secondary-color;
-          padding: 0.25rem;
-          border-radius: 4px;
-          max-width: 100%;
-          height: auto;
-        }
+      h2::before {
+        content: "\2668";
+        padding-right: 0.25rem;
       }
-
+      .post-description {
+        color: $dark-gray;
+      }
       footer {
         display: flex;
-        justify-content: space-between;
-        border-bottom: 2px solid $dark-gray;
+        flex-direction: column;
+        .post-meta {
+          display: flex;
+          justify-content: space-between;
+          font-weight: bolder;
+        }
+        .post-link {
+          background-color: $primary-color;
+          text-align: center;
+          border-radius: 5px;
+          font-weight: bolder;
+          padding: 0.25rem;
+          margin-bottom: 0.5rem;
+        }
       }
-
     }
-
+    &-feature {
+      .post-detail {
+        h2::before {
+          content: "\2646";
+        }
+      }
+    }
+  }
+  .featured {
+    border-bottom: 2px solid $primary-color;
+    margin-bottom: 0.5rem;
+  }
+  @include breakpoint(medium up) {
+    h2 {
+      font-size: 1.75rem;
+    }
+    display: flex;
+    flex-direction: column;
+    .featured {
+      margin-bottom: 1rem;
+      .article-post-feature {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        .post-image {
+          flex: 1 0 37%;
+        }
+        .post-detail {
+          margin-left: 1rem;
+          align-items: stretch;
+          flex: 1 1 auto;
+          h2 {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+    .articles {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: flex-start;
+      .article-post {
+        width: 20vw;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        .post-detail {
+          flex: 1 0 30%;
+        }
+        .post-image {
+          flex: 1 0 40%;
+          text-align: center; // height: 30rem;
+        }
+        .post-footer {
+          flex: 1 0 30%;
+        }
+      }
+    }
+  }
+  .post-view {
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    .link-back {
+      width: 20rem;
+      padding: 0.25rem;
+      font-size: 2rem;
+      font-weight: bolder;
+      color: $primary-color;
+    }
+    h2 {
+      font-size: 2.25rem;
+      color: $secondary-color;
+      border-bottom: 1px solid $dark-gray;
+    }
+    .post-view-image {
+      img {
+        border: 1px solid $secondary-color;
+        padding: 0.25rem;
+        border-radius: 4px;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    footer {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px solid $dark-gray;
+    }
+  }
 }
