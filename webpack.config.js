@@ -2,10 +2,10 @@ const path = require('path')
 const webpack = require('webpack')
 const CleanWebPackPlugin = require('clean-webpack-plugin')
 const vendorPackages = require('./package.json')
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 let hostEnv
-
+const devMode = process.env.NODE_ENV !== 'production'
 const setupEnv = () => {
   switch (process.env.NODE_ENV) {
     case 'production':
@@ -47,7 +47,7 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/,
         exclude: /node_modules/,
         use: [
-          hostEnv ? 'style-loader' : MiniCssExtractPlugin.loader,
+          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
           'sass-loader'
