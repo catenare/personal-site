@@ -6,7 +6,8 @@ const PostView = (props) => {
   if ( props.post.post.id) {
     const post = props.post.post;
     const dateCreated = new Date(post.date).toDateString();
-    const featureImage = (post._embedded["wp.featuredmedia"]) ?
+
+    const featureImage = (post._embedded["wp:featuredmedia"]) ?
     (post._embedded["wp:featuredmedia"][0].source_url) : "https://placeimg.com/400/200/arch";
     return (
       <article className="post-view">
