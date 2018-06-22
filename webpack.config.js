@@ -2,7 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const CleanWebPackPlugin = require('clean-webpack-plugin')
 const vendorPackages = require('./package.json')
-// const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 let hostEnv
 
@@ -35,29 +35,33 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       __IS_PROD__: hostEnv
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css'
     })
   ],
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.(sa|sc|c)ss$/,
         exclude: /node_modules/,
         use: [
-          { loader: 'style-loader' },
-          { loader: 'css-loader' },
-          { loader: 'postcss-loader' },
-          { loader: 'sass-loader' }
+          hostEnv ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
         ]
       },
-      {
-        test: /\.css$/,
-        exclude: /node_modules/,
-        use: [
-          { loader: 'style-loader' },
-          { loader: 'css-loader' },
-          { loader: 'postcss-loader' }
-        ]
-      },
+      // {
+      //   test: /\.css$/,
+      //   exclude: /node_modules/,
+      //   use: [
+      //     { loader: 'style-loader' },
+      //     { loader: 'css-loader' },
+      //     { loader: 'postcss-loader' }
+      //   ]
+      // },
       {
         test: /\.js$/,
         exclude: /node_modules(\/?!foundation-sites)/,
@@ -115,14 +119,6 @@ if (process.env.NODE_ENV === 'production') {
         NODE_ENV: '"production"'
       }
     }),
-    // new UglifyJsPlugin({
-    //   sourceMap: true,
-    //   uglifyOptions: {
-    //     compress: {
-    //       warnings: false
-    //     }
-    //   }
-    // }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
     })
