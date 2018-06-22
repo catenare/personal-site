@@ -69,7 +69,8 @@
 
       .post-image {
         width: 100%;
-         max-width: 100%;
+        max-width: 100%;
+        padding-bottom: 0.5rem;
       }
 
       .post-detail {
@@ -112,6 +113,7 @@
 
           .post-description {
             align-self: stretch;
+            flex: 2 0 auto;
           }
 
           .post-footer {
