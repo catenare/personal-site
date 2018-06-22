@@ -25,7 +25,7 @@ import "./../../scss/site.scss";
 let baseUrl: string; // eslint-disable-line
 let captchaKey: string; // eslint-disable-line
 let formDestination: string; // eslint-disable-line
-let formUrl: string = "https://7hoyjyn8mc.execute-api.eu-central-1.amazonaws.com/dev"; // eslint-disable-line
+let formUrl = "https://7hoyjyn8mc.execute-api.eu-central-1.amazonaws.com/dev"; // eslint-disable-line
 
 if (__IS_PROD__) {
   baseUrl = "https://api.paseo.org.za/johan/";

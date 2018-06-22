@@ -53,15 +53,6 @@ module.exports = {
           'sass-loader'
         ]
       },
-      // {
-      //   test: /\.css$/,
-      //   exclude: /node_modules/,
-      //   use: [
-      //     { loader: 'style-loader' },
-      //     { loader: 'css-loader' },
-      //     { loader: 'postcss-loader' }
-      //   ]
-      // },
       {
         test: /\.js$/,
         exclude: /node_modules(\/?!foundation-sites)/,
