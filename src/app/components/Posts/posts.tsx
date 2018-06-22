@@ -22,7 +22,7 @@ class Posts extends React.Component<any, any> {
     );
     return (
       <React.Fragment>
-        <h1>News</h1>
+        <h1>Musings</h1>
         <section className="featured">
         <Article handleClick={this.postClicked} featured={feature} />
         </section>
