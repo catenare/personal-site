@@ -2,7 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const CleanWebPackPlugin = require('clean-webpack-plugin')
 const vendorPackages = require('./package.json')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 let hostEnv
 const devMode = process.env.NODE_ENV !== 'production'

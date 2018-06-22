@@ -11,6 +11,7 @@
     margin-left: 4rem;
 
     .my-name {
+      text-align: left;
       margin-top: 1rem;
     }
 
@@ -42,6 +43,10 @@
       flex-direction: row;
       margin-left: 1rem;
       justify-content: space-around;
+
+      .my-name {
+        text-align: center;
+      }
 
       .contact-me {
         input, textarea {
