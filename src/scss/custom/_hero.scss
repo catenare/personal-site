@@ -1,37 +1,47 @@
 .hero {
   background-attachment: fixed;
   background-image: url('https://res.cloudinary.com/paseo/image/upload/dpr_auto,q_auto/v1523887589/johan-martin/bali_countryside_iuuhtc.jpg');
-  background-origin: padding-box;
-  // background-position: center center;
+  background-origin: padding-box; // background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   height: 60vh;
-
-  blockquote, h1, cite {
+  blockquote,
+  h1,
+  cite {
     color: $white;
   }
-
   h1 {
     font-size: 5rem;
     text-align: center;
   }
-
-  blockquote, cite {
+  blockquote,
+  cite {
     font-weight: 700;
+    width: 40vw;
+    font-size: 1.25rem;
   }
-
-  @include breakpoint( large down ) {
+  blockquote {
+    border: 0px;
+    strong {
+      font-weight: bolder;
+      color: $secondary-color;
+    }
+  }
+  @include breakpoint( large down) {
     h1 {
       font-size: 3rem;
     }
     background-position: 0 0;
     background-size: auto;
+    blockquote,
+    cite {
+      font-weight: 700;
+      width: 80vw; // font-size: 1.25rem;
+      font-size: 0.9rem;
+    }
   }
-
 }
