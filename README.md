@@ -1,5 +1,6 @@
 # Johan Martin Personal Site
-
+## Version
+* 1.2
 ## Goal
 * My Personal Website Repo
 
